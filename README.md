@@ -73,3 +73,6 @@ README〜ER図作成：5/13 〆切
 - MySQL
 - React
 - Tailwind css
+
+画面遷移図
+https://www.figma.com/file/GZiXRQ5PUjq2hbmHWQhmK3/Nucleus-UI%3A-Mobile-App-UI-Component-Library-%E2%80%93-LITE-version-(Community)?type=design&node-id=858%3A8368&t=gX6C4TU1HHmrtNXU-1
