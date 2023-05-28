@@ -1,14 +1,14 @@
 class GoogleLoginApiController < ApplicationController
-  require 'googleauth/id_token/verifier'
+  require 'googleauth/id_tokens/verifier'
 
   protect_from_forgery except: :callback
   before_action :verify_g_csrf_token, only: :callback
 
   def callback
-    payload = Google::Auth::IdTokens.verify_oidc(params[:credential], and:'542609139708-82ks1ji6n65u810h6c65l4ln1op36e5f.apps.googleusercontent.com')
+    payload = Google::Auth::IDTokens.verify_oidc(params[:credential], aud:'542609139708-82ks1ji6n65u810h6c65l4ln1op36e5f.apps.googleusercontent.com')
     user = User.find_or_create_by(email: payload['email'])
     session[:user_id] = user.id
-    redirect_to root_path, notice: 'ログインしました'
+    redirect_to guide_path, notice: 'ログインしました'
   end
 
   private
