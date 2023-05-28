@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get '/guide', to: 'static_pages#guide'
   get '/terms', to: 'static_pages#terms'
   get '/privacy', to: 'static_pages#privacy'
+  post '/google_login_api/callback', to: 'google_login_api#callback'
 end
