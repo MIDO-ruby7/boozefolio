@@ -5,7 +5,7 @@ class GoogleLoginApiController < ApplicationController
   before_action :verify_g_csrf_token, only: :callback
 
   def callback
-    payload = Google::Auth::IDTokens.verify_oidc(params[:credential], aud:'542609139708-82ks1ji6n65u810h6c65l4ln1op36e5f.apps.googleusercontent.com')
+    payload = Google::Auth::IDTokens.verify_oidc(params[:credential], aud: ENV['GOOGLE_CLIENT_ID'])
     user = User.find_or_create_by(email: payload['email'])
     session[:user_id] = user.id
     redirect_to guide_path, notice: 'ログインしました'
