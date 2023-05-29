@@ -2,7 +2,7 @@ class GoogleLoginApiController < ApplicationController
   require 'googleauth/id_tokens/verifier'
 
   protect_from_forgery except: :callback
-  before_action :verify_g_csrf_token, only: :callback
+  before_action :verify_g_csrf_token
 
   def callback
     payload = Google::Auth::IDTokens.verify_oidc(params[:credential], aud: ENV['GOOGLE_CLIENT_ID'])
