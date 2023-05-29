@@ -74,4 +74,9 @@ group :test do
   gem "webdrivers"
 end
 
+# 機能に必要なgem
 gem 'googleauth'
+gem 'dotenv'
+
+# debug
+gem 'pry-rails'
