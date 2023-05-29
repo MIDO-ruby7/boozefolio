@@ -76,7 +76,7 @@ end
 
 # 機能に必要なgem
 gem 'googleauth'
-gem 'dotenv'
+gem 'dotenv-rails'
 
 # debug
 gem 'pry-rails'
