@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/terms', to: 'static_pages#terms'
   get '/privacy', to: 'static_pages#privacy'
   post '/google_login_api/callback', to: 'google_login_api#callback'
+  resources :items, only: %i[index show new create edit update destroy]
 end
