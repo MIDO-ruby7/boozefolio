@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_29_035423) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_31_045809) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,9 +18,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_29_035423) do
     t.string "name", null: false
     t.string "image"
     t.integer "size"
-    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
     t.index ["name"], name: "index_items_on_name", unique: true
     t.index ["user_id"], name: "index_items_on_user_id"
   end
@@ -30,6 +30,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_29_035423) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
+  end
+
+  create_table "vision_tags", force: :cascade do |t|
+    t.integer "vision_id"
+    t.string "name"
+    t.float "confidence"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "visions", force: :cascade do |t|
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "items", "users"
