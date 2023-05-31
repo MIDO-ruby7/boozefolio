@@ -77,6 +77,7 @@ end
 # 機能に必要なgem
 gem 'googleauth'
 gem 'dotenv-rails'
+gem 'carrierwave', '>= 3.0.0.beta', '< 4.0'
 
 # debug
 gem 'pry-rails'
