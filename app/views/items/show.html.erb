@@ -1,0 +1,7 @@
+<h1><%= @item.name %></h1>
+<%= image_tag @item.image.url, alt: @item.name %>
+<% @item.tags.each do |tag| %>
+  <span class="tag"><%= tag.name %></span>
+<% end %>
+
+<%= image_tag @item.image.url %>
