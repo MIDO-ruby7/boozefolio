@@ -1,5 +1,8 @@
 class ItemsController < ApplicationController
+  require 'httparty'
+
   def index
+    @items = Item.all
   end
 
   #画像のアップロード機能
