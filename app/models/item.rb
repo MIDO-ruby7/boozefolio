@@ -1,26 +1,40 @@
 class Item < ApplicationRecord
+  require 'net/http'
+  require 'dotenv'
+  Dotenv.load
+
   belongs_to :user
   has_many :tags, through: :item_tags
   has_many :item_tags, dependent: :destroy
   mount_uploader :image, BoozeImageUploader
 
   def get_image_tags
-    endpoint = 'https://westus.api.cognitive.microsoft.com/vision/v1.0/analyze'
-    api_key = ENV['AZURE_COMPUTER_V_KEY_1']
-
-    headers = {
-      'Content-Type' => 'application/json',
-      'Ocp-Apim-Subscription-Key' => api_key
-    }
+    uri = URI('https://booze-folio.cognitiveservices.azure.com/vision/v3.1')
+    uri.query = URI.encode_www_form({
+    # Request parameters
+      'visualFeatures' => 'Tags',
+      'language' => 'ja'
+    })
 
     body = {
       url: self.image.url,
-      visualFeatures: 'Tags'
+      visualFeatures: 'Tags',
+      language: 'ja'
     }
 
-    response = HTTParty.post(endpoint, headers: headers, body: body.to_json)
-    data = JSON.parse(response.body)
+    request = Net::HTTP::Post.new(uri.request_uri)
+    # Request headers
+    request['Content-Type'] = 'application/json'
+    # Request headers
+    request['Ocp-Apim-Subscription-Key'] = ENV['AZURE_COMPUTER_V_KEY']
+    # Request body
+    request.body = body.to_json
 
+    response = Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
+      http.request(request)
+    end
+
+    data = JSON.parse(response.body)
     tags = data['tags'].map { |tag| tag['name'] }
 
     tags

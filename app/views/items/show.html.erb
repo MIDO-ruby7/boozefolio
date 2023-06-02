@@ -3,5 +3,4 @@
 <% @item.tags.each do |tag| %>
   <span class="tag"><%= tag.name %></span>
 <% end %>
-
-<%= image_tag @item.image.url %>
+<%= link_to '戻る', items_path %>
