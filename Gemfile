@@ -78,6 +78,7 @@ end
 gem 'googleauth'
 gem 'dotenv-rails'
 gem 'carrierwave', '>= 3.0.0.beta', '< 4.0'
+gem 'httparty'
 
 # debug
 gem 'pry-rails'
