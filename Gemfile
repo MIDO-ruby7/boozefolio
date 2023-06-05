@@ -73,3 +73,12 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# 機能に必要なgem
+gem 'googleauth'
+gem 'dotenv-rails'
+gem 'carrierwave', '>= 3.0.0.beta', '< 4.0'
+gem 'httparty'
+
+# debug
+gem 'pry-rails'
