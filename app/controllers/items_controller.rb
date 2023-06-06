@@ -8,7 +8,9 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = current_user.items.build(item_params)
+    @item = current_user.items.find_or_initialize_by(name: item_params[:name])
+    @item.image = item_params[:image]
+
     if @item.save
       redirect_to items_path, notice: '画像を投稿しました'
     else
