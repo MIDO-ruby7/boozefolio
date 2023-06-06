@@ -2,7 +2,6 @@ class ItemsController < ApplicationController
   def index
   end
 
-  #画像のアップロード機能
   def new
     @item = Item.new
   end
@@ -12,11 +11,9 @@ class ItemsController < ApplicationController
 
     if @item.new_record?
       @item.save
-      @item.photos.create(image: photo_params[:item][:image])
       redirect_to items_path, notice: '新種を登録しました'
     else
-      # binding.pry
-      @item.photos.create(image: photo_params[:item][:image])
+      @item.update(image: item_params[:image])
       redirect_to root_path, notice: '画像を登録しました'
     end
   end
@@ -24,10 +21,6 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name)
-  end
-
-  def photo_params
-    params.require(:item).permit(photo: [:image])[:photo]
+    params.require(:item).permit(:name, :image, :image_cache)
   end
 end
