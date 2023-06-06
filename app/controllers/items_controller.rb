@@ -8,12 +8,16 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = current_user.items.build(item_params)
-    if @item.save
-      redirect_to items_path, notice: '画像を投稿しました'
+    @item = current_user.items.find_or_initialize_by(name: item_params[:name])
+
+    if @item.new_record?
+      @item.save
+      @item.photos.create(image: item_params[:image])
+      redirect_to items_path, notice: '新種を登録しました'
     else
-      flash.now[:alert] = '画像の投稿に失敗しました'
-      render :new, status: :unprocessable_entity
+      # binding.pry
+      @item.photos.create(image: item_params[:image])
+      redirect_to root_path, notice: '画像を登録しました'
     end
   end
 

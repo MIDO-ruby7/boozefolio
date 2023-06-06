@@ -10,19 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_31_045809) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_06_044020) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "item_tags", force: :cascade do |t|
+    t.bigint "item_id", null: false
+    t.bigint "tag_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_item_tags_on_item_id"
+    t.index ["tag_id"], name: "index_item_tags_on_tag_id"
+  end
+
   create_table "items", force: :cascade do |t|
     t.string "name", null: false
-    t.string "image"
     t.integer "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.index ["name"], name: "index_items_on_name", unique: true
     t.index ["user_id"], name: "index_items_on_user_id"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.bigint "item_id"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_photos_on_item_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -32,19 +54,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_31_045809) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
-  create_table "vision_tags", force: :cascade do |t|
-    t.integer "vision_id"
-    t.string "name"
-    t.float "confidence"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "visions", force: :cascade do |t|
-    t.string "url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
+  add_foreign_key "item_tags", "items"
+  add_foreign_key "item_tags", "tags"
   add_foreign_key "items", "users"
+  add_foreign_key "photos", "items"
 end
