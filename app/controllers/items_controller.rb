@@ -12,10 +12,11 @@ class ItemsController < ApplicationController
 
     if @item.new_record?
       @item.save
-      @item.photos.create(image: photo_params[:image])
-      redirect_to root_path, notice: '新種を登録しました'
+      @item.photos.create(image: photo_params[:item][:image])
+      redirect_to items_path, notice: '新種を登録しました'
     else
-      @item.photos.create(image: photo_params[:image])
+      # binding.pry
+      @item.photos.create(image: photo_params[:item][:image])
       redirect_to root_path, notice: '画像を登録しました'
     end
   end
@@ -27,6 +28,6 @@ class ItemsController < ApplicationController
   end
 
   def photo_params
-    params.require(:photo).permit(:image, :image_cache)
+    params.require(:item).permit(photo: [:image])[:photo]
   end
 end
