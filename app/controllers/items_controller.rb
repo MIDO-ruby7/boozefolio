@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   def index
   end
 
+  #画像のアップロード機能
   def new
     @item = Item.new
   end
@@ -11,9 +12,11 @@ class ItemsController < ApplicationController
 
     if @item.new_record?
       @item.save
+      @item.photos.create(image: item_params[:image])
       redirect_to items_path, notice: '新種を登録しました'
     else
-      @item.update(image: item_params[:image])
+      # binding.pry
+      @item.photos.create(image: item_params[:image])
       redirect_to root_path, notice: '画像を登録しました'
     end
   end
