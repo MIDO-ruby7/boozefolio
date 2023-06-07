@@ -35,7 +35,7 @@ class ItemsController < ApplicationController
 
   def destroy
     @item.destroy
-    redirect_to items_path, notice: '図鑑を削除しました'
+    redirect_to items_path, notice: '図鑑を削除しました', status: :see_other
   end
 
   private
