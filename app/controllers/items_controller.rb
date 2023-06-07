@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   def index
+    @items = Item.all.includes(:photos).order(created_at: :desc)
   end
 
   #画像のアップロード機能
