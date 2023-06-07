@@ -1,0 +1,5 @@
+<% item.photos.each do |photo| %>
+  <div class="mt-6 mb-2 ml-4 mr-4">
+    <%= image_tag photo.image.url, class:"h-auto max-w-full rounded-lg" %>
+  </div>
+<% end %>

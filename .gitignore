@@ -37,4 +37,3 @@
 /node_modules
 /vendor/bundle
 .env
-top.html.erb
