@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_06_044020) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_09_112758) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "collections", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "item_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_collections_on_item_id"
+    t.index ["user_id"], name: "index_collections_on_user_id"
+  end
 
   create_table "item_tags", force: :cascade do |t|
     t.bigint "item_id", null: false
@@ -54,6 +63,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_044020) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "collections", "items"
+  add_foreign_key "collections", "users"
   add_foreign_key "item_tags", "items"
   add_foreign_key "item_tags", "tags"
   add_foreign_key "items", "users"
