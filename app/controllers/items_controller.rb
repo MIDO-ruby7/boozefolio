@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only:%i[edit update destroy]
+  before_action :set_item, only: %i[edit update destroy]
   def index
     @items = Item.all.includes(:photos).order(created_at: :desc)
   end
@@ -41,7 +41,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :image, :image_cache, :size)
+    params.require(:item).permit(:name, :image, {images: []}, :image_cache, :size)
   end
 
   def set_item
