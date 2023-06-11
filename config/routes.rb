@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'categories/index'
+  get 'categories/edit'
   root to: 'static_pages#top'
   get '/guide', to: 'static_pages#guide'
   get '/terms', to: 'static_pages#terms'
