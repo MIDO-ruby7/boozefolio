@@ -15,10 +15,10 @@ class ItemsController < ApplicationController
     if @item.new_record?
       @item.save
       @item.photos.create(image: item_params[:image])
-      redirect_to items_path, notice: '新種を登録しました'
+      redirect_to items_path, notice: t('.new_item')
     else
       @item.photos.create(image: item_params[:image])
-      redirect_to root_path, notice: '画像を登録しました'
+      redirect_to root_path, notice: t('.success')
     end
   end
 
@@ -30,12 +30,12 @@ class ItemsController < ApplicationController
 
   def update
     @item.update(item_params)
-    redirect_to items_path, notice: '図鑑を更新しました'
+    redirect_to items_path, notice: t('.success')
   end
 
   def destroy
     @item.destroy
-    redirect_to items_path, notice: '図鑑を削除しました', status: :see_other
+    redirect_to items_path, notice: t('.success'), status: :see_other
   end
 
   private
