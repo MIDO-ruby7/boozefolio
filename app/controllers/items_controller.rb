@@ -41,10 +41,10 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :image, {images: []}, :image_cache, :size)
+    params.require(:item).permit(:name, :image, :image_cache, :size)
   end
 
   def set_item
-    @item = @item = current_user.items.find(params[:id])
+    @item = current_user.items.find(params[:id])
   end
 end
