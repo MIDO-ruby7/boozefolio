@@ -79,5 +79,9 @@ gem 'googleauth'
 gem 'dotenv-rails'
 gem 'carrierwave', '>= 3.0.0.beta', '< 4.0'
 
+#多言語化対応
+#https://twitter.com/hisaju01/status/1668096024823611392?s=20
+gem 'rails-i18n'
+
 # debug
 gem 'pry-rails'
