@@ -30,7 +30,7 @@ class ItemsController < ApplicationController
   def edit; end
 
   def update
-    #binding.pry
+    binding.pry
     @item.update(item_params)
     redirect_to items_path, notice: t('.success')
   end

@@ -48,12 +48,14 @@ ja:
       new:
         title: '商品登録'
         file: 'ファイルを選択'
-
       create:
         success: '登録しました'
         new_item: '新種のお酒です！ありがとうございます'
         fail: '登録できませんでした'
       edit:
         title: '商品編集'
+      update:
+        success: '更新しました'
+        fail: '更新できませんでした'
       destroy:
         success: '削除しました'
