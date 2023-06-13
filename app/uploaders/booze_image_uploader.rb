@@ -15,7 +15,7 @@ class BoozeImageUploader < CarrierWave::Uploader::Base
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   def default_url
-    'logo.png'
+    'no_image_gray.png'
   end
 
   # Process files as they are uploaded:
