@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user, :own?, :logged_in?
+  add_flash_types :success, :info, :warning, :danger
 
   # ログイン中のユーザーを返す
   def current_user
