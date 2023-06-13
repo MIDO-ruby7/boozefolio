@@ -7,6 +7,7 @@ class ItemsController < ApplicationController
   #画像のアップロード機能
   def new
     @item = Item.new
+    @item.photos.build
   end
 
   def create
@@ -14,10 +15,10 @@ class ItemsController < ApplicationController
 
     if @item.new_record?
       @item.save
-      @item.photos.create(image: item_params[:image])
+      @item.photos.create(image: item_params[:photos_attributes]['0'][:image])
       redirect_to items_path, notice: t('.new_item')
     else
-      @item.photos.create(image: item_params[:image])
+      @item.photos.create(image: item_params[:photos_attributes]['0'][:image])
       redirect_to root_path, notice: t('.success')
     end
   end
