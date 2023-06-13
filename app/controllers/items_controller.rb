@@ -29,6 +29,7 @@ class ItemsController < ApplicationController
   def edit; end
 
   def update
+    #binding.pry
     @item.update(item_params)
     redirect_to items_path, notice: t('.success')
   end
@@ -41,7 +42,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :image, :image_cache, :size)
+    params.require(:item).permit(:name, :size, photos_attributes: [:image, :id, :item_id, :image_cache])
   end
 
   def set_item
