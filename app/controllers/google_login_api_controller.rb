@@ -8,14 +8,14 @@ class GoogleLoginApiController < ApplicationController
     payload = Google::Auth::IDTokens.verify_oidc(params[:credential], aud: ENV['GOOGLE_CLIENT_ID'])
     user = User.find_or_create_by(email: payload['email'])
     session[:user_id] = user.id
-    redirect_to items_path, notice: 'ログインしました'
+    redirect_to items_path, notice: t('.success')
   end
 
   private
 
   def verify_g_csrf_token
     if cookies["g_csrf_token"].blank? || params[:g_csrf_token].blank? || cookies["g_csrf_token"] != params[:g_csrf_token]
-      redirect_to root_path, alert: '不正なリクエストです'
+      redirect_to root_path, alert: t('.fail')
     end
   end
 end
