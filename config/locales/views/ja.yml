@@ -24,38 +24,38 @@ ja:
       delete_alert: '本当に実行してよろしいですか？'
       not_authorized: '権限がありません'
     post: '投稿'
-    google_login_api:
-      callback:
-        success: 'ログインしました'
-        fail: 'ログインに失敗しました'
-      verify_g_csrf_token:
-        fail: 'トークンが無効です'
-    static_pages:
-      menu:
-        title: 'MENU'
-      terms:
-        title: '利用規約'
-      privacy:
-        title: 'プライバシーポリシー'
-      guide:
-        title: 'ユーザーガイド'
-    item:
-      index:
-        title: '商品一覧'
-        no_image: 'まだ投稿がありません'
-      show:
-        title: '商品詳細'
-      new:
-        title: '商品登録'
-        file: 'ファイルを選択'
-      create:
-        success: '登録しました'
-        new_item: '新種のお酒です！ありがとうございます'
-        fail: '登録できませんでした'
-      edit:
-        title: '商品編集'
-      update:
-        success: '更新しました'
-        fail: '更新できませんでした'
-      destroy:
-        success: '削除しました'
+  google_login_api:
+    callback:
+      success: 'ログインしました'
+      fail: 'ログインに失敗しました'
+    verify_g_csrf_token:
+      fail: 'トークンが無効です'
+  static_pages:
+    menu:
+      title: 'MENU'
+    terms:
+      title: '利用規約'
+    privacy:
+      title: 'プライバシーポリシー'
+    guide:
+      title: 'ユーザーガイド'
+  item:
+    index:
+      title: '商品一覧'
+      no_image: 'まだ投稿がありません'
+    show:
+      title: '商品詳細'
+    new:
+      title: '商品登録'
+      file: 'ファイルを選択'
+    create:
+      success: '登録しました'
+      new_item: '新種のお酒です！ありがとうございます'
+      fail: '登録できませんでした'
+    edit:
+      title: '商品編集'
+    update:
+      success: '更新しました'
+      fail: '更新できませんでした'
+    destroy:
+      success: '削除しました'

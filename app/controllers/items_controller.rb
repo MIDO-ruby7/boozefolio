@@ -12,6 +12,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = current_user.items.find_or_initialize_by(name: item_params[:name])
+    binding.pry
 
     if @item.new_record?
       @item.save
@@ -30,7 +31,6 @@ class ItemsController < ApplicationController
   def edit; end
 
   def update
-    binding.pry
     @item.update(item_params)
     redirect_to items_path, notice: t('.success')
   end
