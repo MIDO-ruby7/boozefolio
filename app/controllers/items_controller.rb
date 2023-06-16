@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  require 'rmagick'
+  require "mini_magick"
   before_action :set_item, only: %i[edit update destroy]
 
   def index
@@ -13,8 +13,10 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = current_user.items.find_or_initialize_by(name: item_params[:name])
-    if @item.new_record?
+    @item_name = current_user.items.find_or_initialize_by(name: item_params[:name])
+    @item = current_user.items.build(item_params)
+    if @item_name.new_record?
+      binding.pry
       if @item.save
         @item.process_image(item_params[:photos_attributes]['0'][:image])
         redirect_to items_path, notice: t('.new_item')
