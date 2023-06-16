@@ -19,7 +19,7 @@ class BoozeImageUploader < CarrierWave::Uploader::Base
   end
 
   # Process files as they are uploaded:
-  process resize_to_fit: [600, 400]
+  process resize_to_fit: [500, 300]
   process convert: 'webp'
   # def scale(width, height)
   #   # do something
