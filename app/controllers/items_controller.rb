@@ -1,10 +1,12 @@
 class ItemsController < ApplicationController
+  require 'rmagick'
   before_action :set_item, only: %i[edit update destroy]
+
   def index
     @items = Item.all.includes(:photos).order(created_at: :desc)
   end
 
-  #画像のアップロード機能
+  # 画像のアップロード機能
   def new
     @item = Item.new
     @item.photos.build
@@ -14,14 +16,14 @@ class ItemsController < ApplicationController
     @item = current_user.items.find_or_initialize_by(name: item_params[:name])
     if @item.new_record?
       if @item.save
-        @item.photos.create(image: item_params[:photos_attributes]['0'][:image])
+        @item.process_image(item_params[:photos_attributes]['0'][:image])
         redirect_to items_path, notice: t('.new_item')
       else
         flash.now[:alert] = t('.fail')
         render :new, status: :unprocessable_entity
       end
     else
-      @item.photos.create(image: item_params[:photos_attributes]['0'][:image])
+      @item.process_image(item_params[:photos_attributes]['0'][:image])
       redirect_to items_path, notice: t('.success')
     end
   end
