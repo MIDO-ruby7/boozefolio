@@ -22,7 +22,7 @@ class ItemsController < ApplicationController
       end
     else
       @item.photos.create(image: item_params[:photos_attributes]['0'][:image])
-      redirect_to root_path, notice: t('.success')
+      redirect_to items_path, notice: t('.success')
     end
   end
 

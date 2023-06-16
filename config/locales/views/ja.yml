@@ -14,16 +14,6 @@ ja:
     delete: '削除'
     back: '戻る'
     cancel: 'キャンセル'
-    message:
-      not_authenticated: 'ログインしてください'
-      created: '%{item}を作成しました'
-      not_created: '%{item}を作成できませんでした'
-      updated: '%{item}を更新しました'
-      not_updated: '%{item}を更新できませんでした'
-      deleted: '%{item}を削除しました'
-      delete_alert: '本当に実行してよろしいですか？'
-      not_authorized: '権限がありません'
-    post: '投稿'
   google_login_api:
     callback:
       success: 'ログインしました'
@@ -39,7 +29,7 @@ ja:
       title: 'プライバシーポリシー'
     guide:
       title: 'ユーザーガイド'
-  item:
+  items:
     index:
       title: '商品一覧'
       no_image: 'まだ投稿がありません'
@@ -50,7 +40,7 @@ ja:
       file: 'ファイルを選択'
     create:
       success: '登録しました'
-      new_item: '新種のお酒です！ありがとうございます'
+      new_item: '新種のお酒です！登録ありがうございます！'
       fail: '登録できませんでした'
     edit:
       title: '商品編集'
