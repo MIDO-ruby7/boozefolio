@@ -12,14 +12,17 @@ class ItemsController < ApplicationController
 
   def create
     @item = current_user.items.find_or_initialize_by(name: item_params[:name])
-
     if @item.new_record?
-      @item.save
-      @item.photos.create(image: item_params[:photos_attributes]['0'][:image])
-      redirect_to items_path, notice: t('.new_item')
+      if @item.save
+        @item.photos.create(image: item_params[:photos_attributes]['0'][:image])
+        redirect_to items_path, notice: t('.new_item')
+      else
+        flash.now[:alert] = t('.fail')
+        render :new, status: :unprocessable_entity
+      end
     else
       @item.photos.create(image: item_params[:photos_attributes]['0'][:image])
-      redirect_to root_path, notice: t('.success')
+      redirect_to items_path, notice: t('.success')
     end
   end
 
@@ -30,7 +33,6 @@ class ItemsController < ApplicationController
   def edit; end
 
   def update
-    #binding.pry
     @item.update(item_params)
     redirect_to items_path, notice: t('.success')
   end
@@ -43,7 +45,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :size, photos_attributes: [:image, :id, :item_id, :image_cache])
+    params.require(:item).permit(:name, :size, :category_id, photos_attributes: [:image, :id, :item_id, :image_cache])
   end
 
   def set_item
