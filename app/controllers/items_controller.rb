@@ -15,12 +15,8 @@ class ItemsController < ApplicationController
   def create
     @item_name = current_user.items.find_or_initialize_by(name: item_params[:name])
     @item = current_user.items.build(item_params)
-    binding.pry
     if @item_name.new_record?
       if @item.save
-        photo = Photo.last
-        file_size = File.size(photo.image.path)
-        puts "画像ファイルのサイズ: #{file_size} bytes"
         redirect_to items_path, notice: t('.new_item')
       else
         flash.now[:alert] = t('.fail')
