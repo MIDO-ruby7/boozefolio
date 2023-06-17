@@ -1,20 +1,22 @@
 class ItemsController < ApplicationController
+  require "mini_magick"
   before_action :set_item, only: %i[edit update destroy]
+
   def index
     @items = Item.all.includes(:photos).order(created_at: :desc)
   end
 
-  #画像のアップロード機能
+  # 画像のアップロード機能
   def new
     @item = Item.new
     @item.photos.build
   end
 
   def create
-    @item = current_user.items.find_or_initialize_by(name: item_params[:name])
-    if @item.new_record?
+    @item_name = current_user.items.find_or_initialize_by(name: item_params[:name])
+    @item = current_user.items.build(item_params)
+    if @item_name.new_record?
       if @item.save
-        @item.photos.create(image: item_params[:photos_attributes]['0'][:image])
         redirect_to items_path, notice: t('.new_item')
       else
         flash.now[:alert] = t('.fail')

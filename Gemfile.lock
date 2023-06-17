@@ -272,6 +272,7 @@ DEPENDENCIES
   googleauth
   jbuilder
   jsbundling-rails
+  mini_magick
   pg (~> 1.1)
   pry-rails
   puma (~> 5.0)
