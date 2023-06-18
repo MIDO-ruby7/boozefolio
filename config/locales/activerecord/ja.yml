@@ -12,7 +12,9 @@ ja:
         name: '名前'
         email: 'メールアドレス'
       item:
+        category_id: 'カテゴリー'
         name: '商品名'
+        flavor: '味'
         size: 'サイズ'
         maker: 'メーカー'
         alcohol_content: 'アルコール度数'
