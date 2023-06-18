@@ -14,7 +14,10 @@ ja:
       item:
         name: '商品名'
         size: 'サイズ'
-        alcohol: 'アルコール度数'
+        maker: 'メーカー'
+        alcohol_content: 'アルコール度数'
+        country_of_origin: '原産国'
+        note: '備考'
         image: '画像'
       photo:
         image: '画像'
