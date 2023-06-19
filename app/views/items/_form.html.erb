@@ -2,9 +2,11 @@
   <%= render 'shared/error_messages', object: f.object %>
   <div>
     <%= f.label :category_id, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
-    <%= f.collection_select :category_id, Category.all, :id, :name, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+    <%= f.collection_select :category_id, Category.all, :id, :name, { prompt: true }, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
     <%= f.label :name, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
     <%= f.text_field :name, class: "block text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" %>
+    <%= f.label :flavor, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= f.text_field :flavor, class: "block text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" %>
     <%= f.fields_for :photos do |photo_fields| %>
       <div>
         <%= photo_fields.label :image, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
@@ -14,6 +16,16 @@
       <div>
         <%= image_tag item.image.url, id: 'preview', size: '300x200' %>
     <% end %>
+    <%= f.label :size, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= f.text_field :size, class: "block text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" %>
+    <%= f.label :maker, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= f.text_field :maker, class: "block text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" %>
+    <%= f.label :alcohol_content, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= f.text_field :alcohol_content, class: "block text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" %>
+    <%= f.label :country_of_origin, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= f.text_field :country_of_origin, class: "block text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" %>
+    <%= f.label :note, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= f.text_area :note, rows:"4", class: "block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
   </div>
-  <%= f.submit '投稿', class: 'text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2' %>
+  <%= f.submit '投稿', class: 'mt-4 text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2' %>
 <% end %>

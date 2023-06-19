@@ -12,9 +12,17 @@ ja:
         name: '名前'
         email: 'メールアドレス'
       item:
+        category_id: 'カテゴリー'
         name: '商品名'
+        flavor: '味'
         size: 'サイズ'
-        alcohol: 'アルコール度数'
+        maker: 'メーカー'
+        alcohol_content: 'アルコール度数'
+        country_of_origin: '原産国'
+        region: '産地'
+        link: 'リンク'
+        asin: 'ASIN'
+        note: '備考'
         image: '画像'
       photo:
         image: '画像'
@@ -22,3 +30,7 @@ ja:
         name: 'カテゴリー'
       tag:
         name: 'タグ'
+    prompt:
+      models:
+        item:
+          category_id: "選択してください"

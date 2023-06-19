@@ -5,6 +5,8 @@ class Item < ApplicationRecord
   has_many :photos, dependent: :destroy
   accepts_nested_attributes_for :photos, allow_destroy: true
 
+  validates :name, presence: true, uniqueness: true
+
   mount_uploader :image, BoozeImageUploader
 
   def process_image(image_data)
