@@ -40,7 +40,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_17_024632) do
     t.string "maker"
     t.float "alcohol_content"
     t.string "country_of_origin"
+    t.string "region"
+    t.string "link"
     t.text "note"
+    t.string "asin"
     t.index ["name"], name: "index_items_on_name", unique: true
     t.index ["user_id"], name: "index_items_on_user_id"
   end

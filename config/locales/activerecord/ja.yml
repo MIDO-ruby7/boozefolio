@@ -27,3 +27,7 @@ ja:
         name: 'カテゴリー'
       tag:
         name: 'タグ'
+    prompt:
+      models:
+        item:
+          category_id: "選択してください"
