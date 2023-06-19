@@ -19,6 +19,9 @@ ja:
         maker: 'メーカー'
         alcohol_content: 'アルコール度数'
         country_of_origin: '原産国'
+        region: '産地'
+        link: 'リンク'
+        asin: 'ASIN'
         note: '備考'
         image: '画像'
       photo:
