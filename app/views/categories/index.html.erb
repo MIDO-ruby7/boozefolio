@@ -3,10 +3,12 @@
 </div>
 
 <h1 class="text-xl bg-yellow-400 pl-10">categories</h1>
-<div class="mt-4 pl-10">
+<div class="mt-4 mb-20 pl-10">
   <% if @categories.present? %>
     <% @categories.each do |category| %>
       <li class="mb-1"><%= category.name %>
+      <p><%= category.default_size %>ml</p>
+      <p><%= category.default_alcohol_content %>%</p>
       <%= link_to '編集', edit_category_path(category), class:"text-xs text-pink-400 ml-10" %>
       <%= link_to '削除', category_path(category), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class:"text-xs text-pink-400 ml-10" %>
       </li>

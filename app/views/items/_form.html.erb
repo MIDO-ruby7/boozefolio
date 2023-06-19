@@ -1,4 +1,4 @@
-<%= form_with model: item, local: true do |f| %>
+<%= form_with model: item, url: { action: "create"}, local: true do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div>
     <%= f.label :category_id, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
@@ -20,7 +20,7 @@
     <%= f.text_field :size, class: "block text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" %>
     <%= f.label :maker, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
     <%= f.text_field :maker, class: "block text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" %>
-    <%= f.label :alcohol_content, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= f.label :alcohol_content, value: item.category&.default_alcohol_content, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
     <%= f.text_field :alcohol_content, class: "block text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" %>
     <%= f.label :country_of_origin, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
     <%= f.text_field :country_of_origin, class: "block text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" %>
