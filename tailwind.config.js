@@ -8,7 +8,7 @@ module.exports = {
   plugins: [
     require('daisyui'),
   ],
-  // daisyui: {
-  //   themes: ["ここに好きなの入れる(darkなど)"],
-  // },
+  daisyui: {
+    themes: ["cmyk"],
+  },
 }
