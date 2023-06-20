@@ -1,2 +1,0 @@
-class VisionTag < ApplicationRecord
-end
