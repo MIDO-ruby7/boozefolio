@@ -1,2 +1,0 @@
-class Vision < ApplicationRecord
-end
