@@ -33,6 +33,14 @@ class CategoriesController < ApplicationController
     redirect_to categories_path, notice: 'カテゴリーを削除しました'
   end
 
+  def default_values
+    category = Category.find(params[:id])
+    render json: {
+      default_alcohol_content: category.default_alcohol_content,
+      default_size: category.default_size
+    }
+  end
+
   private
 
   def category_params
