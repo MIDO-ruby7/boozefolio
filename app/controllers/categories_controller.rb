@@ -44,7 +44,7 @@ class CategoriesController < ApplicationController
   private
 
   def category_params
-    params.require(:category).permit(:name, :default_alcohol_content, :default_size)
+    params.require(:category).permit(:name)
   end
 
   def set_category

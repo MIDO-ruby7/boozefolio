@@ -7,8 +7,6 @@
   <% if @categories.present? %>
     <% @categories.each do |category| %>
       <li class="mb-1"><%= category.name %>
-      <p><%= category.default_size %>ml</p>
-      <p><%= category.default_alcohol_content %>%</p>
       <%= link_to '編集', edit_category_path(category), class:"text-xs text-pink-400 ml-10" %>
       <%= link_to '削除', category_path(category), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class:"text-xs text-pink-400 ml-10" %>
       </li>
