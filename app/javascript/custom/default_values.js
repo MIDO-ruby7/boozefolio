@@ -8,7 +8,7 @@ const categoryDefaults = {
 };
 
 jQuery(function() {
-  $('#item_category_id').on('change', function() {
+  $(document).on('change', '#item_category_id', function() {
     const categoryId = $(this).val();
     const defaultValues = categoryDefaults[categoryId];
 
