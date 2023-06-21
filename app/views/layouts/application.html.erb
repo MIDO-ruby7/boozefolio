@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="mytheme">
   <head>
     <title>Boozefolio</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -21,8 +21,11 @@
   </head>
 
   <body>
-    <%= render 'shared/flash_message' %>
-    <%= yield %>
-    <%= render 'shared/footer' %>
+    <container class="container text-stone-600 prose">
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/flash_message' %>
+      <%= yield %>
+      <%= render 'shared/footer' %>
+    </container>
   </body>
 </html>
