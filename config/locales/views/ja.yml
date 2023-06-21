@@ -36,7 +36,7 @@ ja:
     show:
       title: '商品詳細'
     new:
-      title: '商品登録'
+      title: '図鑑登録'
       file: 'ファイルを選択'
     create:
       success: '登録しました'

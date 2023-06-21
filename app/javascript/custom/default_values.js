@@ -16,6 +16,11 @@ jQuery(function() {
       // 初期値をフィールドにセット
       $('#item_alcohol_content').val(defaultValues.alcohol_content);
       $('#item_size').val(defaultValues.size);
+
+      const valueDisplay = document.querySelector('#value-display');
+      if (valueDisplay) {
+        valueDisplay.textContent = defaultValues.alcohol_content;
+      }
     }
   });
 });
