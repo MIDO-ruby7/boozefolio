@@ -13,7 +13,7 @@
     <%= f.fields_for :photos do |photo_fields| %>
       <div>
         <h4 class="text-stone-600"><%= photo_fields.label :image %></h4>
-        <%= photo_fields.file_field :image, class: "file-input file-input-bordered file-input-success w-full max-w-xs mb-3", accept: 'image/*', capture: "camera", id: "item_photos_attributes_0_image" %>
+        <%= photo_fields.file_field :image, class: "file-input file-input-bordered file-input-success w-full max-w-xs", accept: 'image/*', capture: "camera", id: "item_photos_attributes_0_image" %>
         <%= photo_fields.hidden_field :image_cache %>
       </div>
       <div>
