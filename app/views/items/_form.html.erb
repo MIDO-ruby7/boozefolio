@@ -7,11 +7,7 @@
     <%= f.text_field :name, class: "input input-bordered input-success w-full max-w-xs" %>
     <h4 class="text-stone-600"><%= f.label :alcohol_content %></h4>
     <%= f.range_field :alcohol_content, in: 1.0..100.0, step: 0.5, class: "range range-secondary range-xs", id: "item_alcohol_content", data: { value_display: "#value-display" } %>
-    <div id="value-display" class="chat-bubble chat-bubble-success"></div>
-      <svg class="absolute text-black w-full h-2 left-0 top-100" x="0px" y="0px" viewBox="0 0 255 255" xml:space="preserve">
-        <polygon class="fill-current" points="0,0 127.5,127.5 255,0"></polygon>
-      </svg>
-    </div>
+    <div id="value-display" class="badge badge-success w-10"></div>
     <h4 class="text-stone-600"><%= f.label :size %></h4>
     <%= f.text_field :size, in: 1..4000, class: "input input-bordered input-success max-w-xs", id: "item_size" %>ml
     <%= f.fields_for :photos do |photo_fields| %>
@@ -23,13 +19,13 @@
       <div>
         <%= image_tag item.image.url, id: 'preview', size: '200x100' %>
     <% end %>
-    <h4 class="text-stone-600"><%= f.label :flavor %></h4>
+    <h4 class="text-stone-600"><div class="badge badge-ghost text-stone-400">任意</div><%= f.label :flavor %></h4>
     <%= f.text_field :flavor, class: "input input-bordered input-success w-full max-w-xs" %>
-    <h4 class="text-stone-600"><%= f.label :maker %></h4>
+    <h4 class="text-stone-600"><div class="badge badge-ghost text-stone-400">任意</div><%= f.label :maker %></h4>
     <%= f.text_field :maker, class: "input input-bordered input-success w-full max-w-xs" %>
-    <h4 class="text-stone-600"><%= f.label :country_of_origin %></h4>
+    <h4 class="text-stone-600"><div class="badge badge-ghost text-stone-400">任意</div><%= f.label :country_of_origin %></h4>
     <%= f.text_field :country_of_origin, class: "input input-bordered input-success w-full max-w-xs" %>
-    <h4 class="text-stone-600"><%= f.label :note %></h4>
+    <h4 class="text-stone-600"><div class="badge badge-ghost text-stone-400">任意</div><%= f.label :note %></h4>
     <%= f.text_area :note, rows:"5", class: "textarea textarea-success w-11/12" %>
   </div>
   <%= f.submit '投稿', class: 'btn btn-success mt-2 w-24' %>
