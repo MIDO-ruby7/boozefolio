@@ -10,9 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_22_025346) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_22_025730) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "beers", force: :cascade do |t|
+    t.string "name", null: false
+    t.float "alcohol_content"
+    t.bigint "brewery_id"
+    t.text "note"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brewery_id"], name: "index_beers_on_brewery_id"
+  end
 
   create_table "breweries", force: :cascade do |t|
     t.string "name", null: false
@@ -72,6 +82,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_22_025346) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "beers", "breweries"
   add_foreign_key "collections", "items"
   add_foreign_key "collections", "users"
   add_foreign_key "items", "users"
