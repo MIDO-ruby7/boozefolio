@@ -1,17 +1,52 @@
-<%= image_tag "logo.png", alt: "BoozeFolio", class:"w-28 h-28" %>
-<h1 class="text-red-500"><%= t('defaults.site_title') %></h1>
+<!DOCTYPE html>
+<html data-theme="mytheme">
+  <head>
+    <title>Boozefolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<script src="https://accounts.google.com/gsi/client" async defer></script>
-<div id="g_id_onload"
-      data-client_id="<%= ENV['GOOGLE_CLIENT_ID'] %>"
-      data-login_uri="http://localhost:3000/google_login_api/callback"
-      data-auto_prompt="false">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= stylesheet_link_tag 'index' %>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZYBBZHS1W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5ZYBBZHS1W');
+    </script>
+  </head>
+
+  <body>
+    <div class="field">
+      <div class="item"></div>
+      <div class="box">
+        <div class="m-10">
+          <h2 class="text-lx mb-10"><%= t('defaults.site_title') %></h1>
+          <script src="https://accounts.google.com/gsi/client" async defer></script>
+          <div id="g_id_onload"
+              data-client_id="<%= ENV['GOOGLE_CLIENT_ID'] %>"
+              data-login_uri="http://localhost:3000/google_login_api/callback"
+              data-auto_prompt="false">
+          </div>
+          <div class="g_id_signin"
+              data-type="standard"
+              data-size="large"
+              data-theme="outline"
+              data-text="sign_in_with"
+              data-shape="rectangular"
+              data-logo_alignment="left">
+          </div>
+        </div>
       </div>
-      <div class="g_id_signin"
-      data-type="standard"
-      data-size="large"
-      data-theme="outline"
-      data-text="sign_in_with"
-      data-shape="rectangular"
-      data-logo_alignment="left">
-</div>
+      <div class="wave -one"></div><!--二つのクラスを持つ波-->
+      <div class="wave -two"></div><!--二つのクラスを持つ波-->
+      <div class="wave -three"></div><!--二つのクラスを持つ波-->
+      </div>
+    </div>
+  </body>
+</html>
