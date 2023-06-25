@@ -93,6 +93,9 @@ GEM
     crass (1.0.6)
     cssbundling-rails (1.1.2)
       railties (>= 6.0.0)
+    dartsass-rails (0.5.0)
+      railties (>= 6.0.0)
+      sass-embedded (~> 1.63)
     date (3.3.3)
     debug (1.8.0)
       irb (>= 1.5.0)
@@ -109,6 +112,8 @@ GEM
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    google-protobuf (3.23.3-arm64-darwin)
+    google-protobuf (3.23.3-x86_64-linux)
     googleauth (1.5.2)
       faraday (>= 0.17.3, < 3.a)
       jwt (>= 1.4, < 3.0)
@@ -214,6 +219,10 @@ GEM
       ffi (~> 1.12)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
+    sass-embedded (1.63.6-arm64-darwin)
+      google-protobuf (~> 3.23)
+    sass-embedded (1.63.6-x86_64-linux-gnu)
+      google-protobuf (~> 3.23)
     selenium-webdriver (4.9.1)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -267,6 +276,7 @@ DEPENDENCIES
   capybara
   carrierwave (>= 3.0.0.beta, < 4.0)
   cssbundling-rails
+  dartsass-rails (~> 0.5.0)
   debug
   dotenv-rails
   googleauth
