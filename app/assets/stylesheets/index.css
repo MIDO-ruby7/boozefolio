@@ -1,6 +1,6 @@
 .box {
-  width: auto; /*外枠のサイズ*/
-  height: 700px; /*外枠のサイズ*/
+  width: 100%; /*外枠のサイズ*/
+  height: 800px; /*外枠のサイズ*/
   background: #fbfcee; /*背景、白っぽいところ*/
   position: relative; /*基準にする*/
   overflow: hidden; /*この枠を超えた部分は隠す*/
@@ -20,8 +20,8 @@
   background: #fde047; /*青い部分、波（を表す円）の色*/
   width: 600px; /*波（を表す円）のサイズ*/
   height: 600px; /*同上*/
-  margin-left: -80px; /*波（を表す円）の位置を縦軸から見てセンターに配置*/
-  margin-top: 20px; /*波（を表す円）の位置を上半分に配置*/
+  margin-left: -100px; /*波（を表す円）の位置を縦軸から見てセンターに配置*/
+  margin-top: 100px; /*波（を表す円）の位置を上半分に配置*/
   -webkit-transform-origin: 50% 48%;
     /*macのsafariとchrome対応　2D
       円の原点 左から50%（x軸）、上からの距離48%（y軸）*/
@@ -84,4 +84,69 @@
       -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
   }
+}
+
+/* 泡のアニメーション */
+.item {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background: #bbf7d0;
+  box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.4) inset;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.4) inset;
+  position: relative;
+}
+.item:after {
+  content: "";
+  display: block;
+  width: 20%;
+  height: 20%;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  right: 15%;
+  top: 15%;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  transform: rotateZ(45deg) scaleY(0.8);
+  -webkit-transform: rotateZ(45deg) scaleY(0.8);
+}
+
+/*animation Setting*/
+@keyframes shake {
+  0% { transform: translateX(10px); }
+  50% { transform: translateX(-10px); }
+  100% { transform: translateX(10px); }
+}
+@-webkit-keyframes shake {
+  0% { -webkit-transform: translateX(10px); }
+  50% { -webkit-transform: translateX(-10px); }
+  100% { -webkit-transform: translateX(10px); }
+}
+
+/*animation Play*/
+.shake {
+  animation: shake 2s ease 0s infinite normal;
+  -webkit-animation: shake 2s ease 0s infinite normal;
+}
+
+/*animation Setting*/
+@keyframes move {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-1000px); opacity: 0; }
+}
+@-webkit-keyframes move {
+  0% { -webkit-transform: translateY(0px); }
+  100% { -webkit-transform: translateY(-1000px); opacity: 0; }
+}
+
+/*animation Play*/
+.move {
+  animation: move 5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s infinite normal;
+  -webkit-animation: move 5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s infinite normal;
+
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
 }

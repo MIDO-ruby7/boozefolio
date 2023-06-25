@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="mytheme">
+<html>
   <head>
     <title>Boozefolio</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -22,10 +22,9 @@
   </head>
 
   <body>
-    <div class="field">
-      <div class="item"></div>
+    <div class="h-screen">
       <div class="box">
-        <div class="m-10">
+        <div class="mb-10">
           <h2 class="text-lx mb-10"><%= t('defaults.site_title') %></h1>
           <script src="https://accounts.google.com/gsi/client" async defer></script>
           <div id="g_id_onload"
@@ -42,10 +41,10 @@
               data-logo_alignment="left">
           </div>
         </div>
-      </div>
-      <div class="wave -one"></div><!--二つのクラスを持つ波-->
-      <div class="wave -two"></div><!--二つのクラスを持つ波-->
-      <div class="wave -three"></div><!--二つのクラスを持つ波-->
+        <div class="wave -one"></div><!--二つのクラスを持つ波-->
+        <div class="wave -two"></div><!--二つのクラスを持つ波-->
+        <div class="wave -three"></div><!--二つのクラスを持つ波-->
+        <div class="move"><div class="item shake"></div></div>
       </div>
     </div>
   </body>
