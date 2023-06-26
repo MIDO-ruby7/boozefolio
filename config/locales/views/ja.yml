@@ -1,9 +1,13 @@
 ja:
   defaults:
-    app_name: 'Boozefolio'
+    app_name: 'Boozepedia'
     catch_copy1: 'お酒と出逢う投稿型百科事典'
-    catch_copy2: 'あなたのお気に入りのお酒を投稿しよう'
-    site_title: 'Boozefolio|お酒と出逢う投稿型図鑑アプリ'
+    catch_copy2: 'コンビニで、旅先で、飲み会で。'
+    catch_copy3: 'あなたが初めて出逢ったお酒を投稿しよう。'
+    catch_copy4: '新たなお酒は、百科事典の1ページに。'
+    catch_copy5: 'あなたの出逢いが、誰かの出逢いに。'
+    site_title: 'Boozefolio|お酒と出逢う投稿型百科事典'
+    cta: '使ってみる'
     site_url: 'http://boozefolio.herokuapp.com'
     home: 'HOME'
     menu1: 'MENU-1'

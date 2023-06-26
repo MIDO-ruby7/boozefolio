@@ -14,7 +14,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        noto: ['Noto Serif JP', 'serif'],
+        noto: ['Noto Sans JP', 'sans-serif'],
         zen: ['Zen Maru Gothic', 'sans-serif'],
       },
     },
