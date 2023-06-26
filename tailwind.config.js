@@ -10,6 +10,16 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('daisyui'),
   ],
+
+  theme: {
+    extend: {
+      fontFamily: {
+        noto: ['Noto Serif JP', 'serif'],
+        zen: ['Zen Maru Gothic', 'sans-serif'],
+      },
+    },
+  },
+
   daisyui: {
     themes: [
       {

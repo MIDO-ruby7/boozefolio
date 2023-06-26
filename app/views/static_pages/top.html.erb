@@ -10,6 +10,10 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <%= stylesheet_link_tag 'index' %>
     <%= stylesheet_link_tag 'bubble' %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZYBBZHS1W"></script>
@@ -23,10 +27,11 @@
   </head>
 
   <body>
-    <div class="h-screen">
+    <div class="h-screen prose">
       <div class="box">
         <div class="mb-10">
-          <h2 class="text-lx mb-10"><%= t('defaults.site_title') %></h1>
+          <h2 class="text-lx mb-10 font-zen"><%= t('defaults.app_name') %></h2>
+          <h3 class="font-zen"><%= t('defaults.catch_copy1') %></h3>
           <script src="https://accounts.google.com/gsi/client" async defer></script>
           <div id="g_id_onload"
               data-client_id="<%= ENV['GOOGLE_CLIENT_ID'] %>"
