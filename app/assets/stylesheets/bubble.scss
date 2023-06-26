@@ -8,6 +8,7 @@
   position: relative;
   background: #c7d2fe;
 }
+
 .item:after {
   content: "";
   display: block;
@@ -36,28 +37,54 @@
   100% { -webkit-transform: translateX(10px); }
 }
 
+.shake {
+  animation: shake 2s ease 0s infinite normal;
+  -webkit-animation: shake 2s ease 0s infinite normal;
+}
+
+/*animation Setting*/
+@keyframes move {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-1000px); opacity: 0; }
+}
+@-webkit-keyframes move {
+  0% { -webkit-transform: translateY(0px); }
+  100% { -webkit-transform: translateY(-1000px); opacity: 0; }
+}
+
+/*animation Play*/
+.move {
+  animation: move 5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s infinite normal;
+  -webkit-animation: move 5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s infinite normal;
+
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+}
+
+
 /*animation Play*/
 @for $i from 0 through 50 {
   $time: $i*0.2;
   $scale: $i*0.1;
 
   .shake#{$i * 1} {
-      animation: shake ($time+2)+s ease 0s infinite normal;
-      -webkit-animation: shake ($time+2)+s ease 0s infinite normal;
+    animation: shake ($time+2)+s ease 0s infinite normal;
+    -webkit-animation: shake ($time+2)+s ease 0s infinite normal;
   }
   .move#{$i * 1}  {
-      $b_ease: cubic-bezier(0.47, 0, 0.745, 0.715);
-      animation: move ($time+5)+s $b_ease $time+s infinite normal;
-      -webkit-animation: move ($time+5)+s $b_ease $time+s infinite normal;
+    $b_ease: cubic-bezier(0.47, 0, 0.745, 0.715);
+    animation: move ($time+5)+s $b_ease $time+s infinite normal;
+    -webkit-animation: move ($time+5)+s $b_ease $time+s infinite normal;
 
-      position: absolute;
-      bottom: -10%;
+    position: absolute;
+    bottom: -10%;
   }
   .pos#{$i * 1}  {
-      left: percentage($i*2/100);
+    left: percentage($i*2/100);
   }
   .scale#{$i * 1}  {
-      transform: scale($scale);
-      -webkit-transform: scale($scale);
+    transform: scale($scale);
+    -webkit-transform: scale($scale);
   }
 }
