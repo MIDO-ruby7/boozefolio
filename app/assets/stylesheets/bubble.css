@@ -42,6 +42,16 @@
   -webkit-animation: shake 2s ease 0s infinite normal;
 }
 
+.shake1 {
+  animation: shake 2s ease 0s infinite normal;
+  -webkit-animation: shake 2s ease 0s infinite normal;
+}
+
+.shake2 {
+  animation: shake 2s ease 0s infinite normal;
+  -webkit-animation: shake 2s ease 0s infinite normal;
+}
+
 /*animation Setting*/
 @keyframes move {
   0% { transform: translateY(0px); }
@@ -60,4 +70,22 @@
   position: absolute;
   bottom: -10%;
   left: 50%;
+}
+
+.move1 {
+  animation: move 5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s infinite normal;
+  -webkit-animation: move 5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s infinite normal;
+
+  position: absolute;
+  bottom: -20%;
+  left: 60%;
+}
+
+.move2 {
+  animation: move 5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s infinite normal;
+  -webkit-animation: move 5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s infinite normal;
+
+  position: absolute;
+  bottom: -30%;
+  left: 70%;
 }
