@@ -2,4 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './top'
+@import './top.css';
+@import './bubble.css';
