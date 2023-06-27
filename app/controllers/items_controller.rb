@@ -17,7 +17,7 @@ class ItemsController < ApplicationController
     @item = current_user.items.build(item_params)
     if @item_name.new_record?
       if @item.save
-        redirect_to items_path, notice: t('.new_item')
+        redirect_to new_page_item_path, notice: t('.new_item')
       else
         flash.now[:alert] = t('.fail')
         render :new, status: :unprocessable_entity
@@ -42,6 +42,10 @@ class ItemsController < ApplicationController
   def destroy
     @item.destroy
     redirect_to items_path, notice: t('.success'), status: :see_other
+  end
+
+  def new_page
+    render layout: false
   end
 
   private

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boozefolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= stylesheet_link_tag 'wave' %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZYBBZHS1W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5ZYBBZHS1W');
+    </script>
+  </head>
+
+  <body>
+    <div class="h-full w-full flex justify-center">
+      <div class="boxNew">
+        <div class="waveNew -one bg-cyan-500 shadow-lg shadow-cyan-500/50"></div><!--二つのクラスを持つ波-->
+        <div class="waveNew -two"></div><!--二つのクラスを持つ波-->
+        <div class="waveNew -three"></div><!--二つのクラスを持つ波-->
+      </div>
+    </div>
+  </body>
+</html>
