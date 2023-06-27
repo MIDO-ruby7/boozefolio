@@ -1,6 +1,4 @@
 .boxNew {
-  width: 100; /*外枠のサイズ*/
-  height: 800px; /*外枠のサイズ*/
   background: #fbfcee; /*背景、白っぽいところ*/
   position: relative; /*基準にする*/
   display: flex;
