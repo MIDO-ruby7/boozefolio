@@ -86,5 +86,3 @@ gem 'rails-i18n'
 
 # debug
 gem 'pry-rails'
-
-gem "dartsass-rails", "~> 0.5.0"
