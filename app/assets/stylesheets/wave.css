@@ -48,19 +48,6 @@
   background: yellow; /*背景色*/
 }
 
-/* .box:after { /*.boxの直後に指定する疑似要素*/
-  content: ''; /*文字列は挿入しない*/
-  display: block; /*widthなどを指定できるようにする*/
-  left: 0; /*親要素にぴったり重なる*/
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, #34d399, rgba(221, 238, 255, 0) 80%, rgba(255, 255, 255, 0.5)); /*背景のピンクグラデーション*/
-  z-index: 11; /*他要素（円）よりも上へ*/
-  -webkit-transform: translate3d(0, 0, 0);/*.box同様に3Dで原点指定*/
-  transform: translate3d(0, 0, 0);
-} */
-
 @-webkit-keyframes drift {
 /*macのsafari、chrome　円の回転のアニメーション設定*/
   from { /*startの配置*/

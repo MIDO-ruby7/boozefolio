@@ -17,7 +17,8 @@ class ItemsController < ApplicationController
     @item = current_user.items.build(item_params)
     if @item_name.new_record?
       if @item.save
-        redirect_to new_page_item_path, notice: t('.new_item')
+        session[:new_item_id] = @item.id
+        redirect_to new_page_item_path(@item)
       else
         flash.now[:alert] = t('.fail')
         render :new, status: :unprocessable_entity
@@ -45,6 +46,8 @@ class ItemsController < ApplicationController
   end
 
   def new_page
+    @new_item = Item.find(session[:new_item_id]) if session[:new_item_id]
+    session[:new_item_id] = nil # セッションから削除
     render layout: false
   end
 
