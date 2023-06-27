@@ -1,17 +1,78 @@
-<%= image_tag "logo.png", alt: "BoozeFolio", class:"w-28 h-28" %>
-<h1 class="text-red-500"><%= t('defaults.site_title') %></h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boozefolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<script src="https://accounts.google.com/gsi/client" async defer></script>
-<div id="g_id_onload"
-      data-client_id="<%= ENV['GOOGLE_CLIENT_ID'] %>"
-      data-login_uri="http://localhost:3000/google_login_api/callback"
-      data-auto_prompt="false">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= stylesheet_link_tag 'top' %>
+    <%= stylesheet_link_tag 'bubble' %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZYBBZHS1W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5ZYBBZHS1W');
+    </script>
+  </head>
+
+  <body>
+    <div class="h-screen w-screen flex">
+      <div class="box">
+        <div class="mb-10">
+          <h2 class="m-4 text-teal-500"><%= t('defaults.app_name') %></h2>
+          <h3 class="font-zen flex justify-center text-stone-800 mt-3"><%= t('defaults.catch_copy1') %></h3>
+        <div class="m-8  font-noto text-stone-600 text-sm">
+          <div class="mb-2">
+            <p><%= t('defaults.catch_copy2') %></p>
+          </div>
+          <div class="mb-2">
+            <p><%= t('defaults.catch_copy3') %></p>
+          </div>
+          <div class="mb-2">
+            <p><%= t('defaults.catch_copy4') %></p>
+          </div>
+          <div class="mb-2">
+            <p><%= t('defaults.catch_copy5') %></p>
+          </div>
+        </div>
+        </div>
+        <div class="mt-44">
+          <p class="font-mono text-teal-500 flex justify-center"><%= t('defaults.cta') %>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 animate-bounce">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </p>
+          <script src="https://accounts.google.com/gsi/client" async defer></script>
+          <div id="g_id_onload"
+              data-client_id="<%= ENV['GOOGLE_CLIENT_ID'] %>"
+              data-login_uri="http://localhost:3000/google_login_api/callback"
+              data-auto_prompt="false">
+          </div>
+          <div class="g_id_signin flex justify-center bg-yellow-50"
+              data-type="standard"
+              data-size="large"
+              data-theme="outline"
+              data-text="sign_in_with"
+              data-shape="rectangular"
+              data-logo_alignment="left">
+          </div>
+        </div>
+        <div class="wave -one"></div><!--二つのクラスを持つ波-->
+        <div class="wave -two"></div><!--二つのクラスを持つ波-->
+        <div class="wave -three"></div><!--二つのクラスを持つ波-->
+        <div class="move"><div class="item shake"></div></div>
       </div>
-      <div class="g_id_signin"
-      data-type="standard"
-      data-size="large"
-      data-theme="outline"
-      data-text="sign_in_with"
-      data-shape="rectangular"
-      data-logo_alignment="left">
-</div>
+    </div>
+  </body>
+</html>

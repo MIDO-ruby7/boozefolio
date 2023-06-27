@@ -3,12 +3,23 @@ module.exports = {
     './app/views/**/*.html.erb',
     './app/helpers/**/*.rb',
     './app/assets/stylesheets/**/*.css',
+    './app/assets/stylesheets/**/*.sass',
     './app/javascript/**/*.js'
   ],
   plugins: [
     require('@tailwindcss/typography'),
     require('daisyui'),
   ],
+
+  theme: {
+    extend: {
+      fontFamily: {
+        noto: ['Noto Sans JP', 'sans-serif'],
+        zen: ['Zen Maru Gothic', 'sans-serif'],
+      },
+    },
+  },
+
   daisyui: {
     themes: [
       {
