@@ -1,6 +1,6 @@
 .box {
   width: 100%; /*外枠のサイズ*/
-  height: 800px; /*外枠のサイズ*/
+  height: 100%; /*外枠のサイズ*/
   background: #fbfcee; /*背景、白っぽいところ*/
   position: relative; /*基準にする*/
   overflow: hidden; /*この枠を超えた部分は隠す*/
@@ -18,10 +18,10 @@
       親要素のサイズを大きくすると（600pxとか）位置が確認しやすい*/
   left: 10%; /*縦軸から見てセンターに波（を表す円）を配置*/
   background: #fde047; /*青い部分、波（を表す円）の色*/
-  width: 600px; /*波（を表す円）のサイズ*/
-  height: 600px; /*同上*/
-  margin-left: -100px; /*波（を表す円）の位置を縦軸から見てセンターに配置*/
-  margin-top: 100px; /*波（を表す円）の位置を上半分に配置*/
+  width: 1000px; /*波（を表す円）のサイズ*/
+  height: 1000px; /*同上*/
+  margin-left: -150px; /*波（を表す円）の位置を縦軸から見てセンターに配置*/
+  margin-top: 150px; /*波（を表す円）の位置を上半分に配置*/
   -webkit-transform-origin: 50% 48%;
     /*macのsafariとchrome対応　2D
       円の原点 左から50%（x軸）、上からの距離48%（y軸）*/
@@ -86,3 +86,6 @@
   }
 }
 
+.g_id_signin {
+  z-index: 12;
+}

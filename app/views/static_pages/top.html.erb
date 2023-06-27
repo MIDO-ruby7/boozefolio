@@ -27,43 +27,32 @@
   </head>
 
   <body>
-    <div class="h-screen prose">
+    <div class="h-screen w-screen flex">
       <div class="box">
         <div class="mb-10">
-          <h2 class="m-4"><%= t('defaults.app_name') %></h2>
-          <h3 class="font-zen flex justify-center"><%= t('defaults.catch_copy1') %></h3>
-          <script src="https://accounts.google.com/gsi/client" async defer></script>
-          <div id="g_id_onload"
-              data-client_id="<%= ENV['GOOGLE_CLIENT_ID'] %>"
-              data-login_uri="http://localhost:3000/google_login_api/callback"
-              data-auto_prompt="false">
+          <h2 class="m-4 text-teal-500"><%= t('defaults.app_name') %></h2>
+          <h3 class="font-zen flex justify-center text-stone-800 mt-3"><%= t('defaults.catch_copy1') %></h3>
+        <div class="m-8  font-noto text-stone-600 text-sm">
+          <div class="mb-2">
+            <p><%= t('defaults.catch_copy2') %></p>
           </div>
-          <div class="g_id_signin flex justify-center bg-yellow-50"
-              data-type="standard"
-              data-size="large"
-              data-theme="outline"
-              data-text="sign_in_with"
-              data-shape="rectangular"
-              data-logo_alignment="left">
+          <div class="mb-2">
+            <p><%= t('defaults.catch_copy3') %></p>
+          </div>
+          <div class="mb-2">
+            <p><%= t('defaults.catch_copy4') %></p>
+          </div>
+          <div class="mb-2">
+            <p><%= t('defaults.catch_copy5') %></p>
           </div>
         </div>
-        <div class="font-noto">
-          <h4 class="m-4 font-noto text-stone-600"><%= t('defaults.catch_copy2') %></h4>
         </div>
-        <div class="font-noto">
-          <h4 class="m-4 font-noto text-stone-600"><%= t('defaults.catch_copy3') %></h4>
-        </div>
-        <div class="font-noto">
-          <h4 class="m-4 font-noto text-stone-600"><%= t('defaults.catch_copy4') %></h4>
-        </div>
-        <div class="font-noto">
-          <h4 class="m-4 font-noto text-stone-600"><%= t('defaults.catch_copy5') %></h4>
-        </div>
-        <div class="font-noto">
-
-        </div>
-        <div class="mt-10">
-          <p class="font-mono text-teal-500 flex justify-center"><%= t('defaults.cta') %></p>
+        <div class="mt-44">
+          <p class="font-mono text-teal-500 flex justify-center"><%= t('defaults.cta') %>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 animate-bounce">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </p>
           <script src="https://accounts.google.com/gsi/client" async defer></script>
           <div id="g_id_onload"
               data-client_id="<%= ENV['GOOGLE_CLIENT_ID'] %>"
