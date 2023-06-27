@@ -1,81 +1,55 @@
 .box {
-  width: 100%; /*外枠のサイズ*/
-  height: 100%; /*外枠のサイズ*/
-  background: #fbfcee; /*背景、白っぽいところ*/
-  position: relative; /*基準にする*/
-  overflow: hidden; /*この枠を超えた部分は隠す*/
+  width: 100%;
+  height: 100%;
+  background: #fbfcee;
+  position: relative;
+  overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
-    /*macのsafariとchrome対応、要素を3D空間内で再配置　原点　がたつき補正？*/
   transform: translate3d(0, 0, 0);
-    /*要素を3D空間内で再配置　原点　がたつきの補正？*/
 }
 
-.wave { /*三つの波すべてに適応する条件、oneはこれのみ適応*/
-  opacity: .4; /*少し透明にする（1で不透明：初期値）*/
-  position: absolute; /*.boxを基準として絶対配置する*/
+.wave {
+  opacity: .4;
+  position: absolute;
   top: 60%;
-    /*波（を表す円）の位置調整
-      親要素のサイズを大きくすると（600pxとか）位置が確認しやすい*/
-  left: 10%; /*縦軸から見てセンターに波（を表す円）を配置*/
-  background: #fde047; /*青い部分、波（を表す円）の色*/
-  width: 1000px; /*波（を表す円）のサイズ*/
-  height: 1000px; /*同上*/
-  margin-left: -150px; /*波（を表す円）の位置を縦軸から見てセンターに配置*/
-  margin-top: 150px; /*波（を表す円）の位置を上半分に配置*/
+  left: 10%;
+  background: #fde047;
+  width: 1000px;
+  height: 1000px;
+  margin-left: -150px;
+  margin-top: 150px;
   -webkit-transform-origin: 50% 48%;
-    /*macのsafariとchrome対応　2D
-      円の原点 左から50%（x軸）、上からの距離48%（y軸）*/
   transform-origin: 50% 48%;
-    /*2D 円の原点 左から50%（x軸）、上からの距離48%（y軸）*/
-  border-radius: 45%; /*ちょっといびつな円にする（100%にすると正円）*/
+  border-radius: 45%;
   -webkit-animation: drift 3000ms infinite linear;
-    /*safariとchrome対応 キーフレームアニメーション
-回転　スピード　無限ループ　開始から終了まで一定に変化させる*/
   animation: drift 3000ms infinite linear;
 }
 
 
-.wave.-three { /*三つ目の円の設定*/
+.wave.-three {
   -webkit-animation: drift 5000ms infinite linear;
-    /*.waveよりも回転速度を上げてずらす*/
   animation: drift 5000ms infinite linear;
 }
 
 .wave.-two {
   -webkit-animation: drift 7000ms infinite linear;
-    /*.wave.-threeよりも回転速度を上げてずらす*/
   animation: drift 7000ms infinite linear;
-  opacity: .1; /*他の二つの円よりもより透明に*/
-  background: yellow; /*背景色*/
+  opacity: .1;
+  background: yellow;
 }
 
-/* .box:after { /*.boxの直後に指定する疑似要素*/
-  content: ''; /*文字列は挿入しない*/
-  display: block; /*widthなどを指定できるようにする*/
-  left: 0; /*親要素にぴったり重なる*/
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, #34d399, rgba(221, 238, 255, 0) 80%, rgba(255, 255, 255, 0.5)); /*背景のピンクグラデーション*/
-  z-index: 11; /*他要素（円）よりも上へ*/
-  -webkit-transform: translate3d(0, 0, 0);/*.box同様に3Dで原点指定*/
-  transform: translate3d(0, 0, 0);
-} */
-
 @-webkit-keyframes drift {
-/*macのsafari、chrome　円の回転のアニメーション設定*/
-  from { /*startの配置*/
+  from {
       -webkit-transform: rotate(0deg);
       transform: rotate(0deg);
   }
-  from { /*360度回転*/
+  from {
       -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
   }
 }
 
 @keyframes drift {
- /円の回転のアニメーション設定*/
   from {
       -webkit-transform: rotate(0deg);
       transform: rotate(0deg);
