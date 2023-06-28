@@ -62,29 +62,3 @@
   left: 50%;
 }
 
-
-/*animation Play*/
-@for $i from 0 through 50 {
-  $time: $i*0.2;
-  $scale: $i*0.1;
-
-  .shake#{$i * 1} {
-    animation: shake ($time+2)+s ease 0s infinite normal;
-    -webkit-animation: shake ($time+2)+s ease 0s infinite normal;
-  }
-  .move#{$i * 1}  {
-    $b_ease: cubic-bezier(0.47, 0, 0.745, 0.715);
-    animation: move ($time+5)+s $b_ease $time+s infinite normal;
-    -webkit-animation: move ($time+5)+s $b_ease $time+s infinite normal;
-
-    position: absolute;
-    bottom: -10%;
-  }
-  .pos#{$i * 1}  {
-    left: percentage($i*2/100);
-  }
-  .scale#{$i * 1}  {
-    transform: scale($scale);
-    -webkit-transform: scale($scale);
-  }
-}
