@@ -5,8 +5,9 @@
   border-radius: 100%;
   box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.6) inset;
   -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.6) inset;
-  position: relative;
+  position: absolute;
   background: #c7d2fe;
+  z-index: 999;
 }
 
 .itemNew:after {
@@ -22,6 +23,7 @@
   -webkit-filter: blur(2px);
   transform: rotateZ(45deg) scaleY(0.8);
   -webkit-transform: rotateZ(45deg) scaleY(0.8);
+  z-index: 100;
 }
 
 /*animation Setting*/
@@ -39,6 +41,7 @@
 .shakeNew {
   animation: shake 2s ease 0s infinite normal;
   -webkit-animation: shake 2s ease 0s infinite normal;
+  z-index: 100;
 }
 
 /*animation Setting*/
@@ -58,4 +61,5 @@
 
   position: absolute;
   bottom: -10%;
+  z-index: 100;
 }

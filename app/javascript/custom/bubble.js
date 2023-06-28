@@ -1,4 +1,4 @@
-var items = 30; // 気泡の個数
+var items = 100; // 気泡の個数
 
 // 気泡を生成して要素に追加
 for (var i = 0; i <= items; i++) {
@@ -26,14 +26,14 @@ jQuery(function ($) {
 
     // shakeクラスの要素にアニメーションのスタイルを設定
     $('.shakeNew' + i).css({
-      animation: 'shakeNew ' + (time + 2) + 's ease 0s infinite normal',
-      '-webkit-animation': 'shakeNew ' + (time + 2) + 's ease 0s infinite normal',
+      animation: 'shakeNew ' + (time + 0.2) + 's ease 0s infinite normal',
+      '-webkit-animation': 'shakeNew ' + (time + 0.2) + 's ease 0s infinite normal',
     });
 
     // moveクラスの要素にアニメーションのスタイルと位置を設定
     $('.moveNew' + i).css({
-      animation: 'moveNew ' + (time + 5) + 's cubic-bezier(0.47, 0, 0.745, 0.715) ' + time + 's infinite normal',
-      '-webkit-animation': 'moveNew ' + (time + 5) + 's cubic-bezier(0.47, 0, 0.745, 0.715) ' + time + 's infinite normal',
+      animation: 'moveNew ' + (time + 0.5) + 's cubic-bezier(0.47, 0, 0.745, 0.715) ' + time + 's infinite normal',
+      '-webkit-animation': 'moveNew ' + (time + 0.5) + 's cubic-bezier(0.47, 0, 0.745, 0.715) ' + time + 's infinite normal',
       position: 'absolute',
       bottom: '-10%',
       left: (Math.random() * 100) + '%', // ランダムな左位置を設定
