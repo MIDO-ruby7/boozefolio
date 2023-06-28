@@ -22,11 +22,11 @@
   </head>
 
   <body>
-    <container class="container text-stone-600 prose h-full trix-content">
+    <container class="container prose h-screen w-screen">
       <%= render 'shared/navbar' %>
       <%= render 'shared/flash_message' %>
       <%= yield %>
-
+      <%= render 'shared/footer' %>
     </container>
   </body>
 </html>

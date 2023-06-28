@@ -33,4 +33,4 @@ ja:
     prompt:
       models:
         item:
-          category_id: "選択すると初期値が入ります"
+          category_id: "選択する"
