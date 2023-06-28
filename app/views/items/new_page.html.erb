@@ -30,7 +30,7 @@
       <div class="boxNew h-screen w-screen">
         <% if @new_item %>
           <% if @new_item.photos.present? %>
-            <%= image_tag @new_item.photos.first.image.url, class:"w-50 h-100 flex absolute justify-center block rounded-lg z-50 bg-cyan-500 shadow-lg shadow-cyan-500/50 z-50" %>
+            <%= image_tag @new_item.photos.first.image.url, class:"w-50 h-100 flex absolute justify-center block rounded-lg z-50 bg-cyan-500 shadow-lg shadow-cyan-500/50 z-40" %>
           <% else %>
             <%= @new_item.name %>
           <% end %>
@@ -38,8 +38,10 @@
         <div class="waveNew -one bg-cyan-500 shadow-lg shadow-cyan-500/50 z-30"></div><!--二つのクラスを持つ波-->
         <div class="waveNew -two z-20"></div><!--二つのクラスを持つ波-->
         <div class="waveNew -three z-10"></div><!--二つのクラスを持つ波-->
-        <%= link_to '戻る', items_path, class: 'button z-40', id: 'next-button' %>
-        <%= link_to '次のお酒を登録する', new_item_path, class: 'button z-40', id: 'next-button' %>
+        <div class="z-40 absolute bottom-10 w-full flex justify-center">
+          <%= link_to t('.index'), items_path, class: 'btn m-2 z-40', id: 'next-button' %>
+          <%= link_to t('.new'), new_item_path, class: 'btn btn-success m-2 z-40', id: 'next-button' %>
+        </div>
       </div>
     </div>
     <script>
