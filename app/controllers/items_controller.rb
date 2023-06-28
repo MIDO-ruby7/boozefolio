@@ -55,7 +55,7 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(
-      :name, :size, :flavor, :maker, :alcohol_content, :country_of_origin, :region, :link, :note, :asin, :category_id,
+      :name, :size, :flavor, :maker, :alcohol_content, :country_of_origin, :region, :link, :note, :asin, :category_id, :content,
       photos_attributes: [:image, :id, :item_id, :image_cache]
     )
   end

@@ -9,6 +9,8 @@ class Item < ApplicationRecord
 
   mount_uploader :image, BoozeImageUploader
 
+  has_rich_text :content
+
   def process_image(image_data)
     photos.create(image: image_data)
   end

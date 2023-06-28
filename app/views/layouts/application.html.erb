@@ -7,6 +7,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "actiontext", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 
     <!-- Google tag (gtag.js) -->
@@ -21,11 +22,11 @@
   </head>
 
   <body>
-    <container class="container text-stone-600 prose h-full">
+    <container class="container text-stone-600 prose h-full trix-content">
       <%= render 'shared/navbar' %>
       <%= render 'shared/flash_message' %>
       <%= yield %>
-      <%= render 'shared/footer' %>
+
     </container>
   </body>
 </html>

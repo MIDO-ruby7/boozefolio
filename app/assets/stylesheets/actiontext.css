@@ -29,3 +29,8 @@
   padding: 0 !important;
   max-width: 100% !important;
 }
+
+trix-editor {
+  border: 2px outset #bbf7d0;
+  margin: 10px 10px 10px 10px;
+}

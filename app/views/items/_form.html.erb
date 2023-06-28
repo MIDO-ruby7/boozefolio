@@ -18,15 +18,24 @@
       </div>
       <div>
         <%= image_tag item.image.url, id: 'preview', size: '200x100' %>
+      </div>
     <% end %>
-    <h4 class="text-stone-600"><div class="badge badge-ghost text-stone-400">任意</div><%= f.label :flavor %></h4>
-    <%= f.text_field :flavor, class: "input input-bordered input-success w-full max-w-xs" %>
-    <h4 class="text-stone-600"><div class="badge badge-ghost text-stone-400">任意</div><%= f.label :maker %></h4>
-    <%= f.text_field :maker, class: "input input-bordered input-success w-full max-w-xs" %>
-    <h4 class="text-stone-600"><div class="badge badge-ghost text-stone-400">任意</div><%= f.label :country_of_origin %></h4>
-    <%= f.text_field :country_of_origin, class: "input input-bordered input-success w-full max-w-xs" %>
-    <h4 class="text-stone-600"><div class="badge badge-ghost text-stone-400">任意</div><%= f.label :note %></h4>
-    <%= f.text_area :note, rows:"5", class: "textarea textarea-success w-11/12" %>
+    <div class="mb-10">
+      <h4 class="text-stone-600"><div class="badge badge-ghost text-stone-400">任意</div><%= f.label :flavor %></h4>
+      <%= f.text_field :flavor, class: "input input-bordered input-success w-full max-w-xs" %>
+    </div>
+    <div class="mb-10">
+      <h4 class="text-stone-600"><div class="badge badge-ghost text-stone-400">任意</div><%= f.label :maker %></h4>
+      <%= f.text_field :maker, class: "input input-bordered input-success w-full max-w-xs" %>
+    </div>
+    <div class="mb-10">
+      <h4 class="text-stone-600"><div class="badge badge-ghost text-stone-400">任意</div><%= f.label :country_of_origin %></h4>
+      <%= f.text_field :country_of_origin, class: "input input-bordered input-success w-full max-w-xs" %>
+    </div>
+    <div class="mb-10">
+      <h4 class="text-stone-600"><div class="badge badge-ghost text-stone-400">任意</div><%= f.label :content %></h4>
+      <%= f.rich_text_area :content, rows:"10", class: "h-20" %>
+    </div>
   </div>
-  <%= f.submit '投稿', class: 'btn btn-success mt-2 w-24' %>
+  <%= f.submit '投稿', class: 'btn btn-success mt-4 w-24' %>
 <% end %>
