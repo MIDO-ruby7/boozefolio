@@ -8,7 +8,6 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-    <%= stylesheet_link_tag 'wave' %>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
@@ -26,8 +25,8 @@
   </head>
 
   <body>
-    <div class="h-full w-full flex justify-center z-0">
-      <div class="boxNew h-screen w-screen">
+    <div class="h-screen w-screen flex justify-center z-0">
+      <div class="boxNew">
         <% if @new_item %>
           <% if @new_item.photos.present? %>
             <%= image_tag @new_item.photos.first.image.url, class:"w-50 h-100 flex absolute justify-center block rounded-lg z-50 bg-cyan-500 shadow-lg shadow-cyan-500/50 z-40" %>
@@ -35,13 +34,14 @@
             <%= @new_item.name %>
           <% end %>
         <% end %>
-        <div class="waveNew -one bg-cyan-500 shadow-lg shadow-cyan-500/50 z-30"></div><!--二つのクラスを持つ波-->
+        <div class="waveNew -one z-30"></div><!--二つのクラスを持つ波-->
         <div class="waveNew -two z-20"></div><!--二つのクラスを持つ波-->
         <div class="waveNew -three z-10"></div><!--二つのクラスを持つ波-->
         <div class="z-40 absolute bottom-10 w-full flex justify-center">
           <%= link_to t('.index'), items_path, class: 'btn m-2 z-40', id: 'next-button' %>
           <%= link_to t('.new'), new_item_path, class: 'btn btn-success m-2 z-40', id: 'next-button' %>
         </div>
+        <div class="moveNew"><div class="itemNew shakeNew"></div></div>
       </div>
     </div>
     <script>
