@@ -56,3 +56,9 @@ ja:
       fail: '更新できませんでした'
     destroy:
       success: '削除しました'
+    new_page:
+      message1: 'BoozePediaに新たな1ページが追加されました!'
+      message2: 'あなたの出逢いが、誰かの出逢いに。'
+      message3: 'Thank you'
+      index: '戻る'
+      new: '次のお酒を登録する'

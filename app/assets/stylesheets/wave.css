@@ -1,0 +1,63 @@
+.boxNew {
+  width: 100%;
+  height: 100%;
+  background: #fbfcee;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.waveNew {
+  opacity: .4;
+  position: absolute;
+  justify-content: center;
+  top: auto;
+  background: #fde047;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  -webkit-transform-origin: 50% 48%;
+  transform-origin: 50% 48%;
+  border-radius: 45%;
+  -webkit-animation: drift 3000ms infinite linear;
+  animation: drift 3000ms infinite linear;
+}
+
+
+.waveNew.-three {
+  -webkit-animation: drift 5000ms infinite linear;
+  animation: drift 5000ms infinite linear;
+}
+
+.waveNew.-two {
+  -webkit-animation: drift 7000ms infinite linear;
+  animation: drift 7000ms infinite linear;
+  opacity: .1;
+  background: yellow;
+}
+
+@-webkit-keyframes drift {
+  from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  from {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes drift {
+  from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  from {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}

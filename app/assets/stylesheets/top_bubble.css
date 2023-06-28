@@ -1,16 +1,15 @@
-.itemNew {
+.item {
   display: block;
   width: 18px;
   height: 18px;
   border-radius: 100%;
   box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.6) inset;
   -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.6) inset;
-  position: absolute;
+  position: relative;
   background: #c7d2fe;
-  z-index: 999;
 }
 
-.itemNew:after {
+.item:after {
   content: "";
   display: block;
   width: 20%;
@@ -18,48 +17,48 @@
   border-radius: 100%;
   background: rgba(255, 255, 255, 0.8);
   position: absolute;
+  right: 15%;
   top: 15%;
   filter: blur(2px);
   -webkit-filter: blur(2px);
   transform: rotateZ(45deg) scaleY(0.8);
   -webkit-transform: rotateZ(45deg) scaleY(0.8);
-  z-index: 100;
 }
 
 /*animation Setting*/
-@keyframes shakeNew {
+@keyframes shake {
   0% { transform: translateX(10px); }
   50% { transform: translateX(-10px); }
   100% { transform: translateX(10px); }
 }
-@-webkit-keyframes shakeNew {
+@-webkit-keyframes shake {
   0% { -webkit-transform: translateX(10px); }
   50% { -webkit-transform: translateX(-10px); }
   100% { -webkit-transform: translateX(10px); }
 }
 
-.shakeNew {
+.shake {
   animation: shake 2s ease 0s infinite normal;
   -webkit-animation: shake 2s ease 0s infinite normal;
-  z-index: 100;
 }
 
 /*animation Setting*/
-@keyframes moveNew {
+@keyframes move {
   0% { transform: translateY(0px); }
   100% { transform: translateY(-1000px); opacity: 0; }
 }
-@-webkit-keyframes moveNew {
+@-webkit-keyframes move {
   0% { -webkit-transform: translateY(0px); }
   100% { -webkit-transform: translateY(-1000px); opacity: 0; }
 }
 
 /*animation Play*/
-.moveNew {
-  animation: moveNew 5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s infinite normal;
-  -webkit-animation: moveNew 5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s infinite normal;
+.move {
+  animation: move 5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s infinite normal;
+  -webkit-animation: move 5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s infinite normal;
 
   position: absolute;
   bottom: -10%;
-  z-index: 100;
+  left: 50%;
 }
+

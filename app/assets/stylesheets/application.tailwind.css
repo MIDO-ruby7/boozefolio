@@ -1,4 +1,6 @@
 @import './top.css';
+@import './top_bubble.css';
+@import './wave.css';
 @import './bubble.css';
 
 @tailwind base;
