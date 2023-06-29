@@ -45,6 +45,8 @@ ja:
     new:
       title: '図鑑登録'
       file: 'ファイルを選択'
+      any: '任意'
+      required: '必須'
     create:
       success: '登録しました'
       new_item: '新種のお酒です！登録ありがうございます！'

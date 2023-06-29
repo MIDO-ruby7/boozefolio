@@ -9,6 +9,8 @@ class Item < ApplicationRecord
 
   mount_uploader :image, BoozeImageUploader
 
+  has_rich_text :content
+
   enum country_of_origin: {
     ar: 32, au: 36, at: 40, be: 56, bz: 84,
     mm:104, ca: 124, lk: 144, cn: 156, tw:158, co: 170, hr: 191, cu: 192,
