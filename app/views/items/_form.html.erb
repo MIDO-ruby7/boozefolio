@@ -6,8 +6,12 @@
     <h4 class="text-stone-600"><%= f.label :name %></h4>
     <%= f.text_field :name, class: "input input-bordered input-success w-full max-w-xs" %>
     <h4 class="text-stone-600"><%= f.label :alcohol_content %></h4>
-    <%= f.range_field :alcohol_content, in: 1.0..100.0, step: 0.5, class: "range range-secondary range-xs", id: "item_alcohol_content", data: { value_display: "#value-display" } %>
-    <div id="value-display" class="badge badge-success w-10"></div>
+    <div class="range-slider-input">
+      <%= f.range_field :alcohol_content, in: 1.0..100.0, step: 0.5, class: "range range-secondary range-xs", id: "item_alcohol_content", data: { value_display: "#value-display" } %>
+      <button class="range-increment">+</button>
+      <div id="value-display" class="badge badge-success w-10"></div>
+      <button class="range-decrement">-</button>
+    </div>
     <h4 class="text-stone-600"><%= f.label :size %></h4>
     <%= f.text_field :size, in: 1..4000, class: "input input-bordered input-success max-w-xs", id: "item_size" %>ml
     <%= f.fields_for :photos do |photo_fields| %>
