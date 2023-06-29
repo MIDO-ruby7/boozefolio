@@ -21,6 +21,7 @@ ja:
     delete: '削除'
     back: '戻る'
     cancel: 'キャンセル'
+    page_now: 'pages now'
   google_login_api:
     callback:
       success: 'ログインしました'
