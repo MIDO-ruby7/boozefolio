@@ -31,20 +31,24 @@
         <div class="mb-10">
           <h2 class="m-4 text-teal-500"><%= t('defaults.app_name') %></h2>
           <h3 class="font-zen flex justify-center text-stone-800 mt-3"><%= t('defaults.catch_copy1') %></h3>
-        <div class="m-8  font-noto text-stone-600 text-sm">
-          <div class="mb-2">
-            <p><%= t('defaults.catch_copy2') %></p>
+          <div class="font-zen flex justify-center text-stone-800 mt-2  text-stone-500 text-sm">
+            <p class="mr-4">現在のページ数</p>
+            <%= Item.count %>
           </div>
-          <div class="mb-2">
-            <p><%= t('defaults.catch_copy3') %></p>
+          <div class="m-8  font-noto text-stone-600 text-sm">
+            <div class="mb-2">
+              <p><%= t('defaults.catch_copy2') %></p>
+            </div>
+            <div class="mb-2">
+              <p><%= t('defaults.catch_copy3') %></p>
+            </div>
+            <div class="mb-2">
+              <p><%= t('defaults.catch_copy4') %></p>
+            </div>
+            <div class="mb-2">
+              <p><%= t('defaults.catch_copy5') %></p>
+            </div>
           </div>
-          <div class="mb-2">
-            <p><%= t('defaults.catch_copy4') %></p>
-          </div>
-          <div class="mb-2">
-            <p><%= t('defaults.catch_copy5') %></p>
-          </div>
-        </div>
         </div>
         <div class="mt-44">
           <p class="font-mono text-teal-500 flex justify-center"><%= t('defaults.cta') %>
