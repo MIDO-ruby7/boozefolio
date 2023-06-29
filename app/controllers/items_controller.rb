@@ -47,7 +47,6 @@ class ItemsController < ApplicationController
 
   def new_page
     @new_item = Item.find(session[:new_item_id]) if session[:new_item_id]
-    session[:new_item_id] = nil # セッションから削除
     render layout: false
   end
 
