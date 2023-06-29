@@ -1,7 +1,7 @@
 <% item.photos.each do |photo| %>
-  <div class="mt-6 mb-2 ml-4 mr-4">
+  <div class="">
     <%= link_to item_path(item) do %>
-      <%= image_tag photo.image.url, class:"h-auto max-w-full rounded-lg" %>
+      <%= image_tag photo.image.url, class:"h-200 w-150 rounded-lg" %>
     <% end %>
   </div>
 <% end %>

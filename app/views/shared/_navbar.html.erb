@@ -1,3 +1,6 @@
 <div class="navbar bg-primary text-primary-content ">
-  <a class="btn btn-ghost normal-case text-xl">BoozePedia</a>
+  <%= link_to t('defaults.app_name'), items_path, class: "btn btn-ghost normal-case text-xl" %>
+  <div>
+    <%= Item.count %><p class="ml-2"><%= t('.pages_now') %></p>
+  </div>
 </div>
