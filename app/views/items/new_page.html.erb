@@ -10,7 +10,7 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
 
 
     <!-- Google tag (gtag.js) -->
@@ -28,11 +28,14 @@
     <div class="flex items-center z-0 h-screen w-screen">
       <div class="boxNew">
         <div class="w-full absolute top-10">
-          <h2 class="text-teal-500 flex justify-center"><%= t('.message1') %></h2>
+          <h2 class="mb-2 text-teal-500 flex justify-center"><%= t('.message1') %></h2>
           <h3 class="font-zen text-stone-800 flex justify-center"><%= t('.message2') %></h3>
         </div>
         <% if @new_item %>
           <% if @new_item.photos.present? %>
+            <h4 class="font-zen text-xl flex justify-center bold absolute top-32 px-3 block rounded-lg z-50 shadow-lg shadow-cyan-500/50 z-40">
+              <%= @new_item.name%>
+            </h4>
             <%= image_tag @new_item.photos.first.image.url, class:"w-50 h-100 flex absolute justify-center block rounded-lg z-50 bg-cyan-500 shadow-lg shadow-cyan-500/50 z-40" %>
           <% else %>
             <%= @new_item.name %>
