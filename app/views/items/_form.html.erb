@@ -20,7 +20,7 @@
         <div class="badge badge-accent text-stone-600"><%= t('items.new.required') %></div>
         <%= f.label :alcohol_content %>
       </h4>
-      <%= f.range_field :alcohol_content, in: 1.0..100.0, step: 0.5, class: "range range-secondary range-xs", id: "item_alcohol_content", data: { value_display: "#value-display" } %>
+      <%= f.number_field :alcohol_content, in: 1.0..100.0, step: 0.5, class: "", id: "item_alcohol_content", data: { value_display: "#value-display" } %>
       <div id="value-display" class="badge badge-success w-10"></div>
     </div>
     <div>
