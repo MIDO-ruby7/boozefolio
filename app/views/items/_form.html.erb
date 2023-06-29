@@ -15,17 +15,16 @@
       </h4>
       <%= f.text_field :name, class: "input input-bordered input-success input-sm w-full max-w-xs" %>
     </div>
-    <div class="range-slider-input">
+    <div class="number-input">
       <h4 class="text-stone-600">
         <div class="badge badge-accent text-stone-600"><%= t('items.new.required') %></div>
-        <%= f.label :alcohol_content %>
+        <%= f.label :alcohol_content %>%
       </h4>
-      <% f.number_field :alcohol_content, in: 1.0..100.0, step: 0.5, class: "", id: "item_alcohol_content", data: { value_display: "#value-display" } %>
-      <button class="range-increment">+</button>
-      <div id="value-display" class="badge badge-success w-10"></div>
-      <button class="range-decrement">-</button>
-    </div>
-
+      <div>
+        <button class="range-increment">+</button>
+        <%= f.number_field :alcohol_content, in: 1.0..100.0, step: 0.1, class: "input input-bordered input-success", id: "item_alcohol_content" %>
+        <button class="range-decrement">-</button>
+      </div>
     </div>
     <div>
       <h4 class="text-stone-600">
