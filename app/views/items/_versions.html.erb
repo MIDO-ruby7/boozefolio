@@ -1,0 +1,15 @@
+<div class="row justify-content-md-center">
+    <div class="col-8 p-4">
+      <div class="d-flex justify-content-between mb-3">
+        <div>
+          <%= link_to '一覧に戻る', items_path, class: 'btn btn-outline-primary' %>
+        </div>
+        バージョン
+      </div>
+      <% if item.versions.present? %>
+        <%= item.versions.last.event %>
+      <% else %>
+        <p>バージョンがありません</p>
+      <% end %>
+    </div>
+  </div>

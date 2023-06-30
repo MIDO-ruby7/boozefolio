@@ -13,31 +13,5 @@
   <%= @item.content %>
 
   <%= render 'shared/crud_menus', item: @item %>
-
-  <div class="row justify-content-md-center">
-    <div class="col-8 p-4">
-      <div class="d-flex justify-content-between mb-3">
-        <%= link_to "\"#{@item.name}\"へ戻る", item_path(@item), class: 'align-self-center' %>
-        <% if @version.next.present? %>
-          <%= button_to 'このバージョンへ戻す', document_version_path(@item, @version),
-            class: 'btn btn-outline-primary',
-            method: :patch,
-            data: { confirm: '本当によろしいですか？' } %>
-        <% end %>
-      </div>
-      <h1 class="font-weight-bold mb-4">
-        このバージョンを表示する
-      </h1>
-      <% @version.changeset.keys.select { |key| %w[name content].include?(key) }.each do |key| %>
-        <div class="mb-4">
-          <h3 class=font-weight-bold">
-            <%= Item.human_attribute_name(key) %>
-          </h3>
-          <div>
-            <%= raw @version.changeset[key].last %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
+  <%= render 'versions', item: @item %>
 </div>
