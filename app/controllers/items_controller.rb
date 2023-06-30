@@ -31,6 +31,8 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    @paper_trail = @item.paper_trail
+    @pre_item = @item.paper_trail.previous_version
   end
 
   def edit
