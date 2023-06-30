@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-  has_paper_trail
+  has_paper_trail on: [:update]
   require "mini_magick"
   belongs_to :user
   belongs_to :category, optional: true
