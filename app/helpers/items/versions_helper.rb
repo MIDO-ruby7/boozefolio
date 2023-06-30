@@ -1,2 +1,0 @@
-module Items::VersionsHelper
-end
