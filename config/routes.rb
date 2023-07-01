@@ -4,15 +4,18 @@ Rails.application.routes.draw do
   get '/terms', to: 'static_pages#terms'
   get '/privacy', to: 'static_pages#privacy'
   post '/google_login_api/callback', to: 'google_login_api#callback'
+
+  namespace :items do
+    resources :searches, only: %i[index], defaults: { format: :json }
+    get 'search', to: 'searches#search'
+  end
+
   resources :items, only: %i[index show new create edit update destroy] do
     member do
       get 'new_page', to: 'items#new_page', as: 'new_page'
     end
-    collection do
-      get 'search', to: 'items#search', as: 'search'
-      get 'search_result', to: 'items#search_result', as: 'search_result'
-    end
   end
+
   resources :categories, only: %i[index new create edit update destroy] do
     member do
       get 'default_values', to: 'categories#default_alcohol_content'
