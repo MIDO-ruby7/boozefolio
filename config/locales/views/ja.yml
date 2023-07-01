@@ -42,7 +42,15 @@ ja:
       title: '商品一覧'
       no_image: 'まだ投稿がありません'
     show:
-      title: '商品詳細'
+      title: 'ページ'
+      name: '商品名：'
+      category: 'カテゴリー：'
+      size: '容量：'
+      alcohol: 'アルコール度数：'
+      maker: 'メーカー：'
+      price: '価格を調べる'
+      country: '原産国：'
+      content: 'ノート：'
     new:
       title: '図鑑登録'
       file: 'ファイルを選択'

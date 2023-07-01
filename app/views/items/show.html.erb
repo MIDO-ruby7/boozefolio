@@ -1,18 +1,24 @@
 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-20 mt-6">
-  <p>name:<%= @item.name %></p>
-  <%= @item.size %>
-  <% @item.photos.each do |photo| %>
-    <div class="mt-6 mb-2 ml-4 mr-4">
-      <%= image_tag photo.image.url, class:"h-auto max-w-full rounded-lg" %>
-    </div>
-  <% end %>
-  <%= @item.flavor %>
-  <%= @item.maker %>
-  <%= @item.alcohol_content %>
-  <%= @item.country_of_origin %>
-  <%= @item.content %>
-
+  <div class="flex flex-col justify-center"><%= image_tag @item.photos[0].image.url, class:"h-auto max-w-full rounded-lg" %></div>
+  <div class="ml-10">
+    <div class="flex flex-col"><%= t('.name') %><%= @item.name %></div>
+    <div class="flex flex-col"><%= t('.size') %><%= @item.size %></div>
+    <div class="flex flex-col"><%= t('.maker') %><%= @item.maker %></div>
+    <div class="flex flex-col"><%= t('.alcohol') %><%= @item.alcohol_content %></div>
+    <div class="flex flex-col"><%= t('.country') %><%= @item.country_of_origin %></div>
+    <div class="flex flex-col"><%= t('.content') %><%= @item.content %></div>
+  </div>
   <%= render 'shared/edit_button', item: @item %>
-  <%= render 'shared/items_path_button' %>
+  <div class="flex flex-row">
+    <button class="btn btn-success mr-4"><a target="_blank" href="https://www.amazon.co.jp/gp/search?ie=UTF8&tag=boozepedia-22&linkCode=ur2&linkId=3ff49a6fa02da222847dc9ea5e1b13b5&camp=247&creative=1211&index=food-beverage&keywords=<%= @item.name %>""><%= t('.price') %></a></button>
+    <div class="ml-4"><%= render 'shared/items_path_button' %></div>
+  </div>
+  <div class="">
+    <% @item.photos[1..].each do |photo| %>
+      <div class="mt-6 mb-2 ml-4 mr-4">
+        <%= image_tag photo.image.url, class: "h-auto max-w-full rounded-lg" %>
+      </div>
+    <% end %>
+  </div>
   <%= render 'versions', item: @item %>
 </div>
