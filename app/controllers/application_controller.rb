@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user, :own?, :logged_in?
   add_flash_types :success, :info, :warning, :danger
+  before_action :set_paper_trail_whodunnit # PaperTrail
 
   # ログイン中のユーザーを返す
   def current_user

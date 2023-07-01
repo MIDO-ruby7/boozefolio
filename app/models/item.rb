@@ -1,4 +1,5 @@
 class Item < ApplicationRecord
+  has_paper_trail on: [:update]
   require "mini_magick"
   belongs_to :user
   belongs_to :category, optional: true
@@ -7,9 +8,9 @@ class Item < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
 
-  mount_uploader :image, BoozeImageUploader
+  mount_uploader :image, BoozeImageUploader # CarrierWave
 
-  has_rich_text :content
+  has_rich_text :content # ActionText
 
   enum country_of_origin: {
     ar: 32, au: 36, at: 40, be: 56, bz: 84,

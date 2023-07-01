@@ -31,13 +31,19 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    @paper_trail = @item.paper_trail
+    @pre_item = @item.paper_trail.previous_version
   end
 
-  def edit; end
+  def edit
+  end
 
   def update
-    @item.update(item_params)
-    redirect_to items_path, notice: t('.success')
+    if @item.update(item_params)
+      redirect_to item_path(@item), notice: t('.success')
+    else
+      redirect_to items_path, alert: t('.fail')
+    end
   end
 
   def destroy

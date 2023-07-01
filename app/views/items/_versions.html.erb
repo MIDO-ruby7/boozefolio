@@ -1,0 +1,17 @@
+<div class="row justify-content-md-center">
+    <div class="col-8 p-4">
+      <div class="">
+        <h3>Update</h3>
+        <% if item.versions.present? %>
+          <% item.versions.each do |version| %>
+            <div class="flex flex-wrap flex-row h-10 m-0">
+              <div class="mr-2">✨<%= version.created_at.to_s(:datetime) %></div>
+              <div>👯‍♀️<%= @paper_trail.originator %>さん</div>
+            </div>
+          <% end %>
+        <% else %>
+          <p>バージョンがありません</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
