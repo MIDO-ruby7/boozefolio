@@ -21,6 +21,8 @@ ja:
     delete: '削除'
     back: '戻る'
     cancel: 'キャンセル'
+    no_version: 'No Version. 編集者を待っています。'
+    version: 'Update'
     page_now: 'pages now'
   google_login_api:
     callback:

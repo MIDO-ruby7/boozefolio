@@ -1,16 +1,16 @@
 <div class="row justify-content-md-center">
     <div class="col-8 p-4">
       <div class="">
-        <h3>Update</h3>
+        <h3><%= t('defaults.version') %></h3>
         <% if item.versions.present? %>
-          <% item.versions.each do |version| %>
+          <% item.versions.reverse_each do |version| %>
             <div class="flex flex-wrap flex-row h-10 m-0">
               <div class="mr-2">✨<%= version.created_at.to_s(:datetime) %></div>
               <div>👯‍♀️<%= version.whodunnit %>さん</div>
             </div>
           <% end %>
         <% else %>
-          <p>バージョンがありません</p>
+          <p><%= t('defaults.no_version') %></p>
         <% end %>
       </div>
     </div>
