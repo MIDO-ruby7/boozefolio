@@ -8,6 +8,10 @@ Rails.application.routes.draw do
     member do
       get 'new_page', to: 'items#new_page', as: 'new_page'
     end
+    collection do
+      get 'search', to: 'items#search', as: 'search'
+      get 'search_result', to: 'items#search_result', as: 'search_result'
+    end
   end
   resources :categories, only: %i[index new create edit update destroy] do
     member do

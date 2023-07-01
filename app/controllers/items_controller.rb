@@ -56,6 +56,19 @@ class ItemsController < ApplicationController
     render layout: false
   end
 
+  def search
+    @items = Item.all
+  end
+
+  def search_result
+    #paramsとして送られてきたkeyword（入力された語句）で、Itemモデルのnameカラムを検索し、その結果を@itemsに代入する
+    @items = Item.where('name LIKE(?)', "%#{params[:keyword]}%")
+    respond_to do |format|
+      format.json { render 'search', json: @users }
+    end
+  end
+
+
   private
 
   def item_params
