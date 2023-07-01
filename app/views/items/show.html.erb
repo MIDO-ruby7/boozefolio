@@ -12,6 +12,7 @@
   <%= @item.country_of_origin %>
   <%= @item.content %>
 
-  <%= render 'shared/crud_menus', item: @item %>
+  <%= render 'shared/edit_button', item: @item %>
+  <%= render 'shared/items_path_button' %>
   <%= render 'versions', item: @item %>
 </div>
