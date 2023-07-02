@@ -1,0 +1,15 @@
+<div class="flex flex-col mt-10">
+  <div class="text-stone-600 flex justify-center">
+    <%= t('.title') %>
+  </div>
+  <div class="flex justify-center">
+    <%= text_field_tag :name,'', id: "js_search_items", class: "input input-bordered input-success  w-full max-w-xs", placeholder:  t('.placeholder') %>
+  </div>
+</div>
+<ul id="js_result">
+  <%= render partial: 'search_list', locals: { items: @items } %>
+</ul>
+<div>
+  <div class="flex justify-center mb-2 mt-5"><%= t('.no_result') %></div>
+  <div class="flex justify-center"><%= link_to t('.new'), new_item_path, class: "btn btn-accent" %></div>
+</div>

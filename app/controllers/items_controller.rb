@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   require "mini_magick"
-  before_action :set_item, only: %i[edit update destroy]
+  before_action :set_item, only: %i[show edit update destroy]
 
   def index
     @items = Item.all.includes(:photos).order(created_at: :desc)
@@ -66,6 +66,6 @@ class ItemsController < ApplicationController
   end
 
   def set_item
-    @item = current_user.items.find(params[:id])
+    @item = Item.find(params[:id])
   end
 end
