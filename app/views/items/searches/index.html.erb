@@ -6,6 +6,6 @@
     <%= text_field_tag :name,'', id: "js_search_items", class: "input input-bordered input-success  w-full max-w-xs", placeholder:  t('.placeholder') %>
   </div>
 </div>
-<ul id="ajax_result">
+<ul id="js_result">
   <%= render partial: 'search_list', locals: { items: @items } %>
 </ul>

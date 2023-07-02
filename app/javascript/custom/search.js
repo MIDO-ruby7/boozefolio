@@ -4,7 +4,7 @@ var ajaxItem = function(input){
   console.log("input");
   console.log(ajaxItem);
   $.ajax({
-    url: "search",
+    url: "/items/search",
     type: "GET",
     data: ("search=" + input),
     dataType: 'json',
