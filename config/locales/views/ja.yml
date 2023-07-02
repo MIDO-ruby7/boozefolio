@@ -13,7 +13,7 @@ ja:
     menu1: 'まだだよ'
     menu2: '記録する'
     menu3: '何作ろ'
-    menu4: 'マイページ'
+    menu4: '頑張る'
     login: 'ログイン'
     logout: 'ログアウト'
     signup: '新規登録'
@@ -23,6 +23,7 @@ ja:
     cancel: 'キャンセル'
     no_version: 'No Version. 編集者を待っています。'
     version: 'Update'
+    line: ''
     page_now: 'pages now'
   google_login_api:
     callback:

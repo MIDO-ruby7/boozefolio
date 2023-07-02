@@ -8,7 +8,7 @@
     <div class="flex flex-col"><%= t('.country') %><%= @item.country_of_origin %></div>
     <div class="flex flex-col"><%= t('.content') %><%= @item.content %></div>
   </div>
-  <div><%= render 'shared/edit_button', item: @item %></div>
+  <div class="flex justify-end mr-5 mb-8"><%= render 'shared/edit_button', item: @item %></div>
   <div class="flex flex-row flex justify-center">
     <button class="btn btn-success mr-4"><a target="_blank" href="https://www.amazon.co.jp/gp/search?ie=UTF8&tag=boozepedia-22&linkCode=ur2&linkId=3ff49a6fa02da222847dc9ea5e1b13b5&camp=247&creative=1211&index=food-beverage&keywords=<%= @item.name %>""><%= t('.price') %></a></button>
     <div class="ml-4"><%= render 'shared/items_path_button' %></div>
