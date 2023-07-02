@@ -1,4 +1,5 @@
 class GoogleLoginApiController < ApplicationController
+  skip_before_action:logged_in_user, only: %i[callback]
   require 'googleauth/id_tokens/verifier'
 
   protect_from_forgery except: :callback

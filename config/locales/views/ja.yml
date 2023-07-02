@@ -15,6 +15,7 @@ ja:
     menu3: '何作ろ'
     menu4: '頑張る'
     login: 'ログイン'
+    login_required: 'ログインしてください'
     logout: 'ログアウト'
     signup: '新規登録'
     edit: '編集'
