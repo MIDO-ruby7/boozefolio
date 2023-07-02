@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   post '/google_login_api/callback', to: 'google_login_api#callback'
 
   namespace :items do
-    resources :searches, only: %i[index], defaults: { format: :json }
+    resources :searches, only: %i[index]
     get 'search', to: 'searches#search'
   end
 

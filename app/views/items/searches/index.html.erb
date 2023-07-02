@@ -1,7 +1,11 @@
 <div class="flex flex-col mt-10">
-  <div class="text-stone-600 flex justify-center"><%= t('.title') %></div>
-  <div class="flex justify-center"><%= text_field_tag :name,'', id: "js_search_items", class: "input input-bordered input-success  w-full max-w-xs", placeholder:  t('.placeholder') %><div>
+  <div class="text-stone-600 flex justify-center">
+    <%= t('.title') %>
+  </div>
+  <div class="flex justify-center">
+    <%= text_field_tag :name,'', id: "js_search_items", class: "input input-bordered input-success  w-full max-w-xs", placeholder:  t('.placeholder') %>
+  </div>
 </div>
-<ul id="js_result">
-  <%= render 'search_result', items: @items %>
+<ul id="ajax_result">
+  <%= render partial: 'search_list', locals: { items: @items } %>
 </ul>

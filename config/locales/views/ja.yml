@@ -75,7 +75,8 @@ ja:
       message3: 'Thank you'
       index: '戻る'
       new: '次のお酒を登録する'
-    search:
-      title: '商品を検索してください'
-      no_result: '検索結果がありません'
-      placeholder: '商品名を入力してください'
+    searches:
+      index:
+        title: '商品を検索してください'
+        no_result: '検索結果がありません'
+        placeholder: '商品名を入力してください'
