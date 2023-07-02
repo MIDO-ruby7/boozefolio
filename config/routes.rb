@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/terms', to: 'static_pages#terms'
   get '/privacy', to: 'static_pages#privacy'
   post '/google_login_api/callback', to: 'google_login_api#callback'
+  delete '/google_login_api/logout', to: 'google_login_api#logout', as: 'logout'
 
   namespace :items do
     resources :searches, only: %i[index]

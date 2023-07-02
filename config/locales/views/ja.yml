@@ -13,7 +13,7 @@ ja:
     menu1: 'まだだよ'
     menu2: '記録する'
     menu3: '何作ろ'
-    menu4: '頑張る'
+    menu4: 'マイページ'
     login: 'ログイン'
     login_required: 'ログインしてください'
     logout: 'ログアウト'
@@ -32,6 +32,9 @@ ja:
       fail: 'ログインに失敗しました'
     verify_g_csrf_token:
       fail: 'トークンが無効です'
+    logout:
+      success: 'ログアウトしました'
+      fail: 'ログアウトに失敗しました'
   static_pages:
     menu:
       title: 'MENU'

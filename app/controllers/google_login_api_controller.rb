@@ -14,6 +14,11 @@ class GoogleLoginApiController < ApplicationController
     redirect_to items_path, notice: t('google_login_api.callback.success')
   end
 
+  def logout
+    reset_session
+    redirect_to root_path, notice: t('google_login_api.logout.success')
+  end
+
   private
 
   def verify_g_csrf_token
