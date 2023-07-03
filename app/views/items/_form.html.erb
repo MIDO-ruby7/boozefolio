@@ -3,32 +3,30 @@
   <div class="text-stone-600">
     <div>
       <h4 class="text-stone-600">
-        <div class="badge badge-accent text-stone-600"><%= t('items.new.required') %></div>
+        <div class="badge badge-error text-stone-600"><%= t('items.new.required') %></div>
         <%= f.label :category_id %>
       </h4>
       <%= f.collection_select :category_id, Category.all, :id, :name, { prompt: true }, class: "select select-bordered  select-success w-full max-w-xs", id: "item_category_id" %>
     </div>
     <div>
       <h4 class="text-stone-600">
-        <div class="badge badge-accent text-stone-600"><%= t('items.new.required') %></div>
+        <div class="badge badge-error text-stone-600"><%= t('items.new.required') %></div>
         <%= f.label :name %>
       </h4>
       <%= f.text_field :name, class: "input input-bordered input-success input-sm w-full max-w-xs" %>
     </div>
     <div class="number-input">
       <h4 class="text-stone-600">
-        <div class="badge badge-accent text-stone-600"><%= t('items.new.required') %></div>
+        <div class="badge badge-error text-stone-600"><%= t('items.new.required') %></div>
         <%= f.label :alcohol_content %>%
       </h4>
       <div>
-        <button class="range-increment">+</button>
         <%= f.number_field :alcohol_content, in: 1.0..100.0, step: 0.1, class: "input input-bordered input-success", id: "item_alcohol_content" %>
-        <button class="range-decrement">-</button>
       </div>
     </div>
     <div>
       <h4 class="text-stone-600">
-        <div class="badge badge-accent text-stone-600"><%= t('items.new.required') %></div>
+        <div class="badge badge-error text-stone-600"><%= t('items.new.required') %></div>
         <%= f.label :size %>
       </h4>
       <%= f.text_field :size, in: 1..4000, class: "input input-bordered input-success input-sm max-w-xs", id: "item_size" %>ml
@@ -49,13 +47,6 @@
     <div>
       <h4 class="text-stone-600">
         <div class="badge badge-ghost text-stone-400"><%= t('items.new.any') %></div>
-        <%= f.label :flavor %>
-      </h4>
-      <%= f.text_field :flavor, class: "input input-bordered input-success input-sm  w-full max-w-xs" %>
-    </div>
-    <div>
-      <h4 class="text-stone-600">
-        <div class="badge badge-ghost text-stone-400"><%= t('items.new.any') %></div>
         <%= f.label :maker %>
       </h4>
       <%= f.text_field :maker, class: "input input-bordered input-success input-sm w-full max-w-xs" %>
@@ -65,7 +56,7 @@
         <div class="badge badge-ghost text-stone-400"><%= t('items.new.any') %></div>
         <%= f.label :country_of_origin %>
       </h4>
-      <%= f.text_field :country_of_origin, class: "input input-bordered input-success input-sm w-full max-w-xs" %>
+      <%= f.select :country_of_origin, Item.country_of_origins_i18n.invert, { include_blank: "指定なし" },  class: "select select-bordered select-success w-full max-w-xs" %>
     </div>
     <div>
       <h4 class="text-stone-600">

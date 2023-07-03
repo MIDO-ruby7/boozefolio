@@ -53,6 +53,7 @@ class ItemsController < ApplicationController
 
   def new_page
     @new_item = Item.find(session[:new_item_id]) if session[:new_item_id]
+    @id = session[:new_item_id]
     render layout: false
   end
 
@@ -60,7 +61,7 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(
-      :name, :size, :flavor, :maker, :alcohol_content, :country_of_origin, :region, :link, :note, :asin, :category_id, :content,
+      :name, :size, :maker, :alcohol_content, :country_of_origin, :region, :link, :category_id, :content,
       photos_attributes: [:image, :id, :item_id, :image_cache]
     )
   end
