@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'static_pages#top'
-  get '/guide', to: 'static_pages#guide'
+  get '/contact', to: 'static_pages#contact'
   get '/terms', to: 'static_pages#terms'
   get '/privacy', to: 'static_pages#privacy'
   post '/google_login_api/callback', to: 'google_login_api#callback'
