@@ -8,9 +8,9 @@ class Item < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
 
-  mount_uploader :image, BoozeImageUploader # CarrierWave
+  mount_uploader :image, BoozeImageUploader
 
-  has_rich_text :content # ActionText
+  has_rich_text :content
 
   enum country_of_origin: {
     ar: 32, au: 36, at: 40, be: 56, bz: 84,

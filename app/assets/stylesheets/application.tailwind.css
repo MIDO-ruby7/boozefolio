@@ -2,7 +2,7 @@
 @import './top_bubble.css';
 @import './wave.css';
 @import './bubble.css';
-@import 'actiontext.css';
+@import './actiontext.css';
 
 @tailwind base;
 @tailwind components;
