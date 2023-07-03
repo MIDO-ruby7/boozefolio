@@ -15,7 +15,7 @@ ja:
         category_id: 'カテゴリー'
         name: '商品名'
         flavor: '味'
-        size: 'サイズ'
+        size: '容量'
         maker: 'メーカー'
         alcohol_content: 'アルコール度数'
         country_of_origin: '原産国'

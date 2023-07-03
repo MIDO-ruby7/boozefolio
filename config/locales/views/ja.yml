@@ -86,5 +86,5 @@ ja:
         title: '商品を検索してください'
         no_result: '検索結果がありません'
         placeholder: '商品名を入力してください'
-        no_result: '検索結果が無い場合、まだ登録がありません'
-        new: 'BoozePediaに新しいページを刻みましょう'
+        no_result: '😭検索結果が無い場合、まだ登録がありません'
+        new: 'BoozePediaに新しいページを刻んでください'
