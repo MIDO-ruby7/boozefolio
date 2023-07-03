@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
     render layout: false
   end
 
-  def guide
+  def contact
   end
 
   def terms
