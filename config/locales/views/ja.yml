@@ -12,9 +12,10 @@ ja:
     home: 'HOME'
     menu1: 'まだだよ'
     menu2: '記録する'
-    menu3: '何作ろ'
+    menu3: 'どうしよ'
     menu4: 'マイページ'
     login: 'ログイン'
+    login_required: 'ログインしてください'
     logout: 'ログアウト'
     signup: '新規登録'
     edit: '編集'
@@ -23,6 +24,7 @@ ja:
     cancel: 'キャンセル'
     no_version: 'No Version. 編集者を待っています。'
     version: 'Update'
+    line: ''
     page_now: 'pages now'
   google_login_api:
     callback:
@@ -30,6 +32,9 @@ ja:
       fail: 'ログインに失敗しました'
     verify_g_csrf_token:
       fail: 'トークンが無効です'
+    destroy:
+      success: 'ログアウトしました'
+      fail: 'ログアウトに失敗しました'
   static_pages:
     menu:
       title: 'MENU'
