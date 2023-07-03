@@ -29,7 +29,7 @@
       </svg>
       <label class="btm-nav-label text-gray-500 text-xs"><%= t('defaults.menu4') %></label>
     <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-      <li><a><%= button_to t('defaults.logout'), logout_path, method: :delete %> </a></li>
+      <li><a><%= link_to t('defaults.logout'), logout_path, data: { turbo_method: :delete }  %></a></li>
       <li><a>Item 2</a></li>
     </ul>
   </div>
