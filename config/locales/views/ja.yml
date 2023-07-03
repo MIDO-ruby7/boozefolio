@@ -46,8 +46,9 @@ ja:
       title: 'ユーザーガイド'
   items:
     index:
-      title: '商品一覧'
+      title: '新規登録されたページ'
       no_image: 'まだ投稿がありません'
+      new: 'New'
     show:
       title: 'ページ'
       name: '商品名：'
