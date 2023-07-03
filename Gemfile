@@ -85,6 +85,7 @@ gem 'paper_trail'
 #多言語化対応
 #https://twitter.com/hisaju01/status/1668096024823611392?s=20
 gem 'rails-i18n'
+gem 'enum_help'
 
 # debug
 gem 'pry-rails'
