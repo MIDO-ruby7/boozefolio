@@ -80,6 +80,7 @@ gem 'googleauth'
 gem 'dotenv-rails'
 gem 'carrierwave', '>= 3.0.0.beta', '< 4.0'
 gem "mini_magick"
+gem 'fog-aws'
 gem 'paper_trail'
 
 #多言語化対応
