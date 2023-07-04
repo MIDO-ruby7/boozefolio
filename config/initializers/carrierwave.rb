@@ -12,11 +12,11 @@ CarrierWave.configure do |config|
       provider: 'AWS',
       aws_access_key_id: ENV['AWS_ACCESS_KEY'],
       aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
-      region: 'ap-northeast-3' #アジアパシフィック（大阪）
+      region: 'ap-northeast-3'
     }
 
     config.fog_directory  = 'boozepedia'
-    config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/boozepedia'
+    config.asset_host = 'https://s3-ap-northeast-3.amazonaws.com/boozepedia'
   else
     # 開発環境はlocalに保存
     config.storage :file
