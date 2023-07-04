@@ -16,13 +16,17 @@
   </div>
   <div class="flex justify-end mr-5 mb-8"><%= render 'shared/edit_button', item: @item %></div>
   <div class="flex flex-row flex justify-center">
-    <button class="btn btn-success mr-4"><a target="_blank" href="https://www.amazon.co.jp/gp/search?ie=UTF8&tag=boozepedia-22&linkCode=ur2&linkId=3ff49a6fa02da222847dc9ea5e1b13b5&camp=247&creative=1211&index=food-beverage&keywords=<%= @item.name %>""><%= t('.price') %></a></button>
+    <button class="btn btn-success mr-4"><a target="_blank" href="https://www.amazon.co.jp/gp/search?ie=UTF8&tag=boozepedia-22&linkCode=ur2&linkId=3ff49a6fa02da222847dc9ea5e1b13b5&camp=247&creative=1211&index=food-beverage&keywords=<%= @item.name %>"><%= t('.price') %></a></button>
     <div class="ml-4"><%= render 'shared/items_path_button' %></div>
   </div>
   <div class="">
-    <% @item.photos[1..].each do |photo| %>
-      <div class="mt-6 mb-2 ml-4 mr-4">
-        <%= image_tag photo.image.url, class: "h-auto max-w-full rounded-lg" %>
+    <% if @item.photos.present? && @item.photos.length > 1 %>
+      <div class="">
+        <% @item.photos[1..].each do |photo| %>
+          <div class="mt-6 mb-2 ml-4 mr-4">
+            <%= image_tag photo.image.url, class: "h-auto max-w-full rounded-lg" %>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>
