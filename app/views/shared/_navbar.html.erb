@@ -1,5 +1,7 @@
-<div class="navbar bg-primary text-primary-content ">
-  <%= link_to t('defaults.app_name'), items_path, class: "btn btn-ghost normal-case text-xl" %>
+<div class="navbar bg-primary text-primary-content">
+  <%= button_to items_path, class: "btn btn-ghost" do %>
+    <%= image_tag("logo2.png", class: "h-10 m-0 mt-2.5") %>
+  <% end %>
   <div>
     <%= Item.count %><p class="ml-2"><%= t('.pages_now') %></p>
   </div>
