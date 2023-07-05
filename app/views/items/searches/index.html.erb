@@ -9,7 +9,7 @@
 <ul id="js_result">
   <%= render partial: 'search_list', locals: { items: @items } %>
 </ul>
-<div>
+<div class="mb-28">
   <div class="flex justify-center mb-2 mt-5"><%= t('.no_result') %></div>
   <div class="flex justify-center"><%= link_to t('.new'), new_item_path, class: "btn btn-accent text-yellow-100" %></div>
 </div>
