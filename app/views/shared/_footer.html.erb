@@ -29,6 +29,7 @@
       </svg>
       <label class="btm-nav-label text-gray-500 text-xs"><%= t('defaults.menu4') %></label>
     <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+      <li><%=  t('defaults.current_user_page_count') %><%= current_user.items.count %></li>
       <li><%= link_to t('defaults.logout'), logout_path, data: { turbo_method: :delete }  %></li>
       <li><%= link_to t('static_pages.contact.title'), contact_path %></li>
       <li><%= link_to t('static_pages.privacy.title'), privacy_path %></li>

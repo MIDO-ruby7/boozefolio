@@ -17,6 +17,7 @@ ja:
     login: 'ログイン'
     login_required: 'ログインしてください'
     logout: 'ログアウト'
+    current_user_page_count: 'あなたの投稿数：'
     signup: '新規登録'
     edit: '編集'
     delete: '削除'
