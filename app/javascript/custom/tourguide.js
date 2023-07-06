@@ -21,5 +21,14 @@ const steps = [
   }
 ]
 
-const tg = new tourguide.TourGuideClient({steps : steps, options : options});
-tg.start();
+const tourGuideCookieName = "tourGuideShown";
+const tourGuideShown = Cookies.get(tourGuideCookieName);
+
+if (!tourGuideShown) {
+  const tg = new tourguide.TourGuideClient({ steps: steps, options: options });
+  tg.start();
+  tg.onFinish(() => {
+    Cookies.set(tourGuideCookieName, true);
+    // Perform any actions you want after the tour is finished
+  });
+}
