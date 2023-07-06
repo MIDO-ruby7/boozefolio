@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   post '/google_login_api/callback', to: 'google_login_api#callback'
   delete '/google_login_api/logout', to: 'google_login_api#destroy', as: 'logout'
 
-
   namespace :items do
     resources :searches, only: %i[index]
     get 'search', to: 'searches#search'
@@ -23,4 +22,6 @@ Rails.application.routes.draw do
       get 'default_values', to: 'categories#default_alcohol_content'
     end
   end
+
+  resources :users, only: %i[show edit update]
 end
