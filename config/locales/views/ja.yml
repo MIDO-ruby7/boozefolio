@@ -45,6 +45,11 @@ ja:
       title: 'プライバシーポリシー'
     contact:
       title: 'お問い合わせ'
+  users:
+    show:
+      title: 'ユーザー名を変更する'
+    edit:
+      title: 'ユーザー名を変更する'
   items:
     index:
       title: '新規登録されたページ'

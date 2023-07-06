@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to user_path(@user), notice: t('.success')
+      redirect_to items_path, notice: t('.success')
     else
       render :edit, status: :unprocessable_entity
     end
@@ -17,5 +17,9 @@ class UsersController < ApplicationController
 
   def set_user
     @user = User.find(current_user.id)
+  end
+
+  def user_params
+    params.require(:user).permit(:name)
   end
 end
