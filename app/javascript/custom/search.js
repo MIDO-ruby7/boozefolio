@@ -1,7 +1,8 @@
+console.log("search.js loaded");
 var preFunc = null;
 var preInput = "";
 var ajaxItem = function(input){
-  console.log("input");
+  console.log(input);
   console.log(ajaxItem);
   $.ajax({
     url: "/items/search",

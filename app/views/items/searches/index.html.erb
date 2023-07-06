@@ -3,7 +3,7 @@
     <%= t('.title') %>
   </div>
   <div class="flex justify-center">
-    <%= text_field_tag :name,'', id: "js_search_items", class: "input input-bordered input-success  w-full max-w-xs", placeholder:  t('.placeholder') %>
+    <%= text_field_tag :name,'', id: "js_search_items", class: "input input-bordered input-success  w-full max-w-xs", placeholder:  t('.placeholder'), "data-turbo-frame": "frame-name" %>
   </div>
 </div>
 <ul id="js_result">
