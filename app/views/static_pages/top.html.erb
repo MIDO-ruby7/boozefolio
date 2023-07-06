@@ -58,7 +58,7 @@
             </div>
           </div>
         </div>
-        <div class="mt-44">
+        <div class="mt-32">
           <p class="font-mono text-teal-500 flex justify-center"><%= t('defaults.cta') %>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 animate-bounce">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -67,7 +67,7 @@
           <script src="https://accounts.google.com/gsi/client" async defer></script>
           <div id="g_id_onload"
               data-client_id="<%= ENV['GOOGLE_CLIENT_ID'] %>"
-              data-login_uri="https://boozefolio.herokuapp.com/google_login_api/callback"
+              data-login_uri="http://localhost:3000/google_login_api/callback"
               data-auto_prompt="false">
           </div>
           <div class="g_id_signin flex justify-center bg-yellow-50"
@@ -79,6 +79,7 @@
               data-logo_alignment="left">
           </div>
         </div>
+        <div class="w-48 m-0"><%= render 'box_boo' %></div>
         <div class="wave -one"></div><!--二つのクラスを持つ波-->
         <div class="wave -two"></div><!--二つのクラスを持つ波-->
         <div class="wave -three"></div><!--二つのクラスを持つ波-->

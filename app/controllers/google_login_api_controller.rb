@@ -14,7 +14,6 @@ class GoogleLoginApiController < ApplicationController
   end
 
   def destroy
-    binding.pry
     session[:user_id] = nil
     redirect_to root_path, status: :see_other, notice: t('google_login_api.destroy.success')
   end
