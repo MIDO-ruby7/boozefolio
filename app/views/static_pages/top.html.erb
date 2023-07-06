@@ -65,7 +65,7 @@
           <script src="https://accounts.google.com/gsi/client" async defer></script>
           <div id="g_id_onload"
               data-client_id="<%= ENV['GOOGLE_CLIENT_ID'] %>"
-              data-login_uri="https://boozefolio.herokuapp.com/google_login_api/callback"
+              data-login_uri="http://localhost:3000/google_login_api/callback"
               data-auto_prompt="false">
           </div>
           <div class="g_id_signin flex justify-center bg-yellow-50"
@@ -82,5 +82,15 @@
         <div class="wave -three"></div><!--二つのクラスを持つ波-->
       </div>
     </div>
+    <footer class="footer footer-center p-4 bg-yellow-50 opacity-85 text-xs text-stone-500">
+      <div>
+        <div>Copyright © 2023 - All right reserved</div>
+        <div class="flex flex-row">
+          <div><%= link_to t('static_pages.contact.title'), contact_path, class: "mr-2" %></div>
+          <div><%= link_to t('static_pages.privacy.title'), privacy_path, class: "mr-2" %></div
+          <div><%= link_to t('static_pages.terms.title'), terms_path %></div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
