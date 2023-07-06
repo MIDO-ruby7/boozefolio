@@ -11,7 +11,7 @@
     </svg>
     <span class="btm-nav-label text-gray-500 text-xs"><%= t('defaults.menu1') %></span>
   <% end %>
-  <%= link_to items_searches_path, class:"no-underline" do %>
+  <%= link_to items_searches_path, class:"no-underline", id:"two" do %>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-2 text-gray-500 dark:text-gray-400">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
     </svg>
@@ -23,18 +23,18 @@
     </svg>
     <span class="btm-nav-label text-gray-500 text-xs"><%= t('defaults.menu3') %></span>
   <% end %>
-  <div class="dropdown dropdown-top dropdown-end flex justify-center" tabindex="0" >
+    <div class="dropdown dropdown-top dropdown-end flex justify-center" tabindex="0" id="three" >
       <svg class="w-6 h-6 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path clip-rule="evenodd" fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"></path>
       </svg>
       <label class="btm-nav-label text-gray-500 text-xs"><%= t('defaults.menu4') %></label>
-    <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-      <li><%=  t('defaults.current_user_page_count') %><%= current_user.items.count %></li>
-      <li><%= link_to t('users.edit.title'), edit_users_path %></li>
-      <li><%= link_to t('defaults.logout'), logout_path, data: { turbo_method: :delete }  %></li>
-      <li><%= link_to t('static_pages.contact.title'), contact_path %></li>
-      <li><%= link_to t('static_pages.privacy.title'), privacy_path %></li>
-      <li><%= link_to t('static_pages.terms.title'), terms_path %></li>
-    </ul>
-  </div>
+      <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+        <li><%=  t('defaults.current_user_page_count') %><%= current_user.items.count %></li>
+        <li><%= link_to t('users.edit.title'), edit_users_path %></li>
+        <li><%= link_to t('defaults.logout'), logout_path, data: { turbo_method: :delete }  %></li>
+        <li><%= link_to t('static_pages.contact.title'), contact_path %></li>
+        <li><%= link_to t('static_pages.privacy.title'), privacy_path %></li>
+        <li><%= link_to t('static_pages.terms.title'), terms_path %></li>
+      </ul>
+    </div>
 </div>
