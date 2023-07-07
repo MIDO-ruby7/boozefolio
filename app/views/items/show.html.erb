@@ -8,11 +8,14 @@
   </div>
   <div class="ml-10">
     <div class="flex flex-col"><%= t('.name') %><%= @item.name %></div>
+    <div class="flex flex-col"><%= t('.category') %><%= @item.category.name %></div>
     <div class="flex flex-col"><%= t('.size') %><%= @item.size %></div>
     <div class="flex flex-col"><%= t('.maker') %><%= @item.maker %></div>
     <div class="flex flex-col"><%= t('.alcohol') %><%= @item.alcohol_content %></div>
     <div class="flex flex-col"><%= t('.country') %><%= @item.country_of_origin %></div>
+    <div class="flex flex-col"><%= t('.region') %><%= @item.region %></div>
     <div class="flex flex-col"><%= t('.content') %><%= @item.content %></div>
+    <div class="flex flex-col"><%= t('.user_name') %><%= @item.user.name %></div>
   </div>
   <div class="flex justify-end mr-5 mb-8"><%= render 'shared/edit_button', item: @item %></div>
   <div class="flex flex-row flex justify-center">

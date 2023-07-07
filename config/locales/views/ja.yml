@@ -64,7 +64,9 @@ ja:
       maker: 'メーカー：'
       price: '価格を調べる'
       country: '原産国：'
+      region: '産地：'
       content: 'ノート：'
+      user_name: '投稿者：'
     new:
       title: '図鑑登録'
       file: 'ファイルを選択'
