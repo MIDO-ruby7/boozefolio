@@ -64,7 +64,9 @@ ja:
       maker: 'メーカー：'
       price: '価格を調べる'
       country: '原産国：'
+      region: '産地：'
       content: 'ノート：'
+      user_name: '投稿者：'
     new:
       title: '図鑑登録'
       file: 'ファイルを選択'
@@ -91,6 +93,7 @@ ja:
       index:
         title: '商品を検索してください'
         no_result: '検索結果がありません'
-        placeholder: '商品名を入力してください'
+        alert: '故障中😇お手数ですが一度画面をリロードしてください🙏'
+        placeholder: '商品を入力'
         no_result: '😭検索結果が無い場合、まだ登録がありません'
         new: 'BoozePediaに新しいページを刻んでください'

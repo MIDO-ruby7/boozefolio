@@ -60,6 +60,13 @@
     <div>
       <h4 class="text-stone-600">
         <div class="badge badge-ghost text-stone-400"><%= t('items.new.any') %></div>
+        <%= f.label :region %>
+      </h4>
+      <%= f.text_field :region, class: "input input-bordered input-success input-sm w-full max-w-xs" %>
+    </div>
+    <div>
+      <h4 class="text-stone-600">
+        <div class="badge badge-ghost text-stone-400"><%= t('items.new.any') %></div>
         <%= f.label :content %>
       </h4>
       <%= f.rich_text_area :content, rows:"10", class: "overflow-auto" %>

@@ -52,8 +52,7 @@ class ItemsController < ApplicationController
   end
 
   def new_page
-    @new_item = Item.find(session[:new_item_id]) if session[:new_item_id]
-    @id = session[:new_item_id]
+    @new_item = current_user.items.find(params[:id])
     render layout: false
   end
 
