@@ -6,7 +6,10 @@ class Item < ApplicationRecord
   has_many :photos, dependent: :destroy
   accepts_nested_attributes_for :photos, allow_destroy: true
 
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true
+  validates :alcohol_content, presence: true
+  validates :size, presence: true
+  validates :category_id, presence: true
 
   mount_uploader :image, BoozeImageUploader
 
