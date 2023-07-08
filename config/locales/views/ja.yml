@@ -50,6 +50,9 @@ ja:
       title: 'ユーザー名を変更する'
     edit:
       title: 'ユーザー名を変更する'
+    update:
+      success: 'ユーザー名を変更しました'
+      fail: 'ユーザー名を変更できませんでした'
   items:
     index:
       title: '新規登録されたページ'
