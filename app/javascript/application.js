@@ -10,3 +10,4 @@ import "./custom/search"
 import "./custom/tourguide"
 import "trix"
 import "@rails/actiontext"
+

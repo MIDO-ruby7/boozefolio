@@ -1,3 +1,4 @@
+
 console.log("search.js loaded");
 var preFunc = null;
 var preInput = "";
