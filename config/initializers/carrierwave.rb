@@ -15,11 +15,11 @@ CarrierWave.configure do |config|
       region: 'ap-northeast-3'
     }
 
-    config.fog_directory  = 'boozepedia'
+    config.fog_directory = 'boozepedia'
     config.asset_host = 'https://s3-ap-northeast-3.amazonaws.com/boozepedia'
   else
     # 開発環境はlocalに保存
     config.storage :file
-    config.enable_processing = false if Rails.env.test? #test:処理をスキップ
+    config.enable_processing = false if Rails.env.test? # test:処理をスキップ
   end
 end

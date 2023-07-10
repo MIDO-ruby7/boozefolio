@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  require "mini_magick"
+  require 'mini_magick'
   before_action :set_item, only: %i[show edit update destroy]
 
   def index
@@ -35,8 +35,7 @@ class ItemsController < ApplicationController
     @pre_item = @item.paper_trail.previous_version
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @item.update(item_params)
@@ -61,7 +60,7 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(
       :name, :size, :maker, :alcohol_content, :country_of_origin, :region, :link, :category_id, :content,
-      photos_attributes: [:image, :id, :item_id, :image_cache]
+      photos_attributes: %i[image id item_id image_cache]
     )
   end
 
