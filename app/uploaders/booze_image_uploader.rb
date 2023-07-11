@@ -1,10 +1,10 @@
 class BoozeImageUploader < CarrierWave::Uploader::Base
-  #Include RMagick or MiniMagick support:
-  #include CarrierWave::RMagick
+  # Include RMagick or MiniMagick support:
+  # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  #storage :file
+  # storage :file
   # productionでは、fogで外部ストレージにアップロードする
   if Rails.env.development? || Rails.env.test?
     storage :file

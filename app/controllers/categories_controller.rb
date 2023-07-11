@@ -21,11 +21,11 @@ class CategoriesController < ApplicationController
   def edit; end
 
   def update
-   if @category.update(category_params)
-    redirect_to categories_path, notice: 'カテゴリーを更新しました'
+    if @category.update(category_params)
+      redirect_to categories_path, notice: 'カテゴリーを更新しました'
     else
       render :edit, status: :unprocessable_entity
-   end
+    end
   end
 
   def destroy
