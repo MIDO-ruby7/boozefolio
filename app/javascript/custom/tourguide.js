@@ -39,6 +39,5 @@ if (!tourGuideShown) {
   tg.start();
   tg.onFinish(() => {
     Cookies.set(tourGuideCookieName, true);
-    // Perform any actions you want after the tour is finished
   });
 }
