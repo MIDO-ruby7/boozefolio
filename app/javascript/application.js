@@ -11,3 +11,4 @@ import "./custom/tourguide"
 import "trix"
 import "@rails/actiontext"
 
+Turbo.session.drive = false;
