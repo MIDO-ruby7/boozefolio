@@ -10,6 +10,5 @@ import "./custom/search"
 import "./custom/tourguide"
 import "trix"
 import "@rails/actiontext"
-import "../../assets/javascripts/serviceworker-companion"
 
 Turbo.session.drive = false;

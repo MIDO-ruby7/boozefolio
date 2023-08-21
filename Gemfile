@@ -91,7 +91,3 @@ gem 'rails-i18n'
 
 # debug
 gem 'pry-rails'
-
-# PWA
-gem "rest-client"
-gem 'serviceworker-rails'
