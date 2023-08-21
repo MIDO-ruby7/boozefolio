@@ -94,3 +94,4 @@ gem 'pry-rails'
 
 # PWA
 gem "rest-client"
+gem 'serviceworker-rails'
