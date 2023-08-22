@@ -6,6 +6,7 @@ class Item < ApplicationRecord
   has_many :photos, dependent: :destroy
   accepts_nested_attributes_for :photos, allow_destroy: true
   has_many :drinking_records
+  has_many :user_items
 
   validates :name, presence: true
   validates :alcohol_content, presence: true
