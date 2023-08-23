@@ -76,12 +76,21 @@ group :test do
   gem 'webdrivers'
 end
 
-# 機能に必要なgem
+# debug
+gem 'pry-rails'
+
+# 画像アップロード
 gem 'carrierwave', '>= 3.0.0.beta', '< 4.0'
-gem 'dotenv-rails'
-gem 'fog-aws'
-gem 'googleauth'
 gem 'mini_magick'
+gem 'fog-aws'
+
+# 環境変数読み込み
+gem 'dotenv-rails'
+
+# Google認証
+gem 'googleauth'
+
+# 共同編集履歴
 gem 'paper_trail'
 
 # 多言語化対応
@@ -89,5 +98,5 @@ gem 'paper_trail'
 gem 'enum_help'
 gem 'rails-i18n'
 
-# debug
-gem 'pry-rails'
+# meta tag
+gem "meta-tags"
