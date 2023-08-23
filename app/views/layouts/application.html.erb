@@ -32,25 +32,9 @@
      crossorigin="anonymous">
     </script>
 
-    <!-- serviceWorker -->
-    <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service_worker.js')
-          .then((registration) => {
-            console.log('Service Worker registered:', registration);
-          })
-          .catch((error) => {
-            console.error('Service Worker registration failed:', error);
-          });
-      });
-    }
-  </script>
-
-  <link rel="manifest" href="/manifest.json">
-  <%= favicon_link_tag('favicon.png') %>
-  <link href="<%= image_path("icon192.png") %>" rel="icon" type="image/png" />
-
+    <%= favicon_link_tag('favicon.png') %>
+    <link href="<%= image_path("icon180.png") %>" rel="apple-touch-icon" sizes="180x180" type="image/png" />
+    <link href="<%= image_path("icon192.png") %>" rel="icon" sizes="192x192" type="image/png" />
   </head>
 
   <body>
