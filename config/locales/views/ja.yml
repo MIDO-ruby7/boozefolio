@@ -104,5 +104,7 @@ ja:
     index:
       title: 'My Collection'
       no_image: 'まだ投稿がありません'
+  drinking_records:
+    create:
       new_item: 'あなたのコレクションに新たなページが刻まれました！'
       success: '記録しました！乾杯！'
