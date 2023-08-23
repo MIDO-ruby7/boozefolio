@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BoozePedia</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZYBBZHS1W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5ZYBBZHS1W');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9661295819210095"
+     crossorigin="anonymous"></script>
+
+    <%= favicon_link_tag('favicon.png') %>
+    <link href="<%= image_path("icon180.png") %>" rel="apple-touch-icon" sizes="180x180" type="image/png" />
+    <link href="<%= image_path("icon192.png") %>" rel="icon" sizes="192x192" type="image/png" />
+  </head>
+
+  <body>
+    <div class="flex items-center z-0 h-screen w-screen">
+      <div class="boxNew">
+        <div class="w-full absolute top-10">
+          <h2 class="mb-2 text-teal-500 flex justify-center"><%= t('.message1') %></h2>
+          <h3 class="font-zen text-stone-800 flex justify-center"><%= t('.message2') %></h3>
+        </div>
+        <% if @item %>
+          <% if @item.photos.present? %>
+            <h4 class="font-zen text-xl flex justify-center bold absolute top-32 px-3 block rounded-lg z-50 shadow-lg shadow-cyan-500/50 z-40">
+              <%= @item.name%>
+            </h4>
+            <%= image_tag @item.photos.first.image.url, class:"w-50 h-100 flex absolute justify-center block rounded-lg z-50 bg-cyan-500 shadow-lg shadow-cyan-500/50 z-40" %>
+          <% else %>
+            <%= @item.name %>
+          <% end %>
+        <% end %>
+        <div class="waveNew -one z-30"></div><!--二つのクラスを持つ波-->
+        <div class="waveNew -two z-20"></div><!--二つのクラスを持つ波-->
+        <div class="waveNew -three z-10"></div><!--二つのクラスを持つ波-->
+        <div class="z-40 absolute bottom-32 right-20 w-full flex justify-end">
+          <%= link_to "https://twitter.com/share?url=#{ request.url }&text=BoozePedia|お酒と出逢う投稿型百科事典にページが追加されました！&hashtags=BoozePedia", class:"bg-blue-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full", target: '_blank' do %>
+            <svg class="w-5 h-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" /></svg>
+          <% end %>
+        </div>
+        <div class="z-40 absolute bottom-10 w-full flex justify-center">
+          <%= link_to t('.index'), items_path, class: 'btn m-2 z-30', id: 'next-button' %>
+          <%= link_to t('.new'), new_item_path, class: 'btn btn-success m-2 z-30', id: 'next-button' %>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById('next-button').addEventListener('click', function() {
+        sessionStorage.removeItem('newItemID');
+      });
+    </script>
+  </body>
+</html>
