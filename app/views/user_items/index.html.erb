@@ -1,0 +1,13 @@
+
+<div>
+  <h3 class="ml-2">
+    <%= t('.title') %>
+  </h3>
+  <div class="grid gap-3 grid-cols-2 md:grid-cols-5 grid-rows-3 p-4">
+    <% if @user_items.present? %>
+      <%= render @user_items %>
+    <% else %>
+      <p><%= t('.no_image') %></p>
+    <% end %>
+  </div>
+</div>

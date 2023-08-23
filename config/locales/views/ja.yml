@@ -100,3 +100,11 @@ ja:
         placeholder: '商品を入力'
         no_result: '😭検索結果が無い場合、まだ登録がありません'
         new: 'BoozePediaに新しいページを刻んでください'
+  user_items:
+    index:
+      title: 'My Collection'
+      no_image: 'まだ投稿がありません'
+  drinking_records:
+    create:
+      new_item: 'あなたのコレクションに新たなページが刻まれました！'
+      success: '記録しました！乾杯！'

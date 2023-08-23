@@ -6,6 +6,10 @@
       <%= image_tag "no_image_gray.png", class:"h-auto max-w-full rounded-lg" %>
     <% end %>
   </div>
+  <%= form_with url: item_drinking_records_path(@item), method: :post, local: true do |form| %>
+    <button type="submit" class="btn btn-primary"><%= t('.drink_button') %></button>
+  <% end %>
+
   <div class="ml-10">
     <div class="flex flex-col"><%= t('.name') %><%= @item.name %></div>
     <div class="flex flex-col"><%= t('.category') %><%= @item.category.name %></div>

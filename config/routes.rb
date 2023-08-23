@@ -15,7 +15,10 @@ Rails.application.routes.draw do
     member do
       get 'new_page', to: 'items#new_page', as: 'new_page'
     end
+    resources :drinking_records, only: %i[create]
   end
+
+  resources :user_items, only: %i[index destroy]
 
   resources :categories, only: %i[index new create edit update destroy] do
     member do
