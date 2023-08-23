@@ -100,3 +100,7 @@ ja:
         placeholder: '商品を入力'
         no_result: '😭検索結果が無い場合、まだ登録がありません'
         new: 'BoozePediaに新しいページを刻んでください'
+  user_items:
+    index:
+      title: 'あなたが出逢ったお酒'
+      no_image: 'まだ投稿がありません'

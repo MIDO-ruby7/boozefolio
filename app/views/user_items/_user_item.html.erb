@@ -1,0 +1,12 @@
+<% user_item.photos.each do |photo| %>
+  <div class="flex justify-center">
+    <%= link_to item_path(user_item), class:"no-underline truncate" do %>
+      <div class="">
+        <%= user_item.item.name %>
+      </div>
+      <div class="h-200 w-150 rounded-lg">
+        <%= image_tag photo.image.url %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

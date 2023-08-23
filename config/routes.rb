@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     resources :drinking_records, only: %i[create]
   end
 
-  resources :user_items, only: %i[index create destroy]
+  resources :user_items, only: %i[index destroy]
 
   resources :categories, only: %i[index new create edit update destroy] do
     member do
