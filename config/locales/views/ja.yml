@@ -106,5 +106,9 @@ ja:
       no_image: 'まだ投稿がありません'
   drinking_records:
     create:
-      new_item: 'あなたのコレクションに新たなページが刻まれました！'
       success: '記録しました！乾杯！'
+    new_page:
+      message1: 'あなたのコレクションが新たに追加されました!'
+      message2: '乾杯！'
+      index: '戻る'
+      new: '次のお酒を登録する'
