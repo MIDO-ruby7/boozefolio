@@ -6,7 +6,6 @@ class DrinkingRecordsController < ApplicationController
 
     if @drinking_record.save
       user_item = current_user.user_items.find_by(item: @item)
-      binding.pry
       if user_item.nil?
         current_user.user_items.create(item: @item)  # 新たにレコードを作成
         redirect_to new_page_item_path(@item), notice: t('.new_item')
