@@ -102,5 +102,7 @@ ja:
         new: 'BoozePediaに新しいページを刻んでください'
   user_items:
     index:
-      title: 'あなたが出逢ったお酒'
+      title: 'My Collection'
       no_image: 'まだ投稿がありません'
+      new_item: 'あなたのコレクションに新たなページが刻まれました！'
+      success: '記録しました！乾杯！'
