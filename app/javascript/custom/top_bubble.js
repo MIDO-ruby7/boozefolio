@@ -1,3 +1,5 @@
+import "../add_jquery"
+
 var items = 30; // 気泡の個数
 
 // 気泡を生成して要素に追加
