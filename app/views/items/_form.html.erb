@@ -1,3 +1,8 @@
+<head>
+  <%= javascript_include_tag "preview", "data-turbo-track": "reload", defer: true %>
+  <%= javascript_include_tag "default_values", "data-turbo-track": "reload", defer: true %>
+</head>
+
 <%= form_with model: item, local: true, data: { turbo: false } do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="text-stone-600">

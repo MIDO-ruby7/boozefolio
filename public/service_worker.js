@@ -3,6 +3,7 @@ const urlsToCache = [
   '/',
   '/items',
   '/items/searches',
+  '/user_items',
 ];
 
 self.addEventListener('install', (event) => {
