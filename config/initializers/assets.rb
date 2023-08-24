@@ -10,4 +10,11 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
-Rails.application.config.assets.precompile += %w( custom/*.js )
+Rails.application.config.assets.precompile += %w(
+  custom/bubble.js
+  custom/default_values.js
+  custom/preview.js
+  custom/search.js
+  custom/top_bubble.js
+  custom/tourguide.js
+)
