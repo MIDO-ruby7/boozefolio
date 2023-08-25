@@ -4,6 +4,13 @@
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme-color": "#fde047",
-  "description": "お酒と出逢う投稿型百科事典"
+  "theme_color": "#fde047",
+  "description": "お酒と出逢う投稿型百科事典",
+  "icons": [
+    {
+      "src": "icon192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
 }
