@@ -4,6 +4,6 @@
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme-color": "#fde047",
+  "theme_color": "#fde047",
   "description": "お酒と出逢う投稿型百科事典"
 }
