@@ -8,12 +8,6 @@
   "description": "お酒と出逢う投稿型百科事典",
   "icons": [
     {
-      "src": "icon192.png",
-      "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "any maskable"
-    },
-    {
       "src": "icon512.png",
       "type": "image/png",
       "sizes": "512x512",
