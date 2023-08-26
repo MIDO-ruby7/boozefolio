@@ -1,5 +1,5 @@
 const share_btn = document.getElementById('share-btn');
-link_btn.addEventListener('click', async () => {
+share_btn.addEventListener('click', async () => {
   try {
     await navigator.share({ title: document.title, url: "" });
   } catch (error) {
