@@ -27,6 +27,7 @@ ja:
     version: 'Update'
     line: ''
     page_now: 'pages now'
+    addhome: 'ホーム画面に追加'
   google_login_api:
     callback:
       success: 'ログインしました'

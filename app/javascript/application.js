@@ -5,5 +5,6 @@ import "./custom/search"
 import "./custom/tourguide"
 import "trix"
 import "@rails/actiontext"
+import "./custom/web_share_api"
 
 Turbo.session.drive = false;
