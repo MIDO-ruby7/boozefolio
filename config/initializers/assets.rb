@@ -17,4 +17,6 @@ Rails.application.config.assets.precompile += %w(
   custom/search.js
   custom/top_bubble.js
   custom/tourguide.js
+  images/icon192.png
+  images/icon512.png
 )
