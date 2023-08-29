@@ -7,4 +7,4 @@ import "trix"
 import "@rails/actiontext"
 import "./custom/web_share_api"
 
-Turbo.session.drive = false;
+Turbo.session.drive = false;import "./channels"
