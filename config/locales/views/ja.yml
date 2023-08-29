@@ -10,9 +10,9 @@ ja:
     cta: '使ってみる'
     site_url: 'http://boozefolio.herokuapp.com'
     home: 'HOME'
-    menu1: 'コレクション'
+    menu1: 'タイムライン'
     menu2: '記録する'
-    menu3: 'Boo'
+    menu3: 'コレクション'
     menu4: 'マイページ'
     login: 'ログイン'
     login_required: 'ログインしてください'
@@ -114,3 +114,6 @@ ja:
       message2: '乾杯！'
       index: '戻る'
       new: '次のお酒を登録する'
+  rooms:
+    show:
+      title: 'TIME LINE'
