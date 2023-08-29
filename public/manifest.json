@@ -1,11 +1,11 @@
 {
-  "name": "BoozePedia|お酒と出逢う投稿型百科事典",
-  "short_name": "BoozePedia",
+  "name": "BoozeKUZU",
+  "short_name": "BoozeKUZU",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#fde047",
-  "description": "お酒と出逢う投稿型百科事典",
+  "description": "酒KUZUが飲んだお酒をコレクションするアプリ",
   "icons": [
     {
       "src": "icon512.png",
