@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  layout 'bubble'
+  layout 'timeline'
   def show
     @messages = Message.includes(:user).all
   end

@@ -57,6 +57,18 @@
         <%= render 'shared/flash_message' %>
         <%= yield %>
       </div>
+      <div class="fixed bottom-10 right-2 z-50 mb-8 mr-2">
+        <button class="btn btn-primary rounded-full" onclick="my_modal_5.showModal()">+</button>
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+          <form method="dialog" class="modal-box">
+            <input type="text" data-behavior="room_speaker" class="input input-bordered w-full max-w-xs" placeholder="Type here" >
+            <div class="modal-action">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn mt-2">Close</button>
+            </div>
+          </form>
+        </dialog>
+      </div>
       <div class="fixed z-10">
         <%= render 'shared/footer' %>
       </div>
