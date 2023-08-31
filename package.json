@@ -11,6 +11,7 @@
     "daisyui": "^3.1.1",
     "esbuild": "^0.17.19",
     "jquery": "^3.7.0",
+    "js-cookie": "^3.0.5",
     "postcss": "^8.4.24",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^15.1.0",
