@@ -6,5 +6,6 @@ import "./custom/tourguide"
 import "trix"
 import "@rails/actiontext"
 import "./custom/web_share_api"
+import "./channels"
 
-Turbo.session.drive = false;import "./channels"
+Turbo.session.drive = false

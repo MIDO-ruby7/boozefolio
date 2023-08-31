@@ -12,6 +12,7 @@
     <%= display_meta_tags(default_meta_tags) %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <%= javascript_include_tag "top_bubble", "data-turbo-track": "reload", defer: true %>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,15 +59,14 @@
         <%= yield %>
       </div>
       <div class="fixed bottom-10 right-2 z-50 mb-8 mr-2">
-        <button class="btn btn-primary rounded-full" onclick="my_modal_5.showModal()">+</button>
-        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-          <form method="dialog" class="modal-box">
-            <input type="text" data-behavior="room_speaker" class="input input-bordered w-full max-w-xs" placeholder="Type here" >
-            <div class="modal-action">
-              <!-- if there is a button in form, it will close the modal -->
-              <button class="btn mt-2">Close</button>
+        <button class="btn btn-primary rounded-full" onclick="my_modal_3.showModal()">+</button>
+        <dialog id="my_modal_3" class="modal">
+          <%= form_with model: @message, url: rooms_path, id:"message-form" do |f| %>
+            <div>
+              <%= f.text_area :content, class:"input input-bordered w-full max-w-xs", id:"message" %>
             </div>
-          </form>
+              <%= f.submit "コメントする", class:"btn btn btn-primary mt-4" %>
+          <% end %>
         </dialog>
       </div>
       <div class="fixed z-10">

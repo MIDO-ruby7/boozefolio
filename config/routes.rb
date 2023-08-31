@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount ActionCable.server => '/cable'
   get 'rooms/show'
   root to: 'static_pages#top'
   get '/contact', to: 'static_pages#contact'
@@ -33,5 +34,5 @@ Rails.application.routes.draw do
 
   resource :users, only: %i[show edit update]
 
-  resources :rooms, only: %i[show]
+  resources :rooms, only: %i[create]
 end
