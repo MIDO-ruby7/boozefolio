@@ -55,21 +55,16 @@
   <body>
     <div class="flex">
       <div class="box z-0">
-        <%= render 'shared/flash_message' %>
-        <%= yield %>
+        <div>
+          <%= render 'shared/flash_message' %>
+          <%= yield %>
+        </div>
       </div>
-      <div class="fixed bottom-10 right-2 z-50 mb-8 mr-2">
-        <button class="btn btn-primary rounded-full" onclick="my_modal_3.showModal()">+</button>
-        <dialog id="my_modal_3" class="modal">
-          <%= form_with model: @message, url: rooms_path, id:"message-form" do |f| %>
-            <div>
-              <%= f.text_area :content, class:"input input-bordered w-full max-w-xs", id:"message" %>
-            </div>
-              <%= f.submit "コメントする", class:"btn btn btn-primary mt-4" %>
-          <% end %>
-        </dialog>
+    </div>
+      <div class="fixed bottom-10 z-50 mb-4 mr-2 grid justify-end">
+        <%= render 'messages/modal_form' %>
       </div>
-      <div class="fixed z-10">
+      <div>
         <%= render 'shared/footer' %>
       </div>
     </div>

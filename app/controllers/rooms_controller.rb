@@ -14,7 +14,7 @@ class RoomsController < ApplicationController
 
   def show
     @message = Message.new
-    @messages = Message.includes(:user).all
+    @messages = Message.includes(:user).all.order(created_at: :desc)
   end
 
   private

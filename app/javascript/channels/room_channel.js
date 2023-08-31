@@ -13,7 +13,7 @@ const appRoom = consumer.subscriptions.create("RoomChannel", {
 
   received(data) {
     const messages = document.getElementById('messages');
-    messages.insertAdjacentHTML('beforeend', data['message']);
+    messages.insertAdjacentHTML('afterbegin', data['message']);
   },
 
   speak: function(content) {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (response.ok) {
         const data = await response.json();
         const messages = document.getElementById('messages');
-        messages.insertAdjacentHTML('beforeend', data.message);
+        messages.insertAdjacentHTML('afterbegin', data.message);
         messageForm.reset();
       } else {
         console.error('Error submitting message:', response);
@@ -56,8 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function closeModalAndResetForm() {
-  const myModal = document.getElementById('my_modal_5');
-  myModal.close();
 
   const messageForm = document.getElementById('message-form');
   messageForm.reset();
