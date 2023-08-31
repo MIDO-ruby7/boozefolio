@@ -827,6 +827,11 @@ sweetalert@^2.1.2:
     es6-object-assign "^1.1.0"
     promise-polyfill "^6.0.2"
 
+tailwindcss-stimulus-components@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/tailwindcss-stimulus-components/-/tailwindcss-stimulus-components-4.0.4.tgz#1df5f2a488aa89365561bb33357095cd59ed831a"
+  integrity sha512-xNlMs1WufKiTMQtVklwHfrR/iuPVaFA0Mk5uefRnHztmr7w4g6BzKAWHyfte60pjhcQbmlbshHMOZiq/dkXnhw==
+
 tailwindcss@^3, tailwindcss@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.3.2.tgz#2f9e35d715fdf0bbf674d90147a0684d7054a2d3"
