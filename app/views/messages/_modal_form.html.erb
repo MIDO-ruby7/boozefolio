@@ -22,7 +22,7 @@
                 <%= f.text_area :content, class:"input input-bordered w-full max-w-xs", id:"message", placeholder:"いま何してる？" %>
               </div>
               <div class="flex justify-end items-center flex-wrap mt-6">
-                <%= f.submit "送信", class:"btn btn btn-primary mt-4 w-36" %>
+                <%= f.submit t('defaults.send'), class:"btn btn btn-primary mt-4 w-36" %>
                 <button class="btn btn-outline opacity-70 mt-4 ml-2" data-action="click->modal#close:prevent">cancel</button>
               </div>
             <% end %>

@@ -4,7 +4,7 @@
       <div id="errorMessages" class="text-red-500 text-sm"></div>
       <div class="flex flex-row">
         <%= f.text_area :content, class:"input input-bordered input-sm mr-2 w-64", id:"message", placeholder:"いま何してる？" %>
-        <%= f.submit "送信", class:"btn btn btn-info btn-sm" %>
+        <%= f.submit t('defaults.send'), class:"btn btn btn-info btn-sm" %>
       </div>
     <% end %>
   </div>
