@@ -101,3 +101,6 @@ gem 'rails-i18n'
 
 # meta tag
 gem "meta-tags"
+
+# OpenAI
+gem "ruby-openai"
