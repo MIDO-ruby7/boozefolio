@@ -11,3 +11,16 @@
     </div>
   </div>
 </div>
+<% if message.boo_response.present? %>
+  <div class="ai-response chat chat-end">
+    <div class="chat-header opacity-80">
+      Boo
+    </div>
+    <div class="chat-bubble w-52 md:w-auto">
+      <%= message.boo_response %>
+    </div>
+    <div class="chat-footer text-xs opacity-50">
+      <%= message.created_at.strftime("%Y/%m/%d %H:%M") %>
+    </div>
+  </div>
+<% end %>

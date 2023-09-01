@@ -14,6 +14,17 @@ const appRoom = consumer.subscriptions.create("RoomChannel", {
   received(data) {
     const messages = document.getElementById('messages');
     messages.insertAdjacentHTML('beforeend', data['message']);
+    const booResponse = data['boo_response'];
+
+    if (booResponse) {
+      const booResponseElement = document.createElement('div');
+      booResponseElement.classList.add('ai-response'); // 必要に応じてクラスを追加
+      booResponseElement.textContent = `AI Response: ${booResponse}`;
+      messages.appendChild(booResponseElement);
+      scrollToBottom();
+    }
+
+    scrollToBottom();
   },
 
   speak: function(content) {
@@ -43,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (response.ok) {
         const data = await response.json();
+        appRoom.speak(content);
         const messages = document.getElementById('messages');
         messages.insertAdjacentHTML('beforeend', data.message);
         scrollToBottom();
