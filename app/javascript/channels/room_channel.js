@@ -13,7 +13,7 @@ const appRoom = consumer.subscriptions.create("RoomChannel", {
 
   received(data) {
     const messages = document.getElementById('messages');
-    messages.insertAdjacentHTML('afterbegin', data['message']);
+    messages.insertAdjacentHTML('beforeend', data['message']);
   },
 
   speak: function(content) {
@@ -44,10 +44,15 @@ document.addEventListener('DOMContentLoaded', () => {
       if (response.ok) {
         const data = await response.json();
         const messages = document.getElementById('messages');
-        messages.insertAdjacentHTML('afterbegin', data.message);
+        messages.insertAdjacentHTML('beforeend', data.message);
+        scrollToBottom();
         messageForm.reset();
       } else {
-        console.error('Error submitting message:', response);
+        const errorData = await response.json();
+        console.error('Error submitting message:', errorData.error);
+        // エラーメッセージを設定
+        const errorMessagesElement = document.getElementById('errorMessages');
+        errorMessagesElement.textContent = errorData.error;
       }
     } catch (error) {
       console.error('Error submitting message:', error);
@@ -55,8 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function closeModalAndResetForm() {
-
-  const messageForm = document.getElementById('message-form');
-  messageForm.reset();
+function scrollToBottom() {
+  const bottomOfBox = document.getElementById('box');
+  bottomOfBox.scrollIntoView({ behavior: 'smooth', block: 'end' });
 }

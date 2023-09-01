@@ -1,0 +1,11 @@
+<div class="bg-yellow-400 bg-opacity-60 flex justify-center w-screen">
+  <div class="my-2">
+    <%= form_with model: @message, url: rooms_path, id:"message-form" do |f| %>
+      <div id="errorMessages" class="text-red-500 text-sm"></div>
+      <div class="flex flex-row">
+        <%= f.text_area :content, class:"input input-bordered input-sm mr-2 w-64", id:"message", placeholder:"いま何してる？" %>
+        <%= f.submit "送信", class:"btn btn btn-info btn-sm" %>
+      </div>
+    <% end %>
+  </div>
+</div>

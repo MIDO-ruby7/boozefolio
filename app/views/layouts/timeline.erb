@@ -54,15 +54,15 @@
 
   <body>
     <div class="flex">
-      <div class="box z-0">
+      <div id="box" class="box z-0">
         <div>
           <%= render 'shared/flash_message' %>
           <%= yield %>
         </div>
       </div>
     </div>
-      <div class="fixed bottom-10 z-50 mb-4 mr-2 grid justify-end">
-        <%= render 'messages/modal_form' %>
+      <div class="fixed bottom-10 z-50 mb-4 mr-2">
+        <%= render 'messages/form' %>
       </div>
       <div>
         <%= render 'shared/footer' %>

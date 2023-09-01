@@ -8,13 +8,13 @@ class RoomsController < ApplicationController
       render json: { message: render_to_string(partial: 'messages/message', locals: { message: @message }) }
     else
       flash.now[:alert] = 'メッセージが送信できませんでした。'
-      render json: { error: 'メッセージが送信できませんでした。' }, status: :unprocessable_entity
+      render json: { error: @message.errors.full_messages.join(', ') }, status: :unprocessable_entity
     end
   end
 
   def show
     @message = Message.new
-    @messages = Message.includes(:user).all.order(created_at: :desc)
+    @messages = Message.includes(:user).all
   end
 
   private
