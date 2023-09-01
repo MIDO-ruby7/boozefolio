@@ -1,9 +1,9 @@
 ja:
   defaults:
-    app_name: 'BoozeKUZU'
-    catch_copy1: '酒KUZUが飲んだお酒をコレクションするアプリ'
+    app_name: '酒KUZUのためのコレクションアプリ'
+    catch_copy1: '酒の楽しみを、BoozeKUZUで共有しよう'
     catch_copy2: 'Booze|酒、ビール、アルコール飲料、酒宴'
-    catch_copy3: 'KUZU|酒を飲む行為をどうにか正当化しようと考える生物'
+    catch_copy3: 'KUZU|酒を飲む行為をどうにか正当化しようとする生物'
     catch_copy4: 'コンビニで、旅先で、飲み会で。'
     catch_copy5: '特徴１: お酒'
     site_title: 'BoozeKUZU|酒KUZUが飲んだお酒をコレクションするアプリ'
@@ -116,4 +116,4 @@ ja:
       new: '次のお酒を登録する'
   rooms:
     show:
-      title: 'TIME LINE'
+      title: 'KUZU TIME LINE'
