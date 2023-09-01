@@ -198,6 +198,11 @@
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-7.0.5.tgz#bbc11203e0d3d5084002abfcf01d621fdf5f3a9d"
   integrity sha512-SOBA2heB9lTw0VYIx8M/ed7inSf4I9sR8OIlJprhgkfQ3WJtrxPJ6DDATR1Z3RYaIR7HlT2Olj08v1lfGIGuHA==
 
+"@rails/actioncable@^7.0.7-2":
+  version "7.0.7-2"
+  resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-7.0.7-2.tgz#c2a28d64720d2b44e421a1b3790070d5fc3f2da2"
+  integrity sha512-7irihOFG//9Z4kBuiwH+VqSfiCdOLcuhC0/y7QcxOC9R08QE5Hq7N+ex2o3SkqiszbmMh7tlj88V+y+Kt/TPmA==
+
 "@rails/actiontext@^7.0.5-1":
   version "7.0.5-1"
   resolved "https://registry.yarnpkg.com/@rails/actiontext/-/actiontext-7.0.5-1.tgz#8274d23c600dcb50dbcbf826c2129083dc99e04c"
@@ -540,6 +545,11 @@ jquery@^3.7.0:
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.0.tgz#fe2c01a05da500709006d8790fe21c8a39d75612"
   integrity sha512-umpJ0/k8X0MvD1ds0P9SfowREz2LenHsQaxSohMZ5OMNEU2r0tf8pdeEFTHMFxWVxKNyU9rTtK3CWzUCTKJUeQ==
 
+js-cookie@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-3.0.5.tgz#0b7e2fd0c01552c58ba86e0841f94dc2557dcdbc"
+  integrity sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==
+
 lilconfig@^2.0.5, lilconfig@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/lilconfig/-/lilconfig-2.1.0.tgz#78e23ac89ebb7e1bfbf25b18043de756548e7f52"
@@ -816,6 +826,11 @@ sweetalert@^2.1.2:
   dependencies:
     es6-object-assign "^1.1.0"
     promise-polyfill "^6.0.2"
+
+tailwindcss-stimulus-components@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/tailwindcss-stimulus-components/-/tailwindcss-stimulus-components-4.0.4.tgz#1df5f2a488aa89365561bb33357095cd59ed831a"
+  integrity sha512-xNlMs1WufKiTMQtVklwHfrR/iuPVaFA0Mk5uefRnHztmr7w4g6BzKAWHyfte60pjhcQbmlbshHMOZiq/dkXnhw==
 
 tailwindcss@^3, tailwindcss@^3.3.2:
   version "3.3.2"

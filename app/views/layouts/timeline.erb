@@ -12,6 +12,7 @@
     <%= display_meta_tags(default_meta_tags) %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <%= javascript_include_tag "top_bubble", "data-turbo-track": "reload", defer: true %>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,11 +54,17 @@
 
   <body>
     <div class="flex">
-      <div class="box z-0">
-        <%= render 'shared/flash_message' %>
-        <%= yield %>
+      <div id="box" class="box z-0">
+        <div>
+          <%= render 'shared/flash_message' %>
+          <%= yield %>
+        </div>
       </div>
-      <div class="fixed z-10">
+    </div>
+      <div class="fixed bottom-10 z-50 mb-4 mr-2">
+        <%= render 'messages/form' %>
+      </div>
+      <div>
         <%= render 'shared/footer' %>
       </div>
     </div>

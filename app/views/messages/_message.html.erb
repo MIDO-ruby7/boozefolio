@@ -1,0 +1,13 @@
+<div class="<%= message.user == current_user ? 'chat chat-start' : 'chat chat-end' %>">
+  <div id="message-area">
+    <div class="chat-header opacity-80">
+      <%= message.user.name %>
+    </div>
+    <div class="chat-bubble w-52 md:w-auto">
+      <%= message.content %>
+    </div>
+    <div class="text-xs opacity-50">
+      <%= message.created_at.strftime("%Y/%m/%d %H:%M") %>
+    </div>
+  </div>
+</div>

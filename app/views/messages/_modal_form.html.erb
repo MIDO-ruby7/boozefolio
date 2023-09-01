@@ -1,0 +1,36 @@
+<div data-controller="modal" data-modal-restore-scroll-value="false" data-action="keydown.esc->modal#close" tabindex="-1" class="relative z-10">
+  <a href="#" data-action="click->modal#open" class="btn btn-primary btn-sm bg-opacity-80 rounded w-screen">+</a>
+  <!-- Modal Background -->
+  <div class="hidden fixed inset-0 bg-black bg-opacity-80 overflow-y-auto flex items-center justify-center"
+        data-modal-target="background"
+        data-action="click->modal#closeBackground"
+        data-transition-enter="transition-all ease-in-out duration-300"
+        data-transition-enter-from="bg-opacity-0"
+        data-transition-enter-to="bg-opacity-80"
+        data-transition-leave="transition-all ease-in-out duration-300"
+        data-transition-leave-from="bg-opacity-80"
+        data-transition-leave-to="bg-opacity-0">
+
+    <!-- Modal Container -->
+    <div data-modal-target="container" class="max-h-screen w-full max-w-lg relative">
+      <!-- Modal Card -->
+      <div class="m-1 bg-white bg-opacity-90 rounded shadow">
+        <div class="p-8">
+          <div class="my-5">
+            <%= form_with model: @message, url: rooms_path, id:"message-form" do |f| %>
+              <div>
+                <%= f.text_area :content, class:"input input-bordered w-full max-w-xs", id:"message", placeholder:"いま何してる？" %>
+              </div>
+              <div class="flex justify-end items-center flex-wrap mt-6">
+                <%= f.submit t('defaults.send'), class:"btn btn btn-primary mt-4 w-36" %>
+                <button class="btn btn-outline opacity-70 mt-4 ml-2" data-action="click->modal#close:prevent">cancel</button>
+              </div>
+            <% end %>
+          </div>
+          <div class="flex justify-end items-center flex-wrap mt-6">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount ActionCable.server => '/cable'
+  get 'rooms/show'
   root to: 'static_pages#top'
   get '/contact', to: 'static_pages#contact'
   get '/terms', to: 'static_pages#terms'
@@ -31,4 +33,6 @@ Rails.application.routes.draw do
   end
 
   resource :users, only: %i[show edit update]
+
+  resources :rooms, only: %i[create]
 end
