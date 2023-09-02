@@ -1,11 +1,11 @@
 module ApplicationHelper
   def default_meta_tags
     {
-      site: 'BoozePedia',
-      title: 'お酒と出逢う投稿型百科事典',
-      reverse: true,
+      site: 'BOOZEKUZU',
+      title: '酒KUZUのためのコレクションアプリ',
+      reverse: false,
       charset: 'utf-8',
-      description: 'コンビニで、旅先で、飲み会で。あなたが出逢ったお酒を投稿しよう。',
+      description: 'あなたが出逢ったお酒をコレクション。',
       keywords: 'お酒、ビール、ワイン、焼酎、ウイスキー、日本酒、梅酒',
       canonical: "https://boozefolio.herokuapp.com",
       separator: '|',
@@ -18,14 +18,14 @@ module ApplicationHelper
         description: :description,
         type: 'website',
         url: request.original_url,
-        image: image_url('ogp.jpg'),
+        image: image_url('ogp.png'),
         local: 'ja-JP'
       },
 
       twitter: {
         card: 'summary_large_image',
         site: '@MIDORI_ruby7',
-        image: image_url('ogp.jpg')
+        image: image_url('ogp.png')
       }
     }
   end
