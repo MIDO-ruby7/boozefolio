@@ -28,7 +28,7 @@ ja:
     no_version: 'No Version. 編集者を待っています。'
     version: 'Update'
     line: ''
-    page_now: 'pages now'
+    page_now: 'items now'
     addhome: 'アプリをシェアする'
     my_collection: 'My Collection'
   google_login_api:
