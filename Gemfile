@@ -104,3 +104,6 @@ gem "meta-tags"
 
 # OpenAI
 gem "ruby-openai"
+
+# API
+gem 'rest-client'
