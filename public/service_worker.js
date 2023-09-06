@@ -1,4 +1,4 @@
-const CACHE_NAME = 'BoozePedia_cache';
+const CACHE_NAME = 'BOOZEKUZU_cache';
 const urlsToCache = [
   '/',
   '/items',
