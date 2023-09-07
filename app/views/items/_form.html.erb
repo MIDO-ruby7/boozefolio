@@ -12,7 +12,7 @@
         <div class="badge badge-error text-stone-600"><%= t('items.new.required') %></div>
         <%= f.label :category_id %>
       </h4>
-      <%= f.collection_select :category_id, Category.all, :id, :name, { prompt: true }, class: "select select-bordered  select-success w-full max-w-xs", id: "item_category_id" %>
+      <%= f.collection_select :category_id, Category.all, :id, :name, { }, { class: "select select-bordered select-success w-full max-w-xs", id: "item_category_id" } %>
     </div>
     <div>
       <h4 class="text-stone-600">

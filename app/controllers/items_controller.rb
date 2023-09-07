@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
     @item.photos.build
+    @category_id = params[:category_id]
   end
 
   def create

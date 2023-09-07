@@ -1,17 +1,8 @@
-<div data-turbo="false">
-  <div class="flex flex-col mt-10">
-    <div class="text-stone-600 flex justify-center">
-      <%= t('.title') %>
-    </div>
-    <div class="flex justify-center">
-      <%= text_field_tag :name,'', id: "js_search_items", class: "input input-bordered input-success  w-full max-w-xs", placeholder:  t('.placeholder'), data: { turbo: false } %>
-    </div>
-  </div>
-  <ul id="js_result">
-    <%= render partial: 'search_list', locals: { items: @items } %>
-  </ul>
-  <div class="mb-28 no_result">
-    <div class="flex justify-center mb-2 mt-5"><%= t('.no_result') %></div>
-    <div class="flex justify-center"><%= link_to t('.new'), new_item_path, class: "btn btn-accent text-yellow-100" %></div>
-  </div>
+<div>
+  <%= link_to "ビール", new_item_path(category_id: 1), id: "category-button-1", class: "btn w-20 h-20 category-link" %>
+  <%= link_to "ワイン", new_item_path(category_id: 2), id: "category-button-2", class: "btn w-20 h-20 category-link" %>
+  <%= link_to "日本酒", new_item_path(category_id: 3), id: "category-button-3", class: "btn w-20 h-20 category-link" %>
+  <%= link_to "焼酎", new_item_path(category_id: 4), id: "category-button-4", class: "btn w-20 h-20 category-link" %>
+  <%= link_to "ウイスキー", new_item_path(category_id: 5), id: "category-button-5", class: "btn w-20 h-20 category-link" %>
+  <%= link_to "チューハイ", new_item_path(category_id: 6), id: "category-button-6", class: "btn w-20 h-20 category-link" %>
 </div>

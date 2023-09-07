@@ -1,3 +1,4 @@
+
 const categoryDefaults = {
   1: { alcohol_content: 5.0, size: 350 },
   2: { alcohol_content: 14.0, size: 750 },
@@ -8,6 +9,25 @@ const categoryDefaults = {
 };
 
 jQuery(function() {
+  // ページ読み込み時にdata-category-idから@category_idの値を取得
+  const categoryId = $('#category-id').data('category-id');
+  const defaultValues = categoryDefaults[categoryId];
+  console.log(categoryId);
+  console.log(defaultValues);
+
+  if (defaultValues) {
+    // 初期値をフィールドにセット
+    $('#item_alcohol_content').val(defaultValues.alcohol_content);
+    $('#item_size').val(defaultValues.size);
+
+    const valueDisplay = document.querySelector('#value-display');
+    if (valueDisplay) {
+      valueDisplay.textContent = defaultValues.alcohol_content;
+    }
+    $('#item_category_id').val(categoryId);
+  }
+
+  // カテゴリが変更されたときの処理
   $(document).on('change', '#item_category_id', function() {
     const categoryId = $(this).val();
     const defaultValues = categoryDefaults[categoryId];
@@ -24,4 +44,3 @@ jQuery(function() {
     }
   });
 });
-
