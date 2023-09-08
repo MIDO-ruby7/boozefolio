@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
               console.log(item);
               const itemLink = document.createElement('a');
               itemLink.textContent = item.name; // nameを表示
-              itemLink.href = '#'; // 商品名を選択した場合の処理を追加
 
               // 商品名をクリックしたらテキストフィールドに自動入力
               itemLink.addEventListener('click', function () {
@@ -77,8 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
           } else {
             const noItemsMessage = document.createElement('p');
-            noItemsMessage.textContent = 'No items found.';
-            suggestedItems.appendChild(noItemsMessage);
+            renderItems(data);
           }
         })
         .catch(error => {
@@ -99,3 +97,17 @@ document.addEventListener('DOMContentLoaded', function () {
     return categoryDefaults[categoryIdToUse].id;
   }
 });
+
+function renderItems(data) {
+  console.log(data);
+  $('#suggested-items').empty(); // 既存の内容をクリア
+
+  // JSON データ内の各アイテムに対して処理を行う
+  data.forEach(item => {
+    const itemLink = document.createElement('a');
+    itemLink.textContent = item.name;
+    itemLink.href = `/items/${item.id}`; // リンク先を設定
+
+    $('#suggested-items').append(itemLink); // リンクを div に追加
+  });
+}
