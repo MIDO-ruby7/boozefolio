@@ -4,11 +4,23 @@ class Items::SearchesController < ApplicationController
   end
 
   def search
-    # paramsとして送られてきたkeyword（入力された語句）で、Itemモデルのnameカラムを検索し、その結果を@itemsに代入する
-    @items = Item.where('name LIKE ?', "%#{params[:search]}%")
+    query = params[:query]
+    yahoo_genre_category_id = params[:yahoo_genre_category_id]
+    @items = Item.where('name LIKE ?', "%#{query}%")
+
+    if @items.present?
+      render_items_as_json(@items)
+    else
+      items_data = YahooApi.item_search(query, yahoo_genre_category_id)
+      render_items_as_json(items_data)
+    end
+  end
+
+  private
+
+  def render_items_as_json(data)
     respond_to do |format|
-      format.html { render partial: 'search_list', locals: { items: @items } }
-      format.json { render json: @items }
+      format.json { render json: data }
     end
   end
 end

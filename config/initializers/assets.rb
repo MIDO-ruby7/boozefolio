@@ -14,9 +14,9 @@ Rails.application.config.assets.precompile += %w(
   custom/bubble.js
   custom/default_values.js
   custom/preview.js
-  custom/search.js
   custom/top_bubble.js
   custom/tourguide.js
+  custom/yahoo_api.js
   images/icon192.png
   images/icon512.png
 )

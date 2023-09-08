@@ -28,7 +28,7 @@ ja:
     no_version: 'No Version. 編集者を待っています。'
     version: 'Update'
     line: ''
-    page_now: 'pages now'
+    page_now: 'items now'
     addhome: 'アプリをシェアする'
     my_collection: 'My Collection'
   google_login_api:
@@ -91,7 +91,7 @@ ja:
     destroy:
       success: '削除しました'
     new_page:
-      message1: 'BoozePediaに新たな1ページが追加されました!'
+      message1: 'BOOZEKUZUに新たな1ページが追加されました!'
       message2: 'あなたの出逢いが、誰かの出逢いに。'
       message3: 'Thank you'
       index: '戻る'
@@ -103,7 +103,7 @@ ja:
         alert: '故障中😇お手数ですが一度画面をリロードしてください🙏'
         placeholder: '商品を入力'
         no_result: '😭検索結果が無い場合、まだ登録がありません'
-        new: 'BoozePediaに新しいページを刻んでください'
+        new: 'BOOZEKUZUに新しいページを刻んでください'
   user_items:
     index:
       title: 'My Collection'

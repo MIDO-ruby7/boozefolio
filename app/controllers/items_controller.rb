@@ -6,10 +6,10 @@ class ItemsController < ApplicationController
     @items = Item.all.includes(:photos).order(created_at: :desc)
   end
 
-  # 画像のアップロード機能
   def new
     @item = Item.new
     @item.photos.build
+    @category_id = params[:category_id]
   end
 
   def create

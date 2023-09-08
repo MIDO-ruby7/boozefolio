@@ -4,7 +4,7 @@
     <title>Boozefolio</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="description" content="BoozePedia|お酒と出逢う投稿型百科事典。新たなお酒を見つけてマイコレクションに登録しよう"/>
+    <meta name="description" content="BOOZEKUZU|お酒と出逢う投稿型百科事典。新たなお酒を見つけてマイコレクションに登録しよう"/>
     <meta name="theme-color" content="#fde047">
 
     <%= csrf_meta_tags %>
@@ -75,7 +75,7 @@
           <script src="https://accounts.google.com/gsi/client" async defer></script>
           <div id="g_id_onload"
               data-client_id="<%= ENV['GOOGLE_CLIENT_ID'] %>"
-              data-login_uri="https://boozefolio.herokuapp.com/google_login_api/callback"
+              data-login_uri="http://localhost:3000/google_login_api/callback"
               data-auto_prompt="false">
           </div>
           <div class="g_id_signin flex justify-center bg-yellow-50"
