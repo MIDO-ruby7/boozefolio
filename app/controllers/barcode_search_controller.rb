@@ -1,2 +1,0 @@
-class BarcodeSearchController < ApplicationController
-end
