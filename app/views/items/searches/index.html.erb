@@ -6,3 +6,6 @@
   <%= link_to "ウイスキー", new_item_path(category_id: 5), id: "category-button-5", class: "btn w-28 h-28 category-link" %>
   <%= link_to "チューハイ/ハイボール", new_item_path(category_id: 6), id: "category-button-6", class: "btn w-28 h-28 category-link" %>
 </div>
+<div class="flex justify-center m-2">
+  <%= link_to "バーコードで探す", items_barcode_searches_path, id: "barcode_search", class: "btn w-full mt-10" %>
+</div>
