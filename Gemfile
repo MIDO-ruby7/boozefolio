@@ -107,3 +107,6 @@ gem "ruby-openai"
 
 # API
 gem 'rest-client'
+
+# 文字列の類似度を計算
+gem 'amatch'
