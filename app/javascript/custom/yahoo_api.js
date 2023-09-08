@@ -53,13 +53,26 @@ document.addEventListener('DOMContentLoaded', function () {
               const itemLink = document.createElement('a');
               itemLink.textContent = item.name; // nameを表示
               itemLink.href = '#'; // 商品名を選択した場合の処理を追加
-  
+
               // 商品名をクリックしたらテキストフィールドに自動入力
               itemLink.addEventListener('click', function () {
                 itemNameInput.value = item.name; // 商品名をテキストフィールドにセット
+
+                // jan_code フィールドに janCode をセット
+                const janCodeField = document.querySelector('#item_jan_code');
+                if (janCodeField) {
+                  janCodeField.value = item.janCode;
+                }
+
+                // maker フィールドに parentBrandName をセット
+                const makerField = document.querySelector('#item_maker');
+                if (makerField) {
+                  makerField.value = item.parentBrandName;
+                }
+
                 suggestedItems.innerHTML = ''; // 選択後、候補をクリア
               });
-  
+
               suggestedItems.appendChild(itemLink);
             });
           } else {
