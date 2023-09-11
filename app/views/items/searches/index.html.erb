@@ -1,5 +1,6 @@
 <script src="https://unpkg.com/@ericblade/quagga2@1.7.4/dist/quagga.min.js"></script>
 <%= javascript_include_tag "quagga", "data-turbo-track": "reload", defer: true %>
+<%= javascript_include_tag "jan_codo_search_yahoo_api", "data-turbo-track": "reload", defer: true %>
 
 <div class="grid grid-cols-3 md:grid-cols-6 gap-3 m-2 mt-20">
   <%= link_to "ビール", new_item_path(category_id: 1), id: "category-button-1", class: "btn w-28 h-28 category-link" %>
@@ -19,6 +20,9 @@
     </div>
     <div id="my_result" class="w-full text-sm text-center">
       ***
+    </div>
+    <div class="link">
+      <div id="jan_codo_suggested-items" class="text-sm flex flex-col mb-32"></div>
     </div>
   </div>
 </div>

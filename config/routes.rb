@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   namespace :items do
     resources :searches, only: %i[index]
     get 'search', to: 'searches#search'
-    resources :barcode_searches, only: %i[index]
+    get 'barcode_search', to: 'searches#barcode_search'
   end
 
   resources :items, only: %i[index show new create edit update destroy] do

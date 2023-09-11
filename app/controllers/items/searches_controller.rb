@@ -16,6 +16,12 @@ class Items::SearchesController < ApplicationController
     end
   end
 
+  def barcode_search
+    barcode_value = params[:barcode]
+    jan_code_items_data = YahooApi.jan_code_search(barcode_value)
+    render_items_as_json(jan_code_items_data)
+  end
+
   private
 
   def render_items_as_json(data)
