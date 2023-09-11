@@ -111,3 +111,27 @@ function renderItems(data) {
     $('#suggested-items').append(itemLink); // リンクを div に追加
   });
 }
+
+const urlParams = new URLSearchParams(window.location.search);
+
+const nameField = document.getElementById('item_name');
+const parentBrandField = document.getElementById('item_maker');
+const janCodeField = document.getElementById('item_jan_code');
+
+const nameValue = urlParams.get('name');
+const makerValue = urlParams.get('maker');
+const janCodeValue = urlParams.get('janCode');
+
+console.log(nameValue);
+console.log(makerValue);
+console.log(janCodeValue);
+
+if (nameValue) {
+  nameField.value = nameValue;
+}
+if (makerValue) {
+  parentBrandField.value = makerValue;
+}
+if (janCodeValue) {
+  janCodeField.value = janCodeValue;
+}

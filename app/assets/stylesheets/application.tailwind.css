@@ -3,6 +3,7 @@
 @import './wave.css';
 @import './bubble.css';
 @import './actiontext.css';
+@import './quagga.css';
 
 @tailwind base;
 @tailwind components;

@@ -1,3 +1,7 @@
+<script src="https://unpkg.com/@ericblade/quagga2@1.7.4/dist/quagga.min.js"></script>
+<%= javascript_include_tag "quagga", "data-turbo-track": "reload", defer: true %>
+<%= javascript_include_tag "jan_codo_search_yahoo_api", "data-turbo-track": "reload", defer: true %>
+
 <div class="grid grid-cols-3 md:grid-cols-6 gap-3 m-2 mt-20">
   <%= link_to "ビール", new_item_path(category_id: 1), id: "category-button-1", class: "btn w-28 h-28 category-link" %>
   <%= link_to "ワイン", new_item_path(category_id: 2), id: "category-button-2", class: "btn w-28 h-28 category-link" %>
@@ -5,4 +9,20 @@
   <%= link_to "焼酎", new_item_path(category_id: 4), id: "category-button-4", class: "btn w-28 h-28 category-link" %>
   <%= link_to "ウイスキー", new_item_path(category_id: 5), id: "category-button-5", class: "btn w-28 h-28 category-link" %>
   <%= link_to "チューハイ/ハイボール", new_item_path(category_id: 6), id: "category-button-6", class: "btn w-28 h-28 category-link" %>
+</div>
+<div class="flex justify-center w-screen">
+  <div id="my_container" class="items-center">
+  <div id="my_inner" class="w-screen rounded-lg text-center mt-10">
+    <div>= バーコードをスキャン =</div>
+    <div id="my_quagga" class="w-screen flex justify-center ">
+      <video class="object-cover h-24"></video>
+      <canvas class="w-0 h-0"></canvas>
+    </div>
+    <div id="my_result" class="w-full text-sm text-center">
+      ***
+    </div>
+    <div class="link">
+      <div id="jan_codo_suggested-items" class="text-sm flex flex-col mb-32"></div>
+    </div>
+  </div>
 </div>

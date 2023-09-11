@@ -7,14 +7,7 @@
 <%= form_with model: item, local: true, data: { turbo: false } do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="text-stone-600">
-    <div>
-      <h4 class="text-stone-600">
-        <div class="badge badge-error text-stone-600"><%= t('items.new.required') %></div>
-        <%= f.label :category_id %>
-      </h4>
-      <%= f.collection_select :category_id, Category.all, :id, :name, { }, { class: "select select-bordered select-success w-full max-w-xs", id: "item_category_id" } %>
-    </div>
-    <div>
+    <div class="m-2">
       <h4 class="text-stone-600">
         <div class="badge badge-error text-stone-600"><%= t('items.new.required') %></div>
         <%= f.label :name %>
@@ -24,7 +17,14 @@
         <div id="suggested-items"  class="flex flex-col"></div>
       </div>
     </div>
-    <div class="number-input">
+    <div class="m-2">
+      <h4 class="text-stone-600">
+        <div class="badge badge-error text-stone-600"><%= t('items.new.required') %></div>
+        <%= f.label :category_id %>
+      </h4>
+      <%= f.collection_select :category_id, Category.all, :id, :name, { }, { class: "select select-bordered select-success w-full max-w-xs", id: "item_category_id" } %>
+    </div>
+    <div class="number-input m-2">
       <h4 class="text-stone-600">
         <div class="badge badge-error text-stone-600"><%= t('items.new.required') %></div>
         <%= f.label :alcohol_content %>%
@@ -33,7 +33,7 @@
         <%= f.number_field :alcohol_content, in: 1.0..100.0, step: 0.1, class: "input input-bordered input-success", id: "item_alcohol_content" %>
       </div>
     </div>
-    <div>
+    <div class="m-2">
       <h4 class="text-stone-600">
         <div class="badge badge-error text-stone-600"><%= t('items.new.required') %></div>
         <%= f.label :size %>
@@ -41,46 +41,46 @@
       <%= f.text_field :size, in: 1..4000, class: "input input-bordered input-success input-sm max-w-xs", id: "item_size" %>ml
     </div>
     <%= f.fields_for :photos do |photo_fields| %>
-      <div>
+      <div class="m-2">
         <h4 class="text-stone-600">
           <div class="badge badge-ghost text-stone-400"><%= t('items.new.any') %></div>
           <%= photo_fields.label :image %>
         </h4>
         <%= photo_fields.file_field :image, class: "file-input file-input-bordered file-input-success file-input-sm w-full max-w-xs", accept: 'image/*', id: "item_photos_attributes_0_image" %>
       </div>
-      <div>
+      <div class="m-2">
         <%= image_tag item.image.url, id: 'preview', size: '200x100' %>
       </div>
     <% end %>
-    <div>
+    <div class="m-2">
       <h4 class="text-stone-600">
         <div class="badge badge-ghost text-stone-400"><%= t('items.new.any') %></div>
         <%= f.label :maker %>
       </h4>
       <%= f.text_field :maker, class: "input input-bordered input-success input-sm w-full max-w-xs" %>
     </div>
-    <div>
+    <div class="m-2">
       <h4 class="text-stone-600">
         <div class="badge badge-ghost text-stone-400"><%= t('items.new.any') %></div>
         <%= f.label :country_of_origin %>
       </h4>
       <%= f.select :country_of_origin, Item.country_of_origins_i18n.invert, { include_blank: "指定なし" },  class: "select select-bordered select-success w-full max-w-xs" %>
     </div>
-    <div>
+    <div class="m-2">
       <h4 class="text-stone-600">
         <div class="badge badge-ghost text-stone-400"><%= t('items.new.any') %></div>
         <%= f.label :region %>
       </h4>
       <%= f.text_field :region, class: "input input-bordered input-success input-sm w-full max-w-xs" %>
     </div>
-    <div>
+    <div class="m-2">
       <h4 class="text-stone-600">
         <div class="badge badge-ghost text-stone-400"><%= t('items.new.any') %></div>
         <%= f.label :jan_code %>
       </h4>
       <%= f.text_field :jan_code, class: "input input-bordered input-success input-sm w-full max-w-xs" %>
     </div>
-    <div>
+    <div class="m-2">
       <h4 class="text-stone-600">
         <div class="badge badge-ghost text-stone-400"><%= t('items.new.any') %></div>
         <%= f.label :content %>
