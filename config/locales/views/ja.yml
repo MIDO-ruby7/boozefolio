@@ -91,8 +91,8 @@ ja:
     destroy:
       success: '削除しました'
     new_page:
-      message1: 'BOOZEKUZUに新たな1ページが追加されました!'
-      message2: 'あなたの出逢いが、誰かの出逢いに。'
+      message1: 'BOOZEKUZUに新種が追加されました!'
+      message2: 'あなたの出逢いに乾杯！'
       message3: 'Thank you'
       index: '戻る'
       new: '次のお酒を登録する'

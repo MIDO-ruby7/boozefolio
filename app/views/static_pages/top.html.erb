@@ -4,7 +4,7 @@
     <title>Boozefolio</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="description" content="BOOZEKUZU|お酒と出逢う投稿型百科事典。新たなお酒を見つけてマイコレクションに登録しよう"/>
+    <meta name="description" content="BOOZEKUZU|酒の楽しみを、BoozeKUZUで共有しよう"/>
     <meta name="theme-color" content="#fde047">
 
     <%= csrf_meta_tags %>
@@ -87,31 +87,17 @@
               data-shape="rectangular"
               data-logo_alignment="left">
           </div>
+          <div class="flex flex-row text-stone-400 flex justify-center">
+            <%= link_to t('static_pages.contact.title'), contact_path, class: "text-xs m-1" %>
+            <%= link_to t('static_pages.privacy.title'), privacy_path, class: "text-xs m-1" %>
+            <%= link_to t('static_pages.terms.title'), terms_path, class: "text-xs m-1" %>
+          </div>
         </div>
-        <div id="tinderslide">
-          <ul>
-            <li class="pane1"><div class="img"></div><div>Miami Beach</div><div class="like"></div><div class="dislike"></div></li>
-            <li class="pane2"><div class="img"></div><div>San Francisco</div><div class="like"></div><div class="dislike"></div></li>
-            <li class="pane3"><div class="img"></div><div>Chicago</div><div class="like"></div><div class="dislike"></div></li>
-            <li class="pane4"><div class="img"></div><div>New York</div><div class="like"></div><div class="dislike"></div></li>
-            <li class="pane5"><div class="img"></div><div>Beach</div><div class="like"></div><div class="dislike"></div></li>
-          </ul>
-      </div>
         <div class="wave -one"></div><!--二つのクラスを持つ波-->
         <div class="wave -two"></div><!--二つのクラスを持つ波-->
         <div class="wave -three"></div><!--二つのクラスを持つ波-->
         <div class="w-64 m-0"><%= render 'box_boo' %></div>
       </div>
     </div>
-    <footer class="footer footer-center p-4 bg-yellow-50 opacity-85 text-xs text-stone-500">
-      <div>
-        <div>Copyright © 2023 - All right reserved</div>
-        <div class="flex flex-row">
-          <div><%= link_to t('static_pages.contact.title'), contact_path, class: "mr-2" %></div>
-          <div><%= link_to t('static_pages.privacy.title'), privacy_path, class: "mr-2" %></div
-          <div><%= link_to t('static_pages.terms.title'), terms_path %></div>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>
