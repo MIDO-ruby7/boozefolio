@@ -4,6 +4,7 @@
 @import './bubble.css';
 @import './actiontext.css';
 @import './quagga.css';
+@import './jTinder.css';
 
 @tailwind base;
 @tailwind components;
