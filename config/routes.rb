@@ -36,4 +36,6 @@ Rails.application.routes.draw do
   resource :users, only: %i[show edit update]
 
   resources :rooms, only: %i[create]
+
+  resources :stamps, only: %i[index new create destroy]
 end

@@ -1,0 +1,27 @@
+<%= javascript_include_tag "preview", "data-turbo-track": "reload", defer: true %>
+
+<div class="m-4">
+  <%= form_with model: @stamp, url: stamps_path, method: :post, local: true do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <div class="mt-2">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "input input-bordered input-success input-sm w-full max-w-xs", placeholder: 'アルファベット（小文字）で入力' %>
+    </div>
+
+    <div class="mt-4">
+      <%= f.label :image, 'スタンプ画像' %>
+      <%= f.file_field :image, id: "image_file_field", class: "file-input file-input-bordered file-input-success file-input-sm w-full max-w-xs" %>
+      <%= f.hidden_field :image_cache %>
+      <div class="mt-4">
+        <%= image_tag @stamp.image.url, id: 'preview', size: '128x128' %>
+      </div>
+    </div>
+
+    <div class="">
+      <%= f.submit '登録', class: 'btn btn-success mt-4 mb-28' %>
+    </div>
+  <% end %>
+
+  <%= link_to '戻る', stamps_path %>
+</div>

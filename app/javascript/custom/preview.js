@@ -1,5 +1,7 @@
+console.log("preview.js loaded")
+
 document.addEventListener('DOMContentLoaded', function(){
-  const fileInput = document.querySelector("#item_photos_attributes_0_image")
+  const fileInput = document.querySelector("#image_file_field")
   const previewImage = document.querySelector("#preview")
 
   fileInput.addEventListener('change', function(event){

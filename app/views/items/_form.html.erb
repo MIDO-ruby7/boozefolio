@@ -46,7 +46,7 @@
           <div class="badge badge-ghost text-stone-400"><%= t('items.new.any') %></div>
           <%= photo_fields.label :image %>
         </h4>
-        <%= photo_fields.file_field :image, class: "file-input file-input-bordered file-input-success file-input-sm w-full max-w-xs", accept: 'image/*', id: "item_photos_attributes_0_image" %>
+        <%= photo_fields.file_field :image, class: "file-input file-input-bordered file-input-success file-input-sm w-full max-w-xs", accept: 'image/*', id: "image_file_field" %>
       </div>
       <div class="m-2">
         <%= image_tag item.image.url, id: 'preview', size: '200x100' %>
