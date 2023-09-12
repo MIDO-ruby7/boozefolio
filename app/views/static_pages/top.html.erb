@@ -52,6 +52,7 @@
   </head>
 
   <body>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <div class="h-screen w-screen flex">
       <div class="box">
         <div class="mb-10">
@@ -75,7 +76,7 @@
           <script src="https://accounts.google.com/gsi/client" async defer></script>
           <div id="g_id_onload"
               data-client_id="<%= ENV['GOOGLE_CLIENT_ID'] %>"
-              data-login_uri="https://boozefolio.herokuapp.com/google_login_api/callback"
+              data-login_uri="https://www.sakekuzu.win/google_login_api/callback"
               data-auto_prompt="false">
           </div>
           <div class="g_id_signin flex justify-center bg-yellow-50"
@@ -87,6 +88,15 @@
               data-logo_alignment="left">
           </div>
         </div>
+        <div id="tinderslide">
+          <ul>
+            <li class="pane1"><div class="img"></div><div>Miami Beach</div><div class="like"></div><div class="dislike"></div></li>
+            <li class="pane2"><div class="img"></div><div>San Francisco</div><div class="like"></div><div class="dislike"></div></li>
+            <li class="pane3"><div class="img"></div><div>Chicago</div><div class="like"></div><div class="dislike"></div></li>
+            <li class="pane4"><div class="img"></div><div>New York</div><div class="like"></div><div class="dislike"></div></li>
+            <li class="pane5"><div class="img"></div><div>Beach</div><div class="like"></div><div class="dislike"></div></li>
+          </ul>
+      </div>
         <div class="wave -one"></div><!--二つのクラスを持つ波-->
         <div class="wave -two"></div><!--二つのクラスを持つ波-->
         <div class="wave -three"></div><!--二つのクラスを持つ波-->
