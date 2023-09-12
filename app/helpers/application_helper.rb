@@ -7,7 +7,7 @@ module ApplicationHelper
       charset: 'utf-8',
       description: 'あなたが出逢ったお酒をコレクション。',
       keywords: 'お酒、ビール、ワイン、焼酎、ウイスキー、日本酒、梅酒',
-      canonical: "https://boozefolio.herokuapp.com",
+      canonical: "https://www.sakekuzu.win",
       separator: '|',
       icon: [
         { href: image_url('icon192.png') }

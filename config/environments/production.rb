@@ -44,8 +44,8 @@ Rails.application.configure do
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
   ActionCable.server.config.disable_request_forgery_protection = true
-  config.action_cable.url = "wss://boozefolio.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = [ "http://boozefolio.herokuapp.com/", "https://boozefolio.herokuapp.com/" ]
+  config.action_cable.url = "wss://www.sakekuzu.win/cable"
+  config.action_cable.allowed_request_origins = [ "https://www.sakekuzu.win/", "https://www.sakekuzu.win/" ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   config.force_ssl = true
