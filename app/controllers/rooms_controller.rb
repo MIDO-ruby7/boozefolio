@@ -19,6 +19,8 @@ class RoomsController < ApplicationController
   def show
     @message = Message.new
     @messages = Message.includes(:user).all
+    @stamps = Stamp.all
+    @acitive_stamp = MessageStampRelationship.includes(:stamp).all
   end
 
   private

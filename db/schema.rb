@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_12_045513) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_13_092304) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -112,14 +112,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_12_045513) do
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
-  create_table "message_stamps", force: :cascade do |t|
-    t.bigint "message_id"
+  create_table "message_stamp_relationships", force: :cascade do |t|
+    t.bigint "user_id"
     t.bigint "stamp_id"
-    t.integer "count", default: 0
+    t.bigint "message_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["message_id"], name: "index_message_stamps_on_message_id"
-    t.index ["stamp_id"], name: "index_message_stamps_on_stamp_id"
+    t.index ["message_id"], name: "index_message_stamp_relationships_on_message_id"
+    t.index ["stamp_id"], name: "index_message_stamp_relationships_on_stamp_id"
+    t.index ["user_id"], name: "index_message_stamp_relationships_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -155,17 +156,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_12_045513) do
     t.index ["user_id"], name: "index_user_items_on_user_id"
   end
 
-  create_table "user_stamps", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "stamp_id"
-    t.bigint "message_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["message_id"], name: "index_user_stamps_on_message_id"
-    t.index ["stamp_id"], name: "index_user_stamps_on_stamp_id"
-    t.index ["user_id"], name: "index_user_stamps_on_user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.datetime "created_at", null: false
@@ -193,13 +183,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_12_045513) do
   add_foreign_key "drinking_records", "items"
   add_foreign_key "drinking_records", "users"
   add_foreign_key "items", "users"
-  add_foreign_key "message_stamps", "messages"
-  add_foreign_key "message_stamps", "stamps"
+  add_foreign_key "message_stamp_relationships", "messages"
+  add_foreign_key "message_stamp_relationships", "stamps"
+  add_foreign_key "message_stamp_relationships", "users"
   add_foreign_key "messages", "users"
   add_foreign_key "photos", "items"
   add_foreign_key "user_items", "items"
   add_foreign_key "user_items", "users"
-  add_foreign_key "user_stamps", "messages"
-  add_foreign_key "user_stamps", "stamps"
-  add_foreign_key "user_stamps", "users"
 end

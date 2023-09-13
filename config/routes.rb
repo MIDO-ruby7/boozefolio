@@ -24,18 +24,14 @@ Rails.application.routes.draw do
       end
     end
   end
-
   resources :user_items, only: %i[index destroy]
-
   resources :categories, only: %i[index new create edit update destroy] do
     member do
       get 'default_values', to: 'categories#default_alcohol_content'
     end
   end
-
   resource :users, only: %i[show edit update]
-
   resources :rooms, only: %i[create]
-
   resources :stamps, only: %i[index new create destroy]
+  resources :message_stamp_relationships, only: %i[create destroy]
 end

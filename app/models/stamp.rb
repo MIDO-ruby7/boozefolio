@@ -1,9 +1,8 @@
 class Stamp < ApplicationRecord
   mount_uploader :image, StampImageUploader
-  has_many :messages, through: :message_stamps
-  has_many :message_stamps, dependent: :destroy
-  has_many :user_stamps, dependent: :destroy
-  has_many :users, through: :user_stamps
+  has_many :message_stamp_relationships, dependent: :destroy
+  has_many :users, through: :message_stamp_relationships
+  has_many :messages, through: :message_stamp_relationships
 
   validates :name, presence: true, uniqueness: true
   validate :name_contains_only_lowercase_letters
@@ -19,7 +18,7 @@ class Stamp < ApplicationRecord
 
   def validate_record_count
     if Stamp.count >= 100
-      errors.add(:base, "スタンプのレコード数は30個までです")
+      errors.add(:base, "スタンプのレコード数は100個までです")
     end
   end
 end
