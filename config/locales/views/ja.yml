@@ -120,6 +120,7 @@ ja:
   rooms:
     show:
       title: 'KUZU TIME LINE'
+      new_stamp_path: 'スタンプを追加する'
   stamps:
     index:
       title: 'スタンプ一覧'

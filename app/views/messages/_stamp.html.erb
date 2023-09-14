@@ -26,12 +26,13 @@
         <div class="p-8 flex flex-row">
           <% stamps.each do |stamp| %>
             <%= button_to message_stamp_relationships_path(message_id: message.id, stamp_id: stamp.id), remote: true, method: :post, id: stamp.id, class: "stamp-link" do %>
-              <%= image_tag stamp.image.url, class: "stamp-image w-6 h-6 m-2", alt: stamp.name %>
+              <%= image_tag stamp.image.url, class: "w-6 h-6 m-2", alt: stamp.name %>
             <% end %>
           <% end %>
         </div>
         <div class="flex justify-end items-center flex-wrap mt-6">
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 m-4 rounded" data-action="click->modal#close:prevent">Close</button>
+          <button class="btn btn-primary m-2"><%= link_to t('rooms.show.new_stamp_path'), new_stamp_path %></button>
+          <button class="btn m-2" data-action="click->modal#close:prevent"><%= t('defaults.cancel') %></button>
         </div>
       </div>
     </div>

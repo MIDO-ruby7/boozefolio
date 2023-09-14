@@ -21,6 +21,7 @@ class RoomsController < ApplicationController
     @messages = Message.includes(:user).all
     @stamps = Stamp.all
     @acitive_stamp = MessageStampRelationship.includes(:stamp).all
+    @stamp_counts = calculate_stamp_counts(@messages)
   end
 
   private
@@ -32,5 +33,17 @@ class RoomsController < ApplicationController
   def render_message_and_broadcast(message)
     rendered_message = ApplicationController.renderer.render(partial: 'messages/message', locals: { message: message })
     ActionCable.server.broadcast('room_channel', { message: rendered_message, boo_response: message.boo_response })
+  end
+
+  def calculate_stamp_counts(messages)
+    stamp_counts = {}
+    messages.each do |message|
+      stamp_counts[message.id] = stamp_counts_for_message(message.id)
+    end
+    stamp_counts
+  end
+
+  def stamp_counts_for_message(message_id)
+    MessageStampRelationship.stamp_count_for_message(message_id)
   end
 end
