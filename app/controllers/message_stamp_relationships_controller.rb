@@ -6,10 +6,10 @@ class MessageStampRelationshipsController < ApplicationController
     existing_relationship = MessageStampRelationship.find_by(user: current_user, message: @message, stamp: @stamp)
     if existing_relationship
       current_user.cancel_stamp(@message, @stamp)
-      redirect_to rooms_show_path
+      redirect_to rooms_show_path(scroll_to_message: @message.id)
     else
       current_user.stamp(@message, @stamp)
-      redirect_to rooms_show_path
+      redirect_to rooms_show_path(scroll_to_message: @message.id)
     end
   end
 

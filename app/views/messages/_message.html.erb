@@ -3,7 +3,7 @@
     <div class="chat-header opacity-80">
       <%= message.user.name %>
     </div>
-    <div class="chat-bubble w-52 md:w-auto">
+    <div class="chat-bubble w-52 md:w-auto" id="message-<%= message.id %>">
       <%= message.content %>
     </div>
     <div class="flex flex-row">

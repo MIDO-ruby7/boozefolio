@@ -6,5 +6,6 @@ import "trix"
 import "@rails/actiontext"
 import "./custom/web_share_api"
 import "./channels"
+import "./custom/scroll"
 
 Turbo.session.drive = false
