@@ -31,6 +31,9 @@ ja:
         name: 'カテゴリー'
       tag:
         name: 'タグ'
+      stamp:
+        name: 'スタンプ名'
+        image: '画像'
     prompt:
       models:
         item:

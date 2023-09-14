@@ -6,9 +6,25 @@
     <div class="chat-bubble w-52 md:w-auto">
       <%= message.content %>
     </div>
-    <div class="text-xs opacity-50">
-      <%= message.created_at.strftime("%Y/%m/%d %H:%M") %>
+    <div class="flex flex-row">
+      <div class="opacity-70 text-xs"><%= message.created_at.strftime("%Y/%m/%d %H:%M") %></div>
+      <%= render 'messages/stamp', stamps: @stamps, message: message if message.user != current_user %>
     </div>
+    <div class="flex flex-row">
+    <% if acitive_stamp.present? %>
+      <% acitive_stamp.each do |acitive_stamp| %>
+        <% if acitive_stamp.message_id == message.id %>
+          <% stamp_count = @stamp_counts[message.id][acitive_stamp.stamp.id] || 0 %>
+          <%= button_to message_stamp_relationships_path(message_id: message.id, stamp_id: acitive_stamp.stamp.id), remote: true, method: :post, id: acitive_stamp.stamp.id, class: "stamp-link" do %>
+            <div class="flex flex-row text-xs">
+              <%= image_tag acitive_stamp.stamp.image.url, class: "w-6 h-6 m-2", alt: acitive_stamp.stamp.name %>
+              <%= stamp_count %>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
   </div>
 </div>
 <% if message.boo_response.present? %>

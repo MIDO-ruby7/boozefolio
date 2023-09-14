@@ -21,7 +21,6 @@ const steps = [
     target: "#three",
     order: 3,
   },{
-  },{
     title: "記録する📷",
     content: "飲酒記録や新種登録はこちらから</p>",
     target: "#four",

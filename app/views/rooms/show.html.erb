@@ -1,6 +1,6 @@
 <div id="bottomOfPage" class="flex flex-col relative mb-32">
   <h1 class="flex flex-row m-2"><%= image_tag "favicon.png", class: "h-6 mr-1" %><%= t('.title') %></h1>
   <div id="messages" class="m-4">
-    <%= render @messages %>
+    <%= render @messages, acitive_stamp: @acitive_stamp, stamp_count: @stamp_counts %>
   </div>
 </div>

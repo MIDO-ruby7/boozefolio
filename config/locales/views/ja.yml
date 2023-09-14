@@ -74,6 +74,7 @@ ja:
       region: '産地：'
       content: 'ノート：'
       user_name: '投稿者：'
+      drink_button: '飲んだよ！'
     new:
       title: '図鑑登録'
       file: 'ファイルを選択'
@@ -119,3 +120,21 @@ ja:
   rooms:
     show:
       title: 'KUZU TIME LINE'
+      new_stamp_path: 'スタンプを追加する'
+  stamps:
+    index:
+      title: 'スタンプ一覧'
+      new_path: '＋ 新しいスタンプを登録する'
+      no_stamps: 'まだスタンプがありません'
+      name: 'スタンプ名'
+      image: 'スタンプ画像'
+      delete: '🗑削除'
+      stamp: 'いいね'
+    new:
+      title: 'スタンプ登録'
+    create:
+      success: 'スタンプを作成しました'
+      fail: 'スタンプを作成できませんでした'
+    destroy:
+      success: 'スタンプを削除しました'
+      dialog: '本当に削除しますか？'
