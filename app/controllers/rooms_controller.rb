@@ -9,7 +9,8 @@ class RoomsController < ApplicationController
     if @message.save
       response_content = Openai.openai_response(content)  # AIからのレスポンスを生成
       @message.update(boo_response: response_content) # AIからのレスポンスを保存
-      render_message_and_broadcast(@message)
+      @active_stamp = MessageStampRelationship.includes(:stamp).all
+      render_message_and_broadcast(@message, @active_stamp)
       render json: { message: render_to_string(partial: 'messages/message', locals: { message: @message }) }
     else
       render json: { error: @message.errors.full_messages.join(', ') }, status: :unprocessable_entity
@@ -20,7 +21,7 @@ class RoomsController < ApplicationController
     @message = Message.new
     @messages = Message.includes(:user).all
     @stamps = Stamp.all
-    @acitive_stamp = MessageStampRelationship.includes(:stamp).all
+    @active_stamp = MessageStampRelationship.includes(:stamp).all
     @stamp_counts = calculate_stamp_counts(@messages)
   end
 
@@ -30,8 +31,8 @@ class RoomsController < ApplicationController
     params.require(:message).permit(:content, :user_id, :boo_response)
   end
 
-  def render_message_and_broadcast(message)
-    rendered_message = ApplicationController.renderer.render(partial: 'messages/message', locals: { message: message })
+  def render_message_and_broadcast(message, active_stamp)
+    rendered_message = ApplicationController.renderer.render(partial: 'messages/message', locals: { message: message, active_stamp: active_stamp })
     ActionCable.server.broadcast('room_channel', { message: rendered_message, boo_response: message.boo_response })
   end
 
