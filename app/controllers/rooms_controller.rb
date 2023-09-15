@@ -21,7 +21,7 @@ class RoomsController < ApplicationController
     @message = Message.new
     @messages = Message.includes(:user).all
     @stamps = Stamp.all
-    @active_stamp = MessageStampRelationship.includes(:stamp).all
+    @active_stamp = MessageStampRelationship.select('DISTINCT ON (message_id, stamp_id) *').includes(:stamp).all
     @stamp_counts = calculate_stamp_counts(@messages)
   end
 
