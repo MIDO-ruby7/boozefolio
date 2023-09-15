@@ -24,11 +24,16 @@
       <!-- Modal Card -->
       <div class="m-1 bg-white rounded shadow">
         <div class="p-8 flex flex-row">
+        <% if stamps.present? %>
           <% stamps.each do |stamp| %>
             <%= button_to message_stamp_relationships_path(message_id: message.id, stamp_id: stamp.id), remote: true, method: :post, id: stamp.id, class: "stamp-link" do %>
               <%= image_tag stamp.image.url, class: "w-6 h-6 m-2", alt: stamp.name %>
             <% end %>
           <% end %>
+        <% else %>
+          <!-- Handle the case where there are no stamps -->
+          <p>No stamps available.</p>
+        <% end %>
         </div>
         <div class="flex justify-end items-center flex-wrap mt-6">
           <button class="btn btn-primary m-2"><%= link_to t('rooms.show.new_stamp_path'), new_stamp_path %></button>
