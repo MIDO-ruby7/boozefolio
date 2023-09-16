@@ -55,23 +55,12 @@
     <div class="h-screen w-screen flex">
       <div class="box">
         <div class="mb-10">
-          <h2 class="m-4 text-teal-500"><%= t('defaults.app_name') %></h2>
-          <h3 class="font-zen flex justify-center text-stone-800 mt-3"><%= t('defaults.catch_copy1') %></h3>
-          <div class="m-8  font-noto text-stone-600 text-xs">
-            <div class="mb-2">
-              <p><%= t('defaults.catch_copy2') %></p>
-            </div>
-            <div class="mb-2">
-              <p><%= t('defaults.catch_copy3') %></p>
-            </div>
-          </div>
+          <h1 class="flex justify-center mt-10 text-2xl font-bold font-noto text-slate-200 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"><%= t('defaults.welcome') %></h1>
+          <h2 class="flex justify-center text-base text-stone-600 mt-5 font-noto"><%= t('defaults.catch_copy1_1') %></h2>
+          <h2 class="flex justify-center text-base text-stone-600 font-noto"><%= t('defaults.catch_copy1_2') %></h2>
         </div>
         <div class="mt-6">
-          <p class="font-mono text-teal-500 flex justify-center"><%= t('defaults.cta') %>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 animate-bounce">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </p>
+          <p class="flex justify-center font-noto text-stone-800 m-4 font-extrabold"><%= t('defaults.cta') %></p>
           <script src="https://accounts.google.com/gsi/client" async defer></script>
           <div id="g_id_onload"
               data-client_id="<%= ENV['GOOGLE_CLIENT_ID'] %>"
@@ -86,7 +75,7 @@
               data-shape="rectangular"
               data-logo_alignment="left">
           </div>
-          <div class="flex flex-row text-stone-400 flex justify-center">
+          <div class="flex flex-row text-stone-500 flex justify-center">
             <%= link_to t('static_pages.contact.title'), contact_path, class: "text-xs m-1" %>
             <%= link_to t('static_pages.privacy.title'), privacy_path, class: "text-xs m-1" %>
             <%= link_to t('static_pages.terms.title'), terms_path, class: "text-xs m-1" %>
