@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   mount ActionCable.server => '/cable'
   get 'rooms/show'
   root to: 'static_pages#top'
+  get '/entrance', to: 'static_pages#entrance'
+  get 'verified', to: 'static_pages#verified'
   get '/contact', to: 'static_pages#contact'
   get '/terms', to: 'static_pages#terms'
   get '/privacy', to: 'static_pages#privacy'

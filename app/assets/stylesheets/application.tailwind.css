@@ -4,6 +4,7 @@
 @import './bubble.css';
 @import './actiontext.css';
 @import './quagga.css';
+@import './entrance.css';
 
 @tailwind base;
 @tailwind components;

@@ -1,0 +1,21 @@
+.hero {
+  transition: background-image 2s ease; /* 背景画像の変化を1秒かけてゆっくりにする */
+}
+
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out; /* 1秒かけてフェードイン */
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* テキストを下から上へ移動させる */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
