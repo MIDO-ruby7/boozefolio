@@ -52,8 +52,8 @@
   </head>
 
   <body>
-    <div class="hero min-h-screen" style="background-image: url(https://boozepedia.s3.ap-northeast-3.amazonaws.com/material/beer.jpeg)">
-      <div class="hero-content text-center">
+    <div class="hero h-screen" style="background-image: url(https://boozepedia.s3.ap-northeast-3.amazonaws.com/material/beer.jpeg)">
+      <div class="hero-content text-center ">
         <div class="max-w-md">
           <div class="replacementContent">
             <p class="text-slate-200 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"><%= t('defaults.app_name') %></p>
@@ -61,7 +61,7 @@
             <div class="py-1 text-xs"><%= t('defaults.catch_copy6') %></div>
             <div class=""><%= t('defaults.catch_copy4') %></div>
           </div>
-          <%= render 'box_boo'%>
+          <div class="object-contain h-64 w-64 fix justify-center scale-150 ml-6"><%= render 'box_boo'%></div>
           <div class="dele-element text-xl font-bold m-4 text-stone-800"><%= t('defaults.catch_copy5') %></div>
           <%= link_to 'Yes', verified_path(choice: 'yes'), class:"btn btn-primary mr-10 dele-element" %>
           <button id="changeBackgroundButton" class="btn btn-primary dele-elementsxqq">No</button>
