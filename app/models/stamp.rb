@@ -5,6 +5,7 @@ class Stamp < ApplicationRecord
   has_many :messages, through: :message_stamp_relationships
 
   validates :name, presence: true, uniqueness: true
+  validates :image, presence: true
   validate :name_contains_only_lowercase_letters
   validate :validate_record_count, on: :create
 
