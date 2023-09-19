@@ -13,7 +13,6 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-    <%= javascript_include_tag "top_bubble", "data-turbo-track": "reload", defer: true %>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,10 +63,10 @@
       <div id="form-container" class="fixed bottom-10 z-50 mb-4 mr-2">
         <%= render 'messages/form' %>
         <!-- Add the loading screen here -->
-        <div id="loading-screen" class="hidden fixed inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center flex flex-col">
-          <div class=" text-3xl font-bold text-slate-200 mb-10">今返信してるよ、飲んで待っててね🍶</div>
-          <div class="animate-spin">
-            <%= image_tag "boo.png", alt: "BOO", id:"loadingImage", class:"w-20" %>
+        <div id="loading-screen" class="hidden fixed inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center">
+          <div id="loading_bg" class="flex flex-col">
+            <div class="text-3xl font-bold text-slate-200 mb-10">今返信してるよ、飲んで待っててね🍶</div>
+            <%= image_tag "boo.png", alt: "BOO", id:"loadingImage", class:"w-20 bg-gray-800 bg-opacity-70" %>
           </div>
           <div class="loader"></div>
         </div>

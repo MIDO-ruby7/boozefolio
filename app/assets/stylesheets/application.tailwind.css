@@ -5,6 +5,7 @@
 @import './actiontext.css';
 @import './quagga.css';
 @import './entrance.css';
+@import './loading.css';
 
 @tailwind base;
 @tailwind components;
