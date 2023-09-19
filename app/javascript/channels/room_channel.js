@@ -35,12 +35,16 @@ const appRoom = consumer.subscriptions.create("RoomChannel", {
 
 document.addEventListener('DOMContentLoaded', () => {
   const messageForm = document.getElementById('message-form');
+  const loadingScreen = document.getElementById('loading-screen');
 
   messageForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const formData = new FormData(messageForm);
     const content = formData.get('message[content]');
+
+    // ローディング画面を表示する
+    loadingScreen.classList.remove('hidden');
 
     try {
       const response = await fetch('/rooms', {
@@ -68,6 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } catch (error) {
       console.error('Error submitting message:', error);
+    } finally {
+      // メッセージ送信後、またはエラー発生後にローディング画面を隠す
+      loadingScreen.classList.add('hidden');
     }
   });
 });

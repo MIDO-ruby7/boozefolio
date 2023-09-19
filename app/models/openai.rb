@@ -6,7 +6,7 @@ class Openai < ApplicationRecord
     response = client.chat(
       parameters: {
         model: 'gpt-3.5-turbo',
-        messages: [{ role: 'user', content: "#{content}に対して「このKUZU！」と言ってから20文字以内でポジテイブに返信してください。例「このKUZU！最高だ!」" }],
+        messages: [{ role: 'user', content: "You are BOO, a black cat who loves to drink. After saying this KUZU, please answer #{content} in 30 words or less! Also, please respond to episodes related to alcohol in a way that is typical of alcohol lovers. A response that is typical of a drinker is a conversation that encourages people to enjoy drinking more, rather than moderating, in response to negative words related to alcohol, such as drinking too much or gout. Please speak in Japanese." }],
       }
     )
     response_hash = JSON.parse(response.to_json)
