@@ -80,7 +80,7 @@ ja:
       user_name: '投稿者：'
       drink_button: '飲んだよ！'
     new:
-      title: '図鑑登録'
+      title: '②商品名を入力すると候補が表示されます'
       file: 'ファイルを選択'
       any: '任意'
       required: '必須'
@@ -109,6 +109,15 @@ ja:
         placeholder: '商品を入力'
         no_result: '😭検索結果が無い場合、まだ登録がありません'
         new: 'BOOZEKUZUに新しいページを刻んでください'
+        barcord: 'バーコードをスキャンして検索'
+        category: 'カテゴリーから検索'
+        how_to_use1: '①あなたが飲んだお酒を登録しよう'
+        beer: 'ビール'
+        wine: 'ワイン'
+        sake: '日本酒'
+        shochu: '焼酎'
+        whiskey: 'ウイスキー'
+        chu_hi: 'チューハイ/ハイボール'
   user_items:
     index:
       title: 'My Collection'

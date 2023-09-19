@@ -1,7 +1,7 @@
 <div>
   <div class="mx-4">
     <div id="category-id" data-category-id="<%= @category_id.to_i %>"></div>
-    <div class="mt-3 text-xl font-semibold flex justify-between"><%= t('.title') %></div>
+    <div class="mt-3 font-semibold flex justify-between"><%= t('.title') %></div>
     <%= render 'form', item: @item, category_id: @category_id %>
   </div>
 </div>

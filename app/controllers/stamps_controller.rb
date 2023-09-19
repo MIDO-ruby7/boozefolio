@@ -18,7 +18,7 @@ class StampsController < ApplicationController
   end
 
   def destroy
-    @stamp = current_user.stamps.find(params[:id])
+    @stamp = Stamp.find(params[:id])
     @stamp.destroy!
     redirect_to stamps_path, notice: t('.success'), status: :see_other
   end
