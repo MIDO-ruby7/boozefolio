@@ -61,8 +61,16 @@
         </div>
       </div>
     </div>
-      <div class="fixed bottom-10 z-50 mb-4 mr-2">
+      <div id="form-container" class="fixed bottom-10 z-50 mb-4 mr-2">
         <%= render 'messages/form' %>
+        <!-- Add the loading screen here -->
+        <div id="loading-screen" class="hidden fixed inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center flex flex-col">
+          <div class=" text-3xl font-bold text-slate-200 mb-10">今返信してるよ、飲んで待っててね🍶</div>
+          <div class="animate-spin">
+            <%= image_tag "boo.png", alt: "BOO", id:"loadingImage", class:"w-20" %>
+          </div>
+          <div class="loader"></div>
+        </div>
       </div>
       <div>
         <%= render 'shared/footer' %>

@@ -2,7 +2,7 @@
   <div class="flex flex-row justify-between">
     <h1 class="flex flex-row m-2"><%= image_tag "favicon.png", class: "h-6 mr-1" %><%= t('.title') %></h1>
     <div id="scrollToBottom" class="flex justify-end flex flex-col">
-      <%= image_tag "https://boozepedia.s3.ap-northeast-3.amazonaws.com/material/boozepedia.gif", alt: "BOOZEKUZU", id:"scrollImage", class:"w-36" %>
+      <div class="absolute ml-12 animate-bounce">scroll↓</div><%= image_tag "https://boozepedia.s3.ap-northeast-3.amazonaws.com/material/boozepedia.gif", alt: "BOOZEKUZU", id:"scrollImage", class:"w-36" %>
     </div>
   </div>
   <div id="messages" class="m-4">
