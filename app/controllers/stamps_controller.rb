@@ -1,6 +1,6 @@
 class StampsController < ApplicationController
   def index
-    @stamps = Stamp.all
+    @stamps = Stamp.all.order(created_at: :desc)
   end
 
   def new

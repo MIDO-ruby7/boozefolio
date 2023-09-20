@@ -1,7 +1,7 @@
 <%= link_to t('.new_path'), new_stamp_path, class:"flex justify-center btn btn-success m-4" %>
 <div class="ml-4 mb-20">
   <% if @stamps.present? %>
-    <tbody>
+    <tbody class="m-2">
       <% @stamps.each do |stamp| %>
         <div class="tooltip tooltip-open tooltip-top mt-10" data-tip=<%= stamp.name %>>
         <button class="btn w-28 h-28"><%= image_tag stamp.image.url, size: '100x100' %></button>
