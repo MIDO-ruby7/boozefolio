@@ -25,15 +25,13 @@ BOOZEKUZU。それは酒を飲む行為を正当化しようとする生物。�
 | 酒KUZUバリデーション|Google認証ログイン|
 |   <img width="270" alt="スクリーンショット 2023-09-17 7 21 38" src="https://github.com/MIDO-ruby7/boozefolio/assets/111557292/aebd9553-129b-4f3b-99f0-4198eb1aaab5"> |<img width="280" alt="スクリーンショット 2023-09-27 19 45 31" src="https://github.com/MIDO-ruby7/boozefolio/assets/111557292/943f9856-0723-492c-ac5f-2fc0df073030">|
 | チュートリアル | みんなが飲んだお酒一覧 |
-| チュートリアル | みんなが飲んだお酒一覧 |
+| <img width="270" alt="スクリーンショット 2023-09-17 7 21 38" src="https://github.com/MIDO-ruby7/boozefolio/assets/111557292/1f3d8720-d39b-43b7-8b86-eb4bba8f5800">|<img width="280" alt="スクリーンショット 2023-09-27 20 12 59" src="https://github.com/MIDO-ruby7/boozefolio/assets/111557292/d9b5da69-6591-4372-90b5-efb9155f36f2">|
 | お酒投稿 | タイムライン |
-| お酒投稿 | タイムライン |
+| <img width="280" alt="スクリーンショット 2023-09-27 20 15 37" src="https://github.com/MIDO-ruby7/boozefolio/assets/111557292/c82eb6ef-dd52-4d37-abe6-51dae2132e9a"><br/>カテゴリを選ぶと自動で初期値が入力されます|<img width="270" alt="スクリーンショット 2023-09-27 20 17 20" src="https://github.com/MIDO-ruby7/boozefolio/assets/111557292/8a60f3ac-540c-46ee-a325-c3f2fdca9d58"> <br/>スタンプ機能とマスコットキャラからの返信機能</br>(OpenAI API)もつけています。|
 | インクリメンタルサーチ | バーコード検索 |
-| インクリメンタルサーチ | バーコード検索 |
-| マスコットキャラからの返信(ChatGPT) |　スタンプ|
-| マスコットキャラからの返信(ChatGPT) |　スタンプ|
+| <img width="280" alt="スクリーンショット 2023-09-27 20 27 55" src="https://github.com/MIDO-ruby7/boozefolio/assets/111557292/4a772822-0427-4680-a6f8-4c3dc01982a5"><br/>DBから検索し、存在しなければ<br/>Yahoo APIより検索して結果を返します|<img width="280" alt="スクリーンショット 2023-09-27 20 16 55" src="https://github.com/MIDO-ruby7/boozefolio/assets/111557292/633c0304-57d3-4093-acaa-7f7744a30ad9"><br/>Yahoo APIよりJANコード検索します<br/>商品名を押すと自動で名前などの値が入ります|
 | コレクション |PWA　|
-| コレクション |PWA　|
+|<img width="280" alt="スクリーンショット 2023-09-27 20 17 08" src="https://github.com/MIDO-ruby7/boozefolio/assets/111557292/990b397b-7b01-4f16-982e-4ff43fd61a05">|　<img width="200" alt="スクリーンショット 2023-09-27 20 17 08" src="https://boozepedia.s3.ap-northeast-3.amazonaws.com/material/icon192.png"><br/>PWAに対応させています||
 
 
 ## ■なぜこのサービスを作りたいのか？
