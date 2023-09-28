@@ -41,4 +41,38 @@ BOOZEKUZU。それは酒を飲む行為を正当化しようとする生物。�
 
 ## ■使用技術
 
-Ruby, Rails7, Tailwind CSS, daisy UI, JavaScript, jQuery, AWS(S3), heroku, 
+Ruby, Rails7, Tailwind CSS, daisy UI, JavaScript, jQuery, AWS(S3), heroku
+
+#### gem:  
+🎨画像アップロード  
+  carrierwave  
+  mini_magick  
+  fog-aws  
+  
+🧠OpenAI　API  
+ ruby-openai  
+  
+🧑‍✈️Google認証  
+  googleauth  
+  
+👥共同編集履歴管理  
+  paper_trail  
+  
+🤷‍♀️多言語化対応  
+  enum_help  
+  rails-i18n  
+  
+🌝その他  
+  meta tag  
+  dotenv-rails  
+  rest-client  
+  amatch  
+  
+#### API  
+ OpenAI API  
+ Yahoo API  
+ Google OAuth 2.0  
+ 
+## ER図
+<img width="1000" alt="スクリーンショット 2023-09-28 11 18 21" src="https://github.com/MIDO-ruby7/boozefolio/assets/111557292/d583c0b5-c139-4809-b8cf-b279a9d91947">
+
